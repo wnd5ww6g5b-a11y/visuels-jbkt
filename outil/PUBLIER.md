@@ -58,5 +58,5 @@ Si aucun post ne relève de A ni de B : s'arrêter tout de suite, sans rien modi
 ## Hashtags de base par marque
 
 - **gloova** : #InstitutDeBeaute #Estheticienne #EstheticienneADomicile #ProthesisteOngulaire #Onglerie #SalonDeCoiffure #Barbier #ExtensionDeCils #ReservationEnLigne #AgendaEnLigne #ProsDeLaBeaute
-- **radar** : #ChauffeurVTC #VTC #VTCStrasbourg #Strasbourg #Alsace #ChauffeurPrive #VTCFrance #ChauffeurIndependant
+- **radar** (toute la France, jamais de hashtag local comme #VTCStrasbourg) : #ChauffeurVTC #VTC #VTCFrance #ChauffeurPrive #ChauffeurIndependant #AppliVTC
 - **jbkt** : #Strasbourg #Alsace #GrandEst #PME #Industrie #Digitalisation #OutilMetier #RemplacerExcel #Productivite #ApplicationSurMesure
