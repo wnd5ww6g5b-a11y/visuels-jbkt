@@ -31,9 +31,18 @@ Le compte Instagram de chaque marque est dans le document `config/instagram`
    4. `git add`, `git commit -m "Post <id>"`, `git push origin main`.
    5. Attendre ~20 s, puis vérifier que l'adresse raw répond (curl -I, code 200).
    6. Windsor.ai for Social Media : `execute_action`, connector `instagram`, action `create_image_post`,
-      account = `account_id` de la marque, params = `{"image_url": <adresse raw>, "caption": <caption>}`.
+      account = `account_id` de la marque, params = `{"image_url": <adresse raw>, "caption": <légende finale>}`.
+      Légende finale = `caption` + ligne vide + les `hashtags` séparés par des espaces.
+      Si `hashtags` est vide ou absent : ajouter 3 ou 4 hashtags pertinents de la liste de la marque ci-dessous.
+      La légende finale ne doit jamais dépasser 2 200 caractères (raccourcir les hashtags si besoin, jamais la légende).
    7. Mettre à jour le document `contents/<id>` (db_write `update` avec `ifVersion`) :
       `status` = `published`, `published_at` = maintenant (ISO), `image_url` = adresse raw.
 4. En cas d'erreur sur un post : NE PAS réessayer en boucle. Écrire `publish_error` = le message dans le document,
    laisser `status` à `scheduled`, et passer au suivant.
 5. Résumer à la fin : posts publiés, posts en erreur.
+
+## Hashtags de base par marque
+
+- **gloova** : #InstitutDeBeaute #Estheticienne #EstheticienneADomicile #ProthesisteOngulaire #Onglerie #SalonDeCoiffure #Barbier #ExtensionDeCils #ReservationEnLigne #AgendaEnLigne #ProsDeLaBeaute
+- **radar** : #ChauffeurVTC #VTC #VTCStrasbourg #Strasbourg #Alsace #ChauffeurPrive #VTCFrance #ChauffeurIndependant
+- **jbkt** : #Strasbourg #Alsace #GrandEst #PME #Industrie #Digitalisation #OutilMetier #RemplacerExcel #Productivite #ApplicationSurMesure
