@@ -16,6 +16,7 @@ Un post a besoin d'une image s'il remplit TOUTES ces conditions :
 - `scheduled_at` entre il y a 24 h et dans 21 jours
 
 Les posts d'exemple `scheduled` sans `validated_at` n'ont pas besoin d'image.
+**Un document avec `video_url` n'a JAMAIS besoin d'image** : c'est une vidéo fournie par Karim, publiée telle quelle.
 
 **B. Publier les posts arrivés à l'heure.** Un post n'est publié QUE s'il remplit TOUTES ces conditions :
 - `channel` = `instagram`
@@ -29,6 +30,17 @@ Le compte Instagram de chaque marque est dans le document `config/instagram`
 (`gloova`, `jbkt`, `radar` → `account_id`).
 
 Si aucun post ne relève de A ni de B : s'arrêter tout de suite, sans rien modifier.
+
+## Vidéos (documents avec `video_url`)
+
+Vidéos fournies par Karim : on les publie **exactement telles quelles** (jamais réencodées, recadrées ni refaites).
+Quand une vidéo remplit les conditions de B (publication à l'heure) :
+1. Story : `execute_action`, connector `instagram`, action `create_story`, account = `account_id` de la marque,
+   params = `{"video_url": <video_url>}`.
+2. Reel : action `create_video_post`, params = `{"video_url": <video_url>, "caption": <légende finale>, "thumb_offset": 1500, "share_to_feed": true}`
+   (légende finale = `caption` + ligne vide + `hashtags`, comme pour les images).
+3. Mettre à jour le document : `status` = `published`, `published_at` = maintenant, `story_media_id` et `instagram_media_id` = les id renvoyés.
+Si un des deux échoue : noter `publish_error` avec le message, mais garder l'id de celui qui a réussi, et ne pas republier celui-là.
 
 ## Étapes
 
