@@ -19,9 +19,18 @@ Radar VTC : rien (pas de site web).
 2. Lire `outil/journal-contenu.md` (tout ce qui a déjà été publié) et la liste réelle du site :
    - JBKT : `blog/*.html`, `zones/*.html` dans le dépôt `wnd5ww6g5b-a11y/site-jbkt` ;
    - Gloova : `src/data/articles-auto.json` et les routes de `src/App.tsx` dans `wnd5ww6g5b-a11y/gloomy-site`.
-3. Lire les vraies données Google de l'outil (document `seo/jbkt` ou `seo/gloova` de l'artifact
-   `215e6505-5f68-4a59-8694-595b631af2eb`) s'il existe : viser en priorité une recherche entre la 5e et la 20e place.
-4. Choisir un sujet qui N'A PAS encore de contenu (ni le même sujet, ni la même recherche visée).
+3. **Priorités GEO d'abord** : lire `outil/geo/priorites.md` (écrit chaque lundi matin par le test GEO, voir `outil/GEO.md`).
+   - Lundi (article) : répondre à la **question prioritaire n° 1** de la marque.
+   - Jeudi (page) : répondre à la **question n° 2** si elle va avec une page « service + zone » (JBKT) ou « métier ou thème » (Gloova) ;
+     sinon, en faire un article à la place de la page n'est PAS permis : suivre alors le point 4.
+   - La question doit apparaître presque mot pour mot dans le titre ou dans le premier sous-titre, et le `lead`
+     doit y répondre directement (règles GEO plus bas). Si la question a déjà une page sur le site, ne pas en créer
+     une deuxième : améliorer la page existante (comme dans `outil/MISE-A-JOUR.md`) et choisir un autre sujet pour le contenu du jour.
+   - Ne rien inventer pour répondre : si la marque ne peut pas répondre honnêtement à la question (ex. un prix JBKT),
+     traiter le sujet sous l'angle « ce qui fait varier », sans chiffre.
+4. Sinon : lire les vraies données Google de l'outil (document `seo/jbkt` ou `seo/gloova` de l'artifact
+   `215e6505-5f68-4a59-8694-595b631af2eb`) s'il existe : viser une recherche entre la 5e et la 20e place.
+5. Choisir un sujet qui N'A PAS encore de contenu (ni le même sujet, ni la même recherche visée).
 
 ## Règles de qualité (toutes obligatoires)
 
