@@ -16,7 +16,8 @@ Un post a besoin d'une image s'il remplit TOUTES ces conditions :
 - `scheduled_at` entre il y a 24 h et dans 21 jours
 
 Les posts d'exemple `scheduled` sans `validated_at` n'ont pas besoin d'image.
-**Un document avec `video_url` n'a JAMAIS besoin d'image** : c'est une vidéo fournie par Karim, publiée telle quelle.
+**Un document avec `video_url` ou `image_urls` n'a JAMAIS besoin d'image** : vidéo ou carrousel fournis par Karim, publiés tels quels.
+**Un document avec `status` = `manual` n'est jamais touché** (ni image, ni publication) : c'est une story avec sticker que Karim poste à la main.
 
 **B. Publier les posts arrivés à l'heure.** Un post n'est publié QUE s'il remplit TOUTES ces conditions :
 - `channel` = `instagram`
@@ -29,20 +30,28 @@ Base de l'outil : artifact `215e6505-5f68-4a59-8694-595b631af2eb`, collection `c
 Le compte Instagram de chaque marque est dans le document `config/instagram`
 (`gloova`, `jbkt`, `radar` → `account_id`).
 
-**D. Commentaires (Radar VTC et JBKT)** : relever les nouveaux commentaires, proposer une réponse, publier les réponses validées par Karim.
+**D. Commentaires (Radar VTC et JBKT, et Gloova pendant le concours)** : relever les nouveaux commentaires, proposer une réponse, publier les réponses validées par Karim.
 
 Si rien ne relève de A, B ni D (ni des articles, voir ARTICLES.md) : s'arrêter tout de suite, sans rien modifier.
 
 ## Vidéos (documents avec `video_url`)
 
 Vidéos fournies par Karim : on les publie **exactement telles quelles** (jamais réencodées, recadrées ni refaites).
-Quand une vidéo remplit les conditions de B (publication à l'heure) :
-1. Story : `execute_action`, connector `instagram`, action `create_story`, account = `account_id` de la marque,
+Quand une vidéo remplit les conditions de B (publication à l'heure), regarder `video_formats`
+(absent = `["story","reel"]`) et ne faire que les formats listés :
+1. Si `story` : `execute_action`, connector `instagram`, action `create_story`, account = `account_id` de la marque,
    params = `{"video_url": <video_url>}`.
-2. Reel : action `create_video_post`, params = `{"video_url": <video_url>, "caption": <légende finale>, "thumb_offset": 1500, "share_to_feed": true}`
+2. Si `reel` : action `create_video_post`, params = `{"video_url": <video_url>, "caption": <légende finale>, "thumb_offset": 1500, "share_to_feed": true}`
    (légende finale = `caption` + ligne vide + `hashtags`, comme pour les images).
 3. Mettre à jour le document : `status` = `published`, `published_at` = maintenant, `story_media_id` et `instagram_media_id` = les id renvoyés.
 Si un des deux échoue : noter `publish_error` avec le message, mais garder l'id de celui qui a réussi, et ne pas republier celui-là.
+
+## Carrousels (documents avec `image_urls`)
+
+Images fournies par Karim (JPEG, dans l'ordre), publiées telles quelles. Quand un carrousel remplit les conditions de B :
+`execute_action`, connector `instagram`, action `create_carousel_post`, account = `account_id` de la marque,
+params = `{"image_urls": <image_urls>, "caption": <légende finale>}` (légende finale = `caption` + ligne vide + `hashtags`).
+Puis `status` = `published`, `published_at`, `instagram_media_id`. En cas d'erreur : `publish_error`, pas de nouvel essai.
 
 ## Étapes
 
@@ -69,7 +78,7 @@ Si un des deux échoue : noter `publish_error` avec le message, mais garder l'id
    laisser `status` tel quel, et passer au suivant.
 5. Résumer à la fin : images préparées, posts publiés, posts en erreur.
 
-## D. Commentaires (Radar VTC et JBKT uniquement)
+## D. Commentaires (Radar VTC et JBKT ; Gloova pendant le concours)
 
 Décidé par Karim : l'outil propose une réponse, **Karim la valide** dans la page « Commentaires ». Rien n'est publié sans validation.
 
@@ -80,7 +89,8 @@ Décidé par Karim : l'outil propose une réponse, **Karim la valide** dans la p
 2. **Relever les nouveaux commentaires** : `get_data`, connector `instagram`, accounts = ceux de `radar` et `jbkt`,
    fields = `["account_id","media_id","media_permalink","media_caption","comment_id","comment_text","comment_username","comment_timestamp","comment_parent_id"]`,
    date_preset = `last_30d` (la date est celle de la publication, pas du commentaire).
-   Garder les lignes qui ont un `comment_id`, dont l'auteur n'est pas le compte lui-même (`radar_vtc`, `jbktsolutionsdigitales`)
+   Du 23 novembre au 3 décembre 2026 inclus, ajouter le compte `gloova` (voir « Concours Gloova » plus bas).
+   Garder les lignes qui ont un `comment_id`, dont l'auteur n'est pas le compte lui-même (`radar_vtc`, `jbktsolutionsdigitales`, `gloova_beauty`)
    et qui n'existent pas encore dans `comments` (même id). Ignorer les commentaires de plus de 7 jours.
 3. Pour chaque nouveau commentaire, créer `comments/<comment_id>` (db_write `set`) :
    `{"brand_id", "media_id", "permalink", "post_title" (titre du document contents dont instagram_media_id = media_id, sinon 1re ligne de la légende),
@@ -91,6 +101,21 @@ Décidé par Karim : l'outil propose une réponse, **Karim la valide** dans la p
    - jamais de prix, jamais de promesse de gains, rien d'inventé ; ne pas mettre de lien (le lien est en bio) ;
    - spam, insulte ou pub : `reply` = `""` et `status` = `ignored` directement.
 5. Résumer : réponses publiées, nouveaux commentaires à valider.
+
+### Concours Gloova (23 nov. → 3 déc. 2026) : réponses automatiques
+
+Décidé par Karim : sur le post du concours (document `contents/concours-gloova-carrousel`, son `instagram_media_id`)
+et sur le reel du concours (`contents/concours-gloova-reel`), les **participations** reçoivent une réponse courte
+**publiée tout de suite, sans validation**. Tout le reste passe par la validation, comme pour Radar et JBKT.
+- **Participation** = un commentaire qui donne une prestation et/ou identifie un compte (@…), sans question.
+  Réponse : 1 phrase, vouvoiement, chaleureuse, qui reprend la prestation citée si elle est claire, puis
+  « Participation bien enregistrée, bonne chance ! ✨ » (varier un peu la formulation, jamais 2 fois la même d'affilée).
+  Publier avec `reply_to_comment`, puis créer `comments/<id>` avec `status` = `replied`, `replied_at`, `auto` = true.
+  Ne jamais dire qu'une participation est gagnante ou « validée » au tirage ; ne rien promettre.
+- **Question** (règlement, lots, date, « je ne suis pas esthéticienne », etc.) ou **critique** : réponse proposée,
+  `status` = `to_validate` (Karim valide). S'appuyer seulement sur le règlement : gloova.fr/concours.
+- **Spam, insulte, compte de « tirage » ou de faux gains** : `status` = `ignored`, pas de réponse.
+- Les commentaires des autres posts Gloova ne sont pas relevés.
 
 ## Hashtags de base par marque
 
