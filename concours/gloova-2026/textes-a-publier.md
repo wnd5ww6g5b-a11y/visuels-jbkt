@@ -4,21 +4,41 @@ Dates : du lundi 23 novembre 2026 (9h) au jeudi 17 décembre 2026 (23h59). Tirag
 Lots : 1er = 1 an de Gloova Ultra + bon d'achat pro de 100 € ; 2e = 6 mois de Pro+ ; 3e = 3 mois de Pro+ ; 4e = 1 mois de Pro+.
 Règlement : gloova.fr/concours
 
-## Calendrier de publication
+## Calendrier de publication : une story par jour
 
 | Quand | Quoi | Fichier |
 |---|---|---|
-| Ven. 20 nov. | Story teasing + sticker « compte à rebours » réglé sur le 23 nov. 9h | gloova-concours-story-1-teasing.jpg |
-| Sam. 21 nov. | Story sondage | gloova-concours-story-2-sondage.jpg |
-| Lun. 23 nov. 9h | Post carrousel (4 visuels dans l'ordre) + légende ci-dessous | gloova-concours-post-1 à 4.jpg |
-| Lun. 23 nov. 9h | Story lancement, avec le post partagé dessus | gloova-concours-story-3-lancement.jpg |
-| Lun. 23 nov. 18h | Reel du concours + légende Reel | gloova-concours-reel.mp4 |
-| Mar. 24 nov. | Story « chance en plus » avec sticker lien vers gloova.fr | gloova-concours-story-4-bonus.jpg |
-| 25 nov. au 13 déc. | Stories vidéo Gloova (pubs avec musique), environ une tous les deux jours, publiées par l'outil | — |
-| Lun. 30 nov., ven. 4 déc., jeu. 10 déc. | Story de relance « Il est encore temps ! », avec le post partagé dessus | gloova-concours-story-relance.jpg |
-| Lun. 14 déc. | Story « Plus que 3 jours » | gloova-concours-story-5-rappel.jpg |
-| Jeu. 17 déc. | Story « Dernier jour » | gloova-concours-story-6-dernier-jour.jpg |
+| Ven. 20 nov. | Teasing + sticker « compte à rebours » réglé sur le 23 nov. 9h | gloova-concours-story-1-teasing.jpg |
+| Sam. 21 nov. | Sondage « Vous gérez vos rendez-vous comment ? » | gloova-concours-story-2-sondage.jpg |
+| Dim. 22 nov. | « Demain 9h » + sticker compte à rebours | gloova-concours-story-8-demain.jpg |
+| Lun. 23 nov. 9h | POST carrousel (post-1 à 4) + story lancement avec le post partagé. 18h : Reel du concours | gloova-concours-story-3-lancement.jpg |
+| Mar. 24 nov. | Une chance en plus + sticker lien gloova.fr | gloova-concours-story-4-bonus.jpg |
+| Mer. 25 nov. | Comment participer | gloova-concours-story-10-participer.jpg |
+| Jeu. 26 nov. | Vidéo pub « matin » | vidéo avec-musique |
+| Ven. 27 nov. | Les 4 lots | gloova-concours-story-9-lots.jpg |
+| Sam. 28 nov. | Vidéo pub « ongles » | vidéo avec-musique |
+| Dim. 29 nov. | La question du concours | gloova-concours-story-11-question.jpg |
+| Lun. 30 nov. | Vidéo pub « prix » | vidéo avec-musique |
+| Mar. 1er déc. | Qui peut participer ? | gloova-concours-story-13-qui-peut.jpg |
+| Mer. 2 déc. | Vidéo pub « fiche » | vidéo avec-musique |
+| Jeu. 3 déc. | Pensez à une consœur | gloova-concours-story-12-consoeur.jpg |
+| Ven. 4 déc. | Vidéo pub « mains » | vidéo avec-musique |
+| Sam. 5 déc. | Zoom sur le 1er lot (bon d'achat 100 €) | gloova-concours-story-15-bon-achat.jpg |
+| Dim. 6 déc. | Vidéo pub « nuit » | vidéo avec-musique |
+| Lun. 7 déc. | Mi-parcours : republier le Reel du concours en story | gloova-concours-reel.mp4 |
+| Mar. 8 déc. | Plus que 10 jours | gloova-concours-story-18-plus-que-10-jours.jpg |
+| Mer. 9 déc. | Vidéo pub « fidélité » | vidéo avec-musique |
+| Jeu. 10 déc. | C'est payant ? Non. | gloova-concours-story-14-gratuit.jpg |
+| Ven. 11 déc. | Vidéo pub « chiffres » | vidéo avec-musique |
+| Sam. 12 déc. | Gloova, votre agenda pro | gloova-concours-story-16-agenda.jpg |
+| Dim. 13 déc. | Vidéo pub « reel-v1 » | vidéo avec-musique |
+| Lun. 14 déc. | Plus que 3 jours | gloova-concours-story-5-rappel.jpg |
+| Mar. 15 déc. | Votre page de réservation (rappel de la chance en plus) | gloova-concours-story-17-page-reservation.jpg |
+| Mer. 16 déc. | Demain, c'est fini | gloova-concours-story-19-demain-fini.jpg |
+| Jeu. 17 déc. | Dernier jour, clôture à 23h59 | gloova-concours-story-6-dernier-jour.jpg |
 | Ven. 18 déc. | Tirage filmé en story, puis story des gagnantes (après leur accord) | gloova-concours-story-7-resultats.jpg |
+
+Les vidéos pubs sont sur le Mac dans Claude > gloova-video > avec-musique. Évitez toute vidéo qui dirait « 0 % de commission » : préférez « sans commission sur les rendez-vous ». Les cadres en pointillés montrent où poser les stickers Instagram (compte à rebours, sondage, questions, lien, post partagé).
 
 Pendant tout le concours : répondre à chaque commentaire dans l'heure si possible.
 
