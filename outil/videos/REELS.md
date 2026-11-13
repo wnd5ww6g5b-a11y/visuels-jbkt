@@ -9,7 +9,7 @@ on passe d'un fond à l'autre, une liste se construit, et la fin montre le logo 
 python3 outil/videos/reel.py fiche.json videos/AAAA/MM/<id>.mp4 --musique clair --apercus apercus.json
 ```
 - `--musique` : `clair` (posé), `calme` (doux), `elan` (rythmé). Les 3 morceaux sont des créations originales libres de droits. Varier d'un jour à l'autre.
-- `--apercus` : écrit 3 petites images (data URI) à copier dans le champ `apercus` du document, pour l'aperçu dans l'outil.
+- `--apercus` : écrit 1 petite image (data URI) à copier dans le champ `apercus` du document, pour l'aperçu dans l'outil.
 - Environ 35 s de rendu par reel. Chrome et Playwright sont déjà installés.
 - Avant de rendre la vidéo complète, regarder 2 ou 3 images de contrôle :
   `python3 -c "import sys,json;sys.path.insert(0,'outil/videos');import anim;v=json.load(open('fiche.json'));print(anim.render(v,[2.0,7.0,12.0]))"`

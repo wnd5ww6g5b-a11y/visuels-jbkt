@@ -29,9 +29,9 @@ Base de l'outil : artifact `215e6505-5f68-4a59-8694-595b631af2eb`, collection `c
 Le compte Instagram de chaque marque est dans le document `config/instagram`
 (`gloova`, `jbkt`, `radar` → `account_id`).
 
-**C. Commentaires (Radar VTC et JBKT)** : relever les nouveaux commentaires, proposer une réponse, publier les réponses validées par Karim.
+**D. Commentaires (Radar VTC et JBKT)** : relever les nouveaux commentaires, proposer une réponse, publier les réponses validées par Karim.
 
-Si rien ne relève de A, B ni C : s'arrêter tout de suite, sans rien modifier.
+Si rien ne relève de A, B ni D (ni des articles, voir ARTICLES.md) : s'arrêter tout de suite, sans rien modifier.
 
 ## Vidéos (documents avec `video_url`)
 
@@ -69,7 +69,7 @@ Si un des deux échoue : noter `publish_error` avec le message, mais garder l'id
    laisser `status` tel quel, et passer au suivant.
 5. Résumer à la fin : images préparées, posts publiés, posts en erreur.
 
-## C. Commentaires (Radar VTC et JBKT uniquement)
+## D. Commentaires (Radar VTC et JBKT uniquement)
 
 Décidé par Karim : l'outil propose une réponse, **Karim la valide** dans la page « Commentaires ». Rien n'est publié sans validation.
 

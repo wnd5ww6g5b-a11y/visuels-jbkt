@@ -4,7 +4,7 @@
   python3 outil/videos/reel.py fiche.json sortie.mp4 [--musique clair|calme|elan] [--apercus apercus.json]
 
 La fiche suit le format de exemple-radar.json / exemple-jbkt.json (voir REELS.md).
---apercus écrit 3 petites images (data URI JPEG) pour l'aperçu dans l'outil.
+--apercus écrit 1 petite image (data URI JPEG) pour l'aperçu dans l'outil.
 """
 import sys, json, base64, io, subprocess, argparse
 from pathlib import Path
@@ -38,11 +38,11 @@ src.unlink(missing_ok=True)
 if a.apercus:
     from PIL import Image
     thumbs = []
-    for t in (1.6, total * 0.45, total - 1.5):
+    for t in (total * 0.42,):
         r = subprocess.run(['ffmpeg', '-v', 'error', '-ss', f'{t:.2f}', '-i', str(out), '-frames:v', '1', '-f', 'image2pipe', '-vcodec', 'mjpeg', '-'],
                            capture_output=True, check=True)
         im = Image.open(io.BytesIO(r.stdout)).convert('RGB').resize((108, 192))
-        b = io.BytesIO(); im.save(b, 'JPEG', quality=45, optimize=True)
+        b = io.BytesIO(); im.save(b, 'JPEG', quality=40, optimize=True)
         thumbs.append('data:image/jpeg;base64,' + base64.b64encode(b.getvalue()).decode())
     json.dump(thumbs, open(a.apercus, 'w'))
 print(out, f'{total:.1f}s')

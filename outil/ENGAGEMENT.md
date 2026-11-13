@@ -4,7 +4,7 @@ Décidé par Karim le 13/11/2026 :
 - chaque marque publie **1 post et 1 reel par jour** ;
 - tout est préparé **une fois par semaine, le dimanche**, pour la semaine suivante (lundi → dimanche) ;
 - Karim valide le lot dans l'outil (page « À valider », bouton « Tout valider ») : rien ne part sans validation ;
-- les réponses aux commentaires sont proposées par l'outil et **validées par Karim** (voir PUBLIER.md, partie C).
+- les réponses aux commentaires sont proposées par l'outil et **validées par Karim** (voir PUBLIER.md, partie D).
 
 Base de l'outil : artifact `215e6505-5f68-4a59-8694-595b631af2eb`, collection `contents`.
 
