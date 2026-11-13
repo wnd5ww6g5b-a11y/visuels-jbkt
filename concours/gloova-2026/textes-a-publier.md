@@ -37,7 +37,7 @@ Pour participer :
 2️⃣ Aimez ce post
 3️⃣ Dites-nous en commentaire votre prestation la plus demandée, et identifiez une consœur pro 💅
 
-✨ Une chance en plus : créez votre compte gratuit sur gloova.fr (lien en bio) et partagez votre page de réservation en story en mentionnant @gloova.
+✨ Une chance en plus : créez votre compte gratuit sur gloova.fr (lien en bio) et partagez votre page de réservation en story en mentionnant @gloova_beauty.
 
 📅 Jusqu'au 2 décembre à 23h59. Tirage au sort le 3 décembre, en story.
 
@@ -47,7 +47,7 @@ Réservé aux pros de la beauté majeurs établis en France (SIRET). Participati
 
 ## Légende du Reel
 
-Pros de la beauté, ce concours est pour vous 🎁 1 an de Gloova Ultra + un bon d'achat pro de 100 € à gagner, et 3 autres lots. Pour participer, rendez-vous sur notre post concours 👉 @gloova. Jusqu'au 2 décembre. Règlement : gloova.fr/concours. Ni organisé ni sponsorisé par Instagram ou Meta.
+Pros de la beauté, ce concours est pour vous 🎁 1 an de Gloova Ultra + un bon d'achat pro de 100 € à gagner, et 3 autres lots. Pour participer, rendez-vous sur notre post concours 👉 @gloova_beauty. Jusqu'au 2 décembre. Règlement : gloova.fr/concours. Ni organisé ni sponsorisé par Instagram ou Meta.
 
 #estheticienne #onglerie #institutdebeaute #jeuconcours #gloova
 
