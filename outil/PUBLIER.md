@@ -89,7 +89,7 @@ Décidé par Karim : l'outil propose une réponse, **Karim la valide** dans la p
 2. **Relever les nouveaux commentaires** : `get_data`, connector `instagram`, accounts = ceux de `radar` et `jbkt`,
    fields = `["account_id","media_id","media_permalink","media_caption","comment_id","comment_text","comment_username","comment_timestamp","comment_parent_id"]`,
    date_preset = `last_30d` (la date est celle de la publication, pas du commentaire).
-   Du 23 novembre au 3 décembre 2026 inclus, ajouter le compte `gloova` (voir « Concours Gloova » plus bas).
+   Du 23 novembre au 18 décembre 2026 inclus, ajouter le compte `gloova` (voir « Concours Gloova » plus bas).
    Garder les lignes qui ont un `comment_id`, dont l'auteur n'est pas le compte lui-même (`radar_vtc`, `jbktsolutionsdigitales`, `gloova_beauty`)
    et qui n'existent pas encore dans `comments` (même id). Ignorer les commentaires de plus de 7 jours.
 3. Pour chaque nouveau commentaire, créer `comments/<comment_id>` (db_write `set`) :
@@ -102,7 +102,7 @@ Décidé par Karim : l'outil propose une réponse, **Karim la valide** dans la p
    - spam, insulte ou pub : `reply` = `""` et `status` = `ignored` directement.
 5. Résumer : réponses publiées, nouveaux commentaires à valider.
 
-### Concours Gloova (23 nov. → 3 déc. 2026) : réponses automatiques
+### Concours Gloova (23 nov. → 18 déc. 2026) : réponses automatiques
 
 Décidé par Karim : sur le post du concours (document `contents/concours-gloova-carrousel`, son `instagram_media_id`)
 et sur le reel du concours (`contents/concours-gloova-reel`), les **participations** reçoivent une réponse courte

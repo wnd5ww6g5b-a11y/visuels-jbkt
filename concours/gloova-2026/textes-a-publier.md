@@ -1,6 +1,6 @@
 # Concours Gloova : textes à publier
 
-Dates : du lundi 23 novembre 2026 (9h) au mercredi 2 décembre 2026 (23h59). Tirage au sort le jeudi 3 décembre 2026.
+Dates : du lundi 23 novembre 2026 (9h) au jeudi 17 décembre 2026 (23h59). Tirage au sort le vendredi 18 décembre 2026.
 Lots : 1er = 1 an de Gloova Ultra + bon d'achat pro de 100 € ; 2e = 6 mois de Pro+ ; 3e = 3 mois de Pro+ ; 4e = 1 mois de Pro+.
 Règlement : gloova.fr/concours
 
@@ -14,10 +14,11 @@ Règlement : gloova.fr/concours
 | Lun. 23 nov. 9h | Story lancement, avec le post partagé dessus | gloova-concours-story-3-lancement.jpg |
 | Lun. 23 nov. 18h | Reel du concours + légende Reel | gloova-concours-reel.mp4 |
 | Mar. 24 nov. | Story « chance en plus » avec sticker lien vers gloova.fr | gloova-concours-story-4-bonus.jpg |
-| 25 au 29 nov. | Une story par jour : une des vidéos pubs (dossier avec-musique) ou une réponse à un commentaire | — |
-| Lun. 30 nov. | Story « Plus que 3 jours » | gloova-concours-story-5-rappel.jpg |
-| Mer. 2 déc. | Story « Dernier jour » | gloova-concours-story-6-dernier-jour.jpg |
-| Jeu. 3 déc. | Tirage filmé en story, puis story des gagnantes (après leur accord) | gloova-concours-story-7-resultats.jpg |
+| 25 nov. au 13 déc. | Stories vidéo Gloova (pubs avec musique), environ une tous les deux jours, publiées par l'outil | — |
+| Lun. 30 nov., ven. 4 déc., jeu. 10 déc. | Story de relance « Il est encore temps ! », avec le post partagé dessus | gloova-concours-story-relance.jpg |
+| Lun. 14 déc. | Story « Plus que 3 jours » | gloova-concours-story-5-rappel.jpg |
+| Jeu. 17 déc. | Story « Dernier jour » | gloova-concours-story-6-dernier-jour.jpg |
+| Ven. 18 déc. | Tirage filmé en story, puis story des gagnantes (après leur accord) | gloova-concours-story-7-resultats.jpg |
 
 Pendant tout le concours : répondre à chaque commentaire dans l'heure si possible.
 
@@ -39,7 +40,7 @@ Pour participer :
 
 ✨ Une chance en plus : créez votre compte gratuit sur gloova.fr (lien en bio) et partagez votre page de réservation en story en mentionnant @gloova_beauty.
 
-📅 Jusqu'au 2 décembre à 23h59. Tirage au sort le 3 décembre, en story.
+📅 Jusqu'au 17 décembre à 23h59. Tirage au sort le 18 décembre, en story.
 
 Réservé aux pros de la beauté majeurs établis en France (SIRET). Participation gratuite, sans obligation d'achat. Règlement complet : gloova.fr/concours. Ce concours n'est ni organisé ni sponsorisé par Instagram ou Meta.
 
@@ -47,7 +48,7 @@ Réservé aux pros de la beauté majeurs établis en France (SIRET). Participati
 
 ## Légende du Reel
 
-Pros de la beauté, ce concours est pour vous 🎁 1 an de Gloova Ultra + un bon d'achat pro de 100 € à gagner, et 3 autres lots. Pour participer, rendez-vous sur notre post concours 👉 @gloova_beauty. Jusqu'au 2 décembre. Règlement : gloova.fr/concours. Ni organisé ni sponsorisé par Instagram ou Meta.
+Pros de la beauté, ce concours est pour vous 🎁 1 an de Gloova Ultra + un bon d'achat pro de 100 € à gagner, et 3 autres lots. Pour participer, rendez-vous sur notre post concours 👉 @gloova_beauty. Jusqu'au 17 décembre. Règlement : gloova.fr/concours. Ni organisé ni sponsorisé par Instagram ou Meta.
 
 #estheticienne #onglerie #institutdebeaute #jeuconcours #gloova
 
