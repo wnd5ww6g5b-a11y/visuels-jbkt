@@ -29,7 +29,9 @@ Base de l'outil : artifact `215e6505-5f68-4a59-8694-595b631af2eb`, collection `c
 Le compte Instagram de chaque marque est dans le document `config/instagram`
 (`gloova`, `jbkt`, `radar` → `account_id`).
 
-Si aucun post ne relève de A ni de B : s'arrêter tout de suite, sans rien modifier.
+**C. Commentaires (Radar VTC et JBKT)** : relever les nouveaux commentaires, proposer une réponse, publier les réponses validées par Karim.
+
+Si rien ne relève de A, B ni C : s'arrêter tout de suite, sans rien modifier.
 
 ## Vidéos (documents avec `video_url`)
 
@@ -66,6 +68,29 @@ Si un des deux échoue : noter `publish_error` avec le message, mais garder l'id
 4. En cas d'erreur sur un post : NE PAS réessayer en boucle. Écrire `publish_error` = le message dans le document,
    laisser `status` tel quel, et passer au suivant.
 5. Résumer à la fin : images préparées, posts publiés, posts en erreur.
+
+## C. Commentaires (Radar VTC et JBKT uniquement)
+
+Décidé par Karim : l'outil propose une réponse, **Karim la valide** dans la page « Commentaires ». Rien n'est publié sans validation.
+
+1. **Publier les réponses validées** : collection `comments`, documents avec `status` = `validated` et sans `error`.
+   Pour chacun : Windsor.ai for Social Media, `execute_action`, connector `instagram`, action `reply_to_comment`,
+   account = `account_id` de la marque, params = `{"comment_id": <id du document>, "message": <reply>}`.
+   Puis `update` : `status` = `replied`, `replied_at` = maintenant. En cas d'erreur : écrire `error` = le message, ne pas réessayer.
+2. **Relever les nouveaux commentaires** : `get_data`, connector `instagram`, accounts = ceux de `radar` et `jbkt`,
+   fields = `["account_id","media_id","media_permalink","media_caption","comment_id","comment_text","comment_username","comment_timestamp","comment_parent_id"]`,
+   date_preset = `last_30d` (la date est celle de la publication, pas du commentaire).
+   Garder les lignes qui ont un `comment_id`, dont l'auteur n'est pas le compte lui-même (`radar_vtc`, `jbktsolutionsdigitales`)
+   et qui n'existent pas encore dans `comments` (même id). Ignorer les commentaires de plus de 7 jours.
+3. Pour chaque nouveau commentaire, créer `comments/<comment_id>` (db_write `set`) :
+   `{"brand_id", "media_id", "permalink", "post_title" (titre du document contents dont instagram_media_id = media_id, sinon 1re ligne de la légende),
+   "username", "text", "at" (comment_timestamp), "reply" (réponse proposée), "status": "to_validate"}`.
+4. **Écrire la réponse proposée** :
+   - courte (1 à 2 phrases), chaleureuse, dans le ton de la marque (Radar : tutoiement entre chauffeurs ; JBKT : vouvoiement) ;
+   - répondre vraiment à ce qui est dit : un vote (« A », « OUI ») → remercier et relancer par une question ; une question précise → répondre si la réponse est sûre, sinon inviter à écrire en message privé ;
+   - jamais de prix, jamais de promesse de gains, rien d'inventé ; ne pas mettre de lien (le lien est en bio) ;
+   - spam, insulte ou pub : `reply` = `""` et `status` = `ignored` directement.
+5. Résumer : réponses publiées, nouveaux commentaires à valider.
 
 ## Hashtags de base par marque
 

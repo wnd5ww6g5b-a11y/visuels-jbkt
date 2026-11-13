@@ -1,0 +1,42 @@
+{
+ "id": "radar-vaut-le-coup",
+ "brand": "radar",
+ "title": "Cette course vaut le coup ?",
+ "hook": {
+  "lines": "Une offre<br>arrive.",
+  "note": "Nouvelle course · 18,40 €",
+  "acc": "Cette course<br>vaut le coup ?"
+ },
+ "phones": [
+  {
+   "kicker": "Une capture",
+   "title": "Le verdict,<br>tout de suite.",
+   "screen": "<img src=\"A/radar-offre.jpg\">"
+  },
+  {
+   "kicker": "Votre historique",
+   "title": "Chaque course<br>gardée.",
+   "screen": "<img src=\"A/radar-historique.jpg\">"
+  }
+ ],
+ "list": {
+  "title": "Décidez en<br>connaissant le chiffre.",
+  "items": [
+   "Le vrai €/km",
+   "Votre €/h",
+   "Rentable ou pas"
+  ]
+ },
+ "end": {
+  "tagline": "Créée par un chauffeur,<br>pour les chauffeurs.",
+  "button": "Essai gratuit sur l’App Store  →",
+  "small": "7 jours offerts · sans engagement"
+ },
+ "caption": "Une offre arrive. Cette course vaut le coup ?\n\nAvec Radar VTC, une capture de l’offre suffit : le vrai €/km, votre €/h et le verdict, tout de suite. Vous décidez en connaissant le chiffre.\n\nEssai gratuit 7 jours sur l’App Store.",
+ "hashtags": [
+  "#ChauffeurVTC",
+  "#VTC",
+  "#VTCFrance",
+  "#ChauffeurIndependant"
+ ]
+}

@@ -1,0 +1,45 @@
+{
+ "id": "jbkt-excel",
+ "brand": "jbkt",
+ "title": "Encore Excel en 4 versions ?",
+ "hook": {
+  "lines": "Encore Excel<br>en 4 versions ?",
+  "card": [
+   "Nom du fichier",
+   "« planning-final-VRAI-v2.xlsx »"
+  ],
+  "acc": "Lequel est<br>à jour ?"
+ },
+ "phones": [
+  {
+   "kicker": "Un seul outil",
+   "title": "Tout le monde voit<br>la même chose.",
+   "screen": "<div class=\"ui\"><div class=\"sb\">9:41</div><p class=\"t\">Commandes</p><p class=\"st\">Mis à jour à l’instant</p><div class=\"row\"><span>Commande 1042<small>Saisie au bureau</small></span><span class=\"chip c-b\">En cours</span></div><div class=\"row\"><span>Commande 1043<small>Saisie à l’atelier</small></span><span class=\"chip c-g\">Prête</span></div><div class=\"row\"><span>Commande 1044<small>Saisie sur la route</small></span><span class=\"chip c-o\">À livrer</span></div><div class=\"row\"><span>Commande 1045<small>Saisie au bureau</small></span><span class=\"chip c-v\">Nouvelle</span></div><div class=\"row\"><span>Commande 1046<small>Saisie à l’atelier</small></span><span class=\"chip c-b\">En cours</span></div></div>"
+  },
+  {
+   "kicker": "Stock",
+   "title": "À jour,<br>en temps réel.",
+   "screen": "<div class=\"ui\"><div class=\"sb\">9:41</div><p class=\"t\">Stock</p><p class=\"st\">Le même pour toute l’équipe</p><div class=\"row\"><span>Référence A<small>Atelier</small></span><span class=\"chip c-g\">OK</span></div><div class=\"row\"><span>Référence B<small>Dépôt</small></span><span class=\"chip c-o\">À commander</span></div><div class=\"row\"><span>Référence C<small>Atelier</small></span><span class=\"chip c-g\">OK</span></div><div class=\"row\"><span>Référence D<small>Dépôt</small></span><span class=\"chip c-v\">Réservé</span></div></div>"
+  }
+ ],
+ "list": {
+  "title": "Fait pour<br>votre métier.",
+  "items": [
+   "Vos écrans, vos mots",
+   "Ordinateur, tablette, téléphone",
+   "Fini le copier-coller"
+  ]
+ },
+ "end": {
+  "tagline": "Des outils pour<br>votre performance.",
+  "button": "Démo gratuite de 30 min",
+  "small": "jbktsolutionsdigitales.fr"
+ },
+ "caption": "Encore Excel en 4 versions ? « planning-final-VRAI-v2.xlsx »… Lequel est à jour ?\n\nOn remplace vos fichiers par un seul outil sur mesure : toute l’équipe voit la même chose, à jour, sur ordinateur, tablette et téléphone.\n\nDémo gratuite de 30 minutes : lien en bio.",
+ "hashtags": [
+  "#LogicielMetier",
+  "#PME",
+  "#Strasbourg",
+  "#Digitalisation"
+ ]
+}
