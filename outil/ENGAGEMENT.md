@@ -93,7 +93,8 @@ Ne jamais mettre `validated_at` : c'est Karim qui valide.
 ## Étapes de la tâche du dimanche
 
 1. `git pull`. Lire ce fichier, `outil/videos/REELS.md`, `outil/marques/radar.md`, `outil/marques/jbkt.md` et `outil/journal-engagement.md` (sujets déjà faits : ne pas les répéter avant 6 semaines).
-2. Lire `contents` (db_query) : repérer les reels déjà programmés la semaine suivante pour radar et jbkt.
+2. Lire `contents` (db_query) : repérer les reels déjà programmés la semaine suivante pour radar et jbkt,
+   et les documents `eng-…` déjà créés pour cette semaine : **ne jamais les recréer ni les écraser** (si toute la semaine existe déjà, s'arrêter et le dire).
 3. Écrire les 14 posts et les reels manquants (suivre la semaine type).
 4. Rendre chaque reel (`reel.py`, voir REELS.md) dans `videos/AAAA/MM/<id>.mp4` ; regarder des images de contrôle avant ;
    une fois tous rendus : `git add`, `git commit`, `git push`, attendre 20 s, vérifier chaque adresse raw (200).
