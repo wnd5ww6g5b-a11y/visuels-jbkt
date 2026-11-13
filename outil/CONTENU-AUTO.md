@@ -46,6 +46,31 @@ Radar VTC : rien (pas de site web).
   Pas de titre principal dans le corps, pas de FAQ dans le corps (elle va dans `faq`, 3 ou 4 questions).
 - Relire le texte en entier avant publication : orthographe, rien d'inventé, ton juste.
 
+## Règles GEO : être cité par ChatGPT, Claude, Perplexity et les résumés IA de Google (toutes obligatoires)
+
+Les assistants IA recopient des passages courts et précis. Chaque texte doit donc pouvoir être découpé
+en morceaux qui se comprennent seuls.
+
+- **Réponse d'abord** : le `lead` répond directement à la recherche visée en 2 phrases (40 à 60 mots),
+  avec le nom de la marque et ce qu'elle fait. Exemple : « Un logiciel de suivi de production remplace
+  le carnet papier au poste : chaque opérateur saisit sa production sur tablette… JBKT Solutions Digitales
+  le conçoit sur mesure pour les ateliers d'Alsace. »
+- **Chaque sous-titre `## ` est une question**, et le premier paragraphe dessous y répond en 1 ou 2 phrases
+  complètes, compréhensibles sans le reste de la page (pas de « comme vu plus haut », pas de « cela » sans sujet).
+- **Nommer les choses** : écrire « Gloova » ou « JBKT Solutions Digitales » plutôt que « nous » ou « l'outil »
+  au moins une fois par section ; écrire le métier et la zone en toutes lettres (« les instituts de beauté de Lyon »).
+- **Définitions et étapes** : quand c'est utile, une phrase « X, c'est… » et une liste numérotée d'étapes
+  (`1. `), que les IA reprennent volontiers.
+- **Un comparatif honnête** quand le sujet s'y prête (ex. « papier ou tablette », « site vitrine ou appli ») :
+  une liste « avantages / limites » pour chaque option, sans dénigrer de concurrent par son nom.
+- **FAQ** : questions telles qu'un client les taperait dans ChatGPT (« Combien de temps pour… ? »,
+  « Est-ce que… ? »), réponses de 1 à 3 phrases qui contiennent le nom de la marque. Jamais de prix JBKT.
+- **Faits datés et vérifiables seulement** : si un fait extérieur est utilisé (règle, obligation légale…),
+  il vient d'une recherche web faite pendant le passage, et la source officielle est mise en lien.
+  Sinon, pas de fait extérieur.
+- Après publication, `llms.txt` et `llms-full.txt` se régénèrent seuls à la mise en ligne, et la nouvelle page
+  est signalée à Bing (IndexNow) : rien à faire en plus.
+
 ## JBKT — pages « service + zone » (jeudi)
 
 Services (page principale à mettre dans `service_path`) :
