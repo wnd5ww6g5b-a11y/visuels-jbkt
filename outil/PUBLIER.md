@@ -46,6 +46,12 @@ Quand une vidéo remplit les conditions de B (publication à l'heure), regarder 
 3. Mettre à jour le document : `status` = `published`, `published_at` = maintenant, `story_media_id` et `instagram_media_id` = les id renvoyés.
 Si un des deux échoue : noter `publish_error` avec le message, mais garder l'id de celui qui a réussi, et ne pas republier celui-là.
 
+## Stories image (documents avec `format` = `story` et `image_url`)
+
+Visuel fourni par Karim (1080 × 1920), publié tel quel, jamais redessiné. Quand il remplit les conditions de B :
+`execute_action`, connector `instagram`, action `create_story`, account = `account_id` de la marque, params = `{"image_url": <image_url>}`.
+Puis `status` = `published`, `published_at`, `story_media_id`. Ne jamais le publier en post (`create_image_post`).
+
 ## Carrousels (documents avec `image_urls`)
 
 Images fournies par Karim (JPEG, dans l'ordre), publiées telles quelles. Quand un carrousel remplit les conditions de B :
