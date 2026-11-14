@@ -39,7 +39,8 @@ Pour un reel d'engagement, la fin pose la question : par exemple `tagline` = `"E
 
 ### Écrans des téléphones (`screen`)
 
-- Captures réelles de Radar VTC : `<img src="A/radar-offre.jpg">`, `<img src="A/radar-historique.jpg">`, `<img src="A/radar-zones.jpg">`.
+- **Ne plus utiliser les captures réelles de Radar VTC** (`radar-offre.jpg`, `radar-historique.jpg`, `radar-zones.jpg`) :
+  elles montrent des noms de plateformes et des lieux de Strasbourg. Dessiner l'écran en HTML (ci-dessous), avec des montants d'exemple et des zones « Zone A, B… ».
 - Site JBKT sur mobile : `<img src="A/site-jbkt-mobile.jpg">`.
 - Écran dessiné en HTML (pour une maquette d'appli JBKT, ou un calcul Radar) :
   ```html

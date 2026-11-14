@@ -2,6 +2,14 @@
 
 Une ligne par publication : date · marque · format · sujet. Ne pas répéter un sujet avant 6 semaines.
 
+- 2026-11-14 · jbkt · post · Ce ou ça · Vos factures :
+- 2026-11-14 · jbkt · reel · Un métier, un outil · Restaurant : les réservations du soir
+- 2026-11-14 · radar · post · A ou B · Tu roules plutôt le jour ou la nuit
+- 2026-11-14 · radar · reel · Fonction de l’app · Ton historique
+- 2026-11-15 · jbkt · post · Astuce · Votre page Contact : 4 choses à vérifier
+- 2026-11-15 · jbkt · reel · Comment on travaille · Les 4 étapes
+- 2026-11-15 · radar · post · Question ouverte · L’approche max que tu acceptes
+- 2026-11-15 · radar · reel · Fonction de l’app · Ton €/km par zone
 - 2026-11-16 · jbkt · post · Ce ou ça · Vos bons d’intervention :
 - 2026-11-16 · jbkt · reel · Avant / après · Avant / après : le bon d’intervention
 - 2026-11-16 · radar · post · Tu la prends ? · Tu la prends ?

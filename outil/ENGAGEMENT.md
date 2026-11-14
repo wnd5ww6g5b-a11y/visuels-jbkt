@@ -1,19 +1,22 @@
-# Engagement Instagram : Radar VTC et JBKT (1 post + 1 reel par jour)
+# Engagement Instagram : Radar VTC et JBKT (1 post + 1 reel + 2 stories par jour)
 
 Décidé par Karim le 13/11/2026 :
-- chaque marque publie **1 post et 1 reel par jour** ;
+- chaque marque publie **1 post et 1 reel par jour** (le reel part aussi en story) ;
+- mis à jour le 14/11/2026 : en plus, **1 story du post du jour** (le visuel du post en 1080 × 1920, `outil/story.py`), soit 2 stories par jour et par marque ;
 - tout est préparé **une fois par semaine, le dimanche**, pour la semaine suivante (lundi → dimanche) ;
-- Karim valide le lot dans l'outil (page « À valider », bouton « Tout valider ») : rien ne part sans validation ;
+- mis à jour le 14/11/2026 : Karim délègue le plan marketing de JBKT et Radar. Les documents sont créés **directement programmés**
+  (`status` = `scheduled`, `validated_at` = maintenant, `validated_by` = `Claude (plan délégué par Karim)`).
+  Karim peut toujours modifier ou refuser un contenu dans le calendrier avant l'heure prévue ;
 - les réponses aux commentaires sont proposées par l'outil et **validées par Karim** (voir PUBLIER.md, partie D).
 
 Base de l'outil : artifact `215e6505-5f68-4a59-8694-595b631af2eb`, collection `contents`.
 
 ## Horaires (heure de Paris)
 
-| Marque | Post | Reel (+ story de la même vidéo) |
-|---|---|---|
-| radar | 07:30 | 18:30 |
-| jbkt | 08:30 | 12:30 |
+| Marque | Post | Reel (+ story de la même vidéo) | Story du post |
+|---|---|---|---|
+| radar | 07:30 | 18:30 | 21:00 |
+| jbkt | 08:30 | 12:30 | 17:30 |
 
 Si un reel est **déjà programmé** ce jour-là pour la marque (vidéo validée : `video_url` présent, `status` = `scheduled`),
 on ne crée pas de nouveau reel ce jour-là : la vidéo existante est le reel du jour.
@@ -81,7 +84,13 @@ Chemin `contents/eng-<marque>-<AAAAMMJJ>-<post|reel>`. Champs :
 }
 ```
 Pour un reel, en plus : `"video_url"` (adresse raw GitHub), `"video_formats": ["story", "reel"]`, `"apercus"` (sortie de `--apercus`), et `visual` = `{"bg": "encre"}`.
-Ne jamais mettre `validated_at` : c'est Karim qui valide.
+Mettre `"status": "scheduled"`, `"validated_at"` (maintenant, ISO) et `"validated_by": "Claude (plan délégué par Karim)"`.
+
+**Story du post** (un document par jour et par marque) : `contents/eng-<marque>-<AAAAMMJJ>-story`, après le rendu du post :
+`python3 outil/story.py images/AAAA/MM/<post>.jpg images/AAAA/MM/<id-story>.jpg`, puis
+`{"brand_id", "channel": "instagram", "status": "scheduled", "scheduled_at": "<jour>T21:00" (radar) ou "T17:30" (jbkt), "title": "Story du post du jour",
+"caption": "", "hashtags": [], "format": "story", "image_url": <adresse raw>, "visual": {"bg": …}, "validated_at", "validated_by"}`.
+Les posts de la semaine doivent donc être rendus (`outil/rendre.py`) par cette tâche, et leur `image_url` rempli.
 
 ## Légendes
 
@@ -95,9 +104,9 @@ Ne jamais mettre `validated_at` : c'est Karim qui valide.
 1. `git pull`. Lire ce fichier, `outil/videos/REELS.md`, `outil/marques/radar.md`, `outil/marques/jbkt.md` et `outil/journal-engagement.md` (sujets déjà faits : ne pas les répéter avant 6 semaines).
 2. Lire `contents` (db_query) : repérer les reels déjà programmés la semaine suivante pour radar et jbkt,
    et les documents `eng-…` déjà créés pour cette semaine : **ne jamais les recréer ni les écraser** (si toute la semaine existe déjà, s'arrêter et le dire).
-3. Écrire les 14 posts et les reels manquants (suivre la semaine type).
+3. Écrire les 14 posts et les reels manquants (suivre la semaine type), rendre les 14 posts (`outil/rendre.py`, vérifier à l'œil) et leurs 14 stories (`outil/story.py`).
 4. Rendre chaque reel (`reel.py`, voir REELS.md) dans `videos/AAAA/MM/<id>.mp4` ; regarder des images de contrôle avant ;
    une fois tous rendus : `git add`, `git commit`, `git push`, attendre 20 s, vérifier chaque adresse raw (200).
 5. Créer les documents (db_write `set`, 10 par appel au plus, attendre 2 s entre les appels).
 6. Ajouter les sujets de la semaine à `outil/journal-engagement.md` (date, marque, format, sujet), commit et push.
-7. Résumer : nombre de posts et de reels préparés, à valider dans l'outil.
+7. Résumer : nombre de posts, reels et stories programmés, et les sujets de la semaine.
