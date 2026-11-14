@@ -30,16 +30,18 @@ def img(p):
 def device(e, w):
     """Un écran dans son appareil, largeur extérieure w (px). L'écran garde exactement ses proportions : rien n'est rogné."""
     src, app = img(e['fichier']), e['appareil']
+    # coins et bordures proportionnels à la taille, comme sur un vrai appareil,
+    # pour ne jamais couper la barre d'état (9:41) ni le contenu des coins
     if app == 'telephone':
-        pad, r_out, r_in, ratio = 14, 64, 52, 2556 / 1179
-        cls = 'ph'
+        pad = round(w * 0.035); ratio = 2556 / 1179; cls = 'ph'
+        iw = w - 2 * pad; r_in = round(iw * 0.125)
     elif app == 'tablette':
-        pad, r_out, r_in, ratio = 18, 40, 22, 1536 / 2048
-        cls = 'tb'
+        pad = round(w * 0.022); ratio = 1536 / 2048; cls = 'tb'
+        iw = w - 2 * pad; r_in = round(iw * 0.022)
     else:
-        pad, r_out, r_in, ratio = 12, 22, 8, 1800 / 2880
-        cls = 'lp'
-    iw = w - 2 * pad
+        pad = round(w * 0.014); ratio = 1800 / 2880; cls = 'lp'
+        iw = w - 2 * pad; r_in = round(iw * 0.008)
+    r_out = r_in + pad
     ih = iw * ratio
     screen = (f'<div class="{cls}" style="width:{w}px;height:{ih + 2 * pad:.1f}px;padding:{pad}px;border-radius:{r_out}px{" " + str(r_out) + "px 6px 6px" if cls == "lp" else ""}">'
               f'<img src="{src}" style="width:{iw}px;height:{ih:.1f}px;border-radius:{r_in}px"></div>')
