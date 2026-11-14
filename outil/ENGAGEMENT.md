@@ -110,3 +110,19 @@ Les posts de la semaine doivent donc être rendus (`outil/rendre.py`) par cette 
 5. Créer les documents (db_write `set`, 10 par appel au plus, attendre 2 s entre les appels).
 6. Ajouter les sujets de la semaine à `outil/journal-engagement.md` (date, marque, format, sujet), commit et push.
 7. Résumer : nombre de posts, reels et stories programmés, et les sujets de la semaine.
+
+
+## JBKT : montrer ce qu'on construit (depuis le 15/11/2026)
+
+Karim veut des contenus JBKT plus concrets : on voit l'outil, on comprend ce qu'il fait.
+Source : la banque d'écrans `banque/jbkt/` (`ecrans.json` = les écrans, `series.json` = les textes de chaque démo).
+
+- Rendu : `python3 outil/demo.py <demo> <dossier> --reel` donne le post (1080 × 1350), une story par écran et le reel.
+  Déjà rendus dans `images/demos/` et `videos/demos/` (noms `<demo>-post.jpg`, `<demo>-story-<n>.jpg`, `<demo>-reel.mp4`).
+- Semaine JBKT : **4 jours sur 7 = une démo** (post à 08:30 + reel de la démo à 12:30 + 2 stories de la démo à 17:30 et 19:30) ;
+  les 3 autres jours gardent les formats d'engagement (Ce ou ça, Question, Astuce) et les vidéos déjà programmées (réalisations).
+- Une démo n'est utilisée qu'une fois toutes les 6 semaines : noter la date dans `ecrans.json` (`utilise_le`).
+- Légende : celle de `series.json` (`caption`, `hashtags`). Toujours « Démo réalisée avec des données fictives ».
+  **Jamais** « notre client », « réalisation pour… » : ce sont des démos, pas des clients.
+- Nouvelle démo déposée sans entrée dans `series.json` : l'écrire (cible, titre court sur 2 lignes, une phrase simple par écran,
+  caption, hashtags, musique clair|calme|elan), rendre, vérifier les images à l'œil, puis programmer.

@@ -1,0 +1,308 @@
+[
+ {
+  "demo": "crm-commercial",
+  "titre": "Démo 3 — CRM commercial PME (marque fictive « Nordal Fenêtres & volets »)",
+  "statut": "demo",
+  "utilise_le": [],
+  "ecrans": [
+   {
+    "fichier": "crm/crm-commercial-1-ordinateur.jpg",
+    "n": 1,
+    "appareil": "ordinateur",
+    "legende": "toutes les affaires classées par étape (à contacter, devis envoyé, négociation, signé), avec les montants."
+   },
+   {
+    "fichier": "crm/crm-commercial-2-ordinateur.jpg",
+    "n": 2,
+    "appareil": "ordinateur",
+    "legende": "la fiche client réunit les coordonnées, l'affaire en cours, l'historique des échanges et la prochaine action."
+   },
+   {
+    "fichier": "crm/crm-commercial-3-ordinateur.jpg",
+    "n": 3,
+    "appareil": "ordinateur",
+    "legende": "le devis détaillé, avec le suivi d'ouverture par le client et la marge estimée."
+   },
+   {
+    "fichier": "crm/crm-commercial-4-ordinateur.jpg",
+    "n": 4,
+    "appareil": "ordinateur",
+    "legende": "la liste des relances du jour et l'e-mail de relance déjà prêt à envoyer."
+   },
+   {
+    "fichier": "crm/crm-commercial-5-ordinateur.jpg",
+    "n": 5,
+    "appareil": "ordinateur",
+    "legende": "le chiffre signé du mois face à l'objectif, mois par mois et par produit."
+   }
+  ]
+ },
+ {
+  "demo": "outils-metier-btp",
+  "titre": "Démo 1 — Artisan BTP : bons d'intervention (marque fictive « Roth & Fils », plomberie-chauffage)",
+  "statut": "demo",
+  "utilise_le": [],
+  "ecrans": [
+   {
+    "fichier": "outils-metier/outils-metier-btp-1-telephone.jpg",
+    "n": 1,
+    "appareil": "telephone",
+    "legende": "le technicien voit sur son téléphone ses 4 interventions du jour, celle en cours en avant."
+   },
+   {
+    "fichier": "outils-metier/outils-metier-btp-2-tablette.jpg",
+    "n": 2,
+    "appareil": "tablette",
+    "legende": "sur la tablette, le bon d'intervention est rempli : travaux faits, pièces, temps passé, photos et remarques."
+   },
+   {
+    "fichier": "outils-metier/outils-metier-btp-3-tablette.jpg",
+    "n": 3,
+    "appareil": "tablette",
+    "legende": "le client signe directement sur la tablette et reçoit une copie par e-mail."
+   },
+   {
+    "fichier": "outils-metier/outils-metier-btp-4-telephone.jpg",
+    "n": 4,
+    "appareil": "telephone",
+    "legende": "le téléphone confirme que le bon est bien arrivé au bureau et affiche l'intervention suivante."
+   },
+   {
+    "fichier": "outils-metier/outils-metier-btp-5-tablette.jpg",
+    "n": 5,
+    "appareil": "tablette",
+    "legende": "au bureau, on voit tous les bons signés à facturer et on crée les factures en un clic."
+   }
+  ]
+ },
+ {
+  "demo": "outils-metier-devis-factures",
+  "titre": "Démo 6 — Devis et factures (marque fictive « Atelier Hamm », peinture et décoration)",
+  "statut": "demo",
+  "utilise_le": [],
+  "ecrans": [
+   {
+    "fichier": "outils-metier/outils-metier-devis-factures-1-ordinateur.jpg",
+    "n": 1,
+    "appareil": "ordinateur",
+    "legende": "création d'un devis en 3 étapes, ici les prestations, avec le total calculé tout seul."
+   },
+   {
+    "fichier": "outils-metier/outils-metier-devis-factures-2-telephone.jpg",
+    "n": 2,
+    "appareil": "telephone",
+    "legende": "la cliente reçoit le devis sur son téléphone et peut l'accepter et le signer en un geste."
+   },
+   {
+    "fichier": "outils-metier/outils-metier-devis-factures-3-telephone.jpg",
+    "n": 3,
+    "appareil": "telephone",
+    "legende": "l'artisan voit que le devis est accepté, signé, et que l'acompte est déjà payé."
+   },
+   {
+    "fichier": "outils-metier/outils-metier-devis-factures-4-ordinateur.jpg",
+    "n": 4,
+    "appareil": "ordinateur",
+    "legende": "la facture est créée depuis le devis, avec l'acompte déjà déduit, sans rien ressaisir."
+   },
+   {
+    "fichier": "outils-metier/outils-metier-devis-factures-5-ordinateur.jpg",
+    "n": 5,
+    "appareil": "ordinateur",
+    "legende": "la liste des factures payées, en attente et en retard, avec les montants à encaisser."
+   }
+  ]
+ },
+ {
+  "demo": "outils-metier-garage",
+  "titre": "Démo 2 — Garage : suivi des véhicules (marque fictive « Garage Morand », mécanique et entretien)",
+  "statut": "demo",
+  "utilise_le": [],
+  "ecrans": [
+   {
+    "fichier": "outils-metier/outils-metier-garage-1-ordinateur.jpg",
+    "n": 1,
+    "appareil": "ordinateur",
+    "legende": "l'agenda de l'atelier, pont par pont, avec les voitures terminées, en cours et à venir."
+   },
+   {
+    "fichier": "outils-metier/outils-metier-garage-2-ordinateur.jpg",
+    "n": 2,
+    "appareil": "ordinateur",
+    "legende": "la fiche du véhicule avec son kilométrage, tout son historique et les prochaines échéances."
+   },
+   {
+    "fichier": "outils-metier/outils-metier-garage-3-telephone.jpg",
+    "n": 3,
+    "appareil": "telephone",
+    "legende": "la cliente reçoit le devis de réparation sur son téléphone, choisit les options et le valide."
+   },
+   {
+    "fichier": "outils-metier/outils-metier-garage-4-telephone.jpg",
+    "n": 4,
+    "appareil": "telephone",
+    "legende": "le rappel d'entretien part tout seul par SMS, le client répond et le rendez-vous se crée automatiquement."
+   }
+  ]
+ },
+ {
+  "demo": "outils-metier-production",
+  "titre": "Démo 4 — Atelier / usine : suivi de production (marque fictive « Vogt Industrie », découpage et emboutissage)",
+  "statut": "demo",
+  "utilise_le": [],
+  "ecrans": [
+   {
+    "fichier": "outils-metier/outils-metier-production-1-tablette.jpg",
+    "n": 1,
+    "appareil": "tablette",
+    "legende": "l'écran du poste sur tablette, avec le compteur de pièces et 3 gros boutons : démarrer, pause, terminé."
+   },
+   {
+    "fichier": "outils-metier/outils-metier-production-2-ordinateur.jpg",
+    "n": 2,
+    "appareil": "ordinateur",
+    "legende": "sur l'ordinateur, tous les ordres de fabrication du jour avec l'avancement de chaque poste."
+   },
+   {
+    "fichier": "outils-metier/outils-metier-production-3-tablette.jpg",
+    "n": 3,
+    "appareil": "tablette",
+    "legende": "l'opérateur déclare un arrêt en deux touches (panne, réglage, manque matière…) et prévient la maintenance."
+   },
+   {
+    "fichier": "outils-metier/outils-metier-production-4-ordinateur.jpg",
+    "n": 4,
+    "appareil": "ordinateur",
+    "legende": "le tableau de bord de la journée : pièces produites, état des postes, arrêts et leurs causes."
+   }
+  ]
+ },
+ {
+  "demo": "sites-beaute",
+  "titre": "Institut de beauté — « Maison Ilona »",
+  "statut": "demo",
+  "utilise_le": [],
+  "ecrans": [
+   {
+    "fichier": "sites/sites-beaute-1-ordinateur.jpg",
+    "n": 1,
+    "appareil": "ordinateur",
+    "legende": "la page d'accueil sur ordinateur, douce et calme, avec la prise de rendez-vous en avant."
+   },
+   {
+    "fichier": "sites/sites-beaute-2-telephone.jpg",
+    "n": 2,
+    "appareil": "telephone",
+    "legende": "l'accueil sur téléphone, avec le bouton de rendez-vous et la liste des soins."
+   },
+   {
+    "fichier": "sites/sites-beaute-3-ordinateur.jpg",
+    "n": 3,
+    "appareil": "ordinateur",
+    "legende": "la page des soins du visage avec les tarifs, la réservation et les avis clientes."
+   },
+   {
+    "fichier": "sites/sites-beaute-4-telephone.jpg",
+    "n": 4,
+    "appareil": "telephone",
+    "legende": "la réservation d'un soin sur téléphone, en trois choix simples."
+   }
+  ]
+ },
+ {
+  "demo": "sites-conseil",
+  "titre": "Cabinet de conseil — « Arcane Conseil »",
+  "statut": "demo",
+  "utilise_le": [],
+  "ecrans": [
+   {
+    "fichier": "sites/sites-conseil-1-ordinateur.jpg",
+    "n": 1,
+    "appareil": "ordinateur",
+    "legende": "la page d'accueil sur ordinateur, avec les 4 expertises et la prise d'appel découverte."
+   },
+   {
+    "fichier": "sites/sites-conseil-2-telephone.jpg",
+    "n": 2,
+    "appareil": "telephone",
+    "legende": "l'accueil sur téléphone, avec le bouton pour réserver un appel."
+   },
+   {
+    "fichier": "sites/sites-conseil-3-ordinateur.jpg",
+    "n": 3,
+    "appareil": "ordinateur",
+    "legende": "la page « Notre accompagnement » avec les 3 formules, le formulaire et les avis de dirigeants."
+   },
+   {
+    "fichier": "sites/sites-conseil-4-telephone.jpg",
+    "n": 4,
+    "appareil": "telephone",
+    "legende": "la réservation d'un appel découverte sur téléphone."
+   }
+  ]
+ },
+ {
+  "demo": "sites-renovation",
+  "titre": "Artisan rénovation — « Kern Rénovation »",
+  "statut": "demo",
+  "utilise_le": [],
+  "ecrans": [
+   {
+    "fichier": "sites/sites-renovation-1-ordinateur.jpg",
+    "n": 1,
+    "appareil": "ordinateur",
+    "legende": "la page d'accueil sur ordinateur, avec la promesse, les boutons « Demander un devis » et « Appeler », et les 4 services."
+   },
+   {
+    "fichier": "sites/sites-renovation-2-telephone.jpg",
+    "n": 2,
+    "appareil": "telephone",
+    "legende": "la même page d'accueil sur téléphone, avec les gros boutons devis et appel juste sous la photo."
+   },
+   {
+    "fichier": "sites/sites-renovation-3-ordinateur.jpg",
+    "n": 3,
+    "appareil": "ordinateur",
+    "legende": "la page « Salle de bain » : les étapes du chantier, le formulaire de devis et les avis clients."
+   },
+   {
+    "fichier": "sites/sites-renovation-4-telephone.jpg",
+    "n": 4,
+    "appareil": "telephone",
+    "legende": "le formulaire de devis sur téléphone, avec un avis client et le pied de page."
+   }
+  ]
+ },
+ {
+  "demo": "sites-restaurant",
+  "titre": "Restaurant — « Maison Brunner »",
+  "statut": "demo",
+  "utilise_le": [],
+  "ecrans": [
+   {
+    "fichier": "sites/sites-restaurant-1-ordinateur.jpg",
+    "n": 1,
+    "appareil": "ordinateur",
+    "legende": "la page d'accueil sur ordinateur, avec le bouton pour réserver une table et appeler."
+   },
+   {
+    "fichier": "sites/sites-restaurant-2-telephone.jpg",
+    "n": 2,
+    "appareil": "telephone",
+    "legende": "l'accueil sur téléphone, avec la réservation en un geste."
+   },
+   {
+    "fichier": "sites/sites-restaurant-3-ordinateur.jpg",
+    "n": 3,
+    "appareil": "ordinateur",
+    "legende": "la carte avec les prix, la réservation et les avis."
+   },
+   {
+    "fichier": "sites/sites-restaurant-4-telephone.jpg",
+    "n": 4,
+    "appareil": "telephone",
+    "legende": "la réservation d'une table sur téléphone."
+   }
+  ]
+ }
+]

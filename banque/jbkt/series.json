@@ -1,0 +1,176 @@
+{
+ "outils-metier-btp": {
+  "cible": "Artisans du bâtiment",
+  "titre": "Le bon d’intervention, rempli et signé sur la tablette.",
+  "cta": "Votre outil sur mesure ?",
+  "musique": "elan",
+  "phrases": [
+   "Le matin, le technicien voit ses interventions du jour.",
+   "Sur place, le bon se remplit : travaux, pièces, photos.",
+   "Le client signe sur la tablette, et reçoit sa copie.",
+   "Le bon arrive au bureau tout de suite.",
+   "Au bureau, les bons signés sont prêts à facturer."
+  ],
+  "caption": "Artisans du bâtiment : et si le bon d’intervention ne repassait plus par le papier ?\n\nExemple d’outil que nous construisons :\n· le technicien voit ses interventions du jour sur son téléphone\n· il remplit le bon sur la tablette, avec photos et pièces\n· le client signe sur place\n· le bureau reçoit le bon et facture en un clic\n\nDémo réalisée avec des données fictives. Chaque outil est construit sur mesure, avec vos étapes et vos mots.\n\nDémo gratuite de 30 minutes : lien en bio.",
+  "hashtags": [
+   "#Artisan",
+   "#BTP",
+   "#ApplicationSurMesure",
+   "#Strasbourg"
+  ]
+ },
+ "crm-commercial": {
+  "cible": "PME",
+  "titre": "Vos affaires, du contact à la signature.",
+  "cta": "Votre CRM sur mesure ?",
+  "musique": "calme",
+  "phrases": [
+   "Chaque affaire, classée par étape, avec son montant.",
+   "La fiche client : échanges, affaire en cours, prochaine action.",
+   "Le devis, et le suivi de son ouverture par le client.",
+   "Les relances du jour, avec l’e-mail déjà prêt.",
+   "Le chiffre signé du mois, face à l’objectif."
+  ],
+  "caption": "Vos affaires en cours, elles sont où ? Dans un Excel, dans des mails, dans votre tête ?\n\nExemple de CRM que nous construisons :\n· toutes les affaires classées par étape\n· la fiche client avec l’historique des échanges\n· les relances du jour, prêtes à partir\n· le chiffre du mois, face à l’objectif\n\nDémo réalisée avec des données fictives. Votre CRM suit vos étapes de vente à vous.\n\nDémo gratuite de 30 minutes : lien en bio.",
+  "hashtags": [
+   "#CRM",
+   "#PME",
+   "#LogicielMetier",
+   "#Strasbourg"
+  ]
+ },
+ "outils-metier-production": {
+  "cible": "Ateliers et usines",
+  "titre": "La production de la journée, poste par poste.",
+  "cta": "Votre suivi de production ?",
+  "musique": "elan",
+  "phrases": [
+   "Au poste : un compteur et 3 gros boutons.",
+   "Au bureau : tous les ordres de fabrication du jour.",
+   "Un arrêt ? Déclaré en deux touches.",
+   "Le soir : pièces produites, arrêts et leurs causes."
+  ],
+  "caption": "Vos ordres de fabrication, vous les suivez comment ? Papier au poste, Excel au bureau ?\n\nExemple d’outil de suivi de production que nous construisons :\n· une tablette au poste, avec 3 gros boutons\n· les ordres de fabrication du jour au bureau\n· les arrêts déclarés en deux touches\n· le tableau de bord de la journée\n\nDémo réalisée avec des données fictives. Nous partons de vos postes et de vos documents actuels.\n\nDémo gratuite de 30 minutes : lien en bio.",
+  "hashtags": [
+   "#Industrie",
+   "#SuiviDeProduction",
+   "#PME",
+   "#GrandEst"
+  ]
+ },
+ "outils-metier-devis-factures": {
+  "cible": "Artisans et indépendants",
+  "titre": "Du devis signé à la facture, sans rien ressaisir.",
+  "cta": "Vos devis et factures ?",
+  "musique": "clair",
+  "phrases": [
+   "Le devis se crée en 3 étapes, le total se calcule seul.",
+   "Le client le reçoit sur son téléphone et le signe.",
+   "Devis accepté, acompte payé : vous le voyez tout de suite.",
+   "La facture se crée depuis le devis, acompte déduit.",
+   "Payées, en attente, en retard : tout est clair."
+  ],
+  "caption": "Le devis tapé le soir, puis la facture retapée une semaine plus tard ?\n\nExemple d’outil devis et factures que nous construisons :\n· le devis en 3 étapes, total calculé tout seul\n· signé par le client sur son téléphone\n· la facture créée depuis le devis, sans ressaisie\n· le suivi des factures payées et en retard\n\nDémo réalisée avec des données fictives.\n\nDémo gratuite de 30 minutes : lien en bio.",
+  "hashtags": [
+   "#Artisan",
+   "#Devis",
+   "#Facturation",
+   "#PME"
+  ]
+ },
+ "outils-metier-garage": {
+  "cible": "Garages",
+  "titre": "Chaque véhicule, son historique et ses rappels.",
+  "cta": "Votre outil de garage ?",
+  "musique": "calme",
+  "phrases": [
+   "L’agenda de l’atelier, pont par pont.",
+   "La fiche du véhicule : kilométrage, historique, échéances.",
+   "Le client valide son devis sur son téléphone.",
+   "Le rappel d’entretien part tout seul."
+  ],
+  "caption": "Garage : l’historique de chaque voiture, il est où ?\n\nExemple d’outil que nous construisons :\n· l’agenda de l’atelier, pont par pont\n· la fiche de chaque véhicule avec son historique\n· le devis validé par le client sur son téléphone\n· les rappels d’entretien envoyés au bon moment\n\nDémo réalisée avec des données fictives.\n\nDémo gratuite de 30 minutes : lien en bio.",
+  "hashtags": [
+   "#Garage",
+   "#Artisan",
+   "#ApplicationSurMesure",
+   "#Strasbourg"
+  ]
+ },
+ "sites-renovation": {
+  "cible": "Site vitrine · Artisan rénovation",
+  "titre": "Un site qui donne envie de demander un devis.",
+  "cta": "Votre site internet ?",
+  "musique": "clair",
+  "phrases": [
+   "L’accueil : la promesse, et deux boutons, devis et appel.",
+   "Sur téléphone, les boutons sont juste sous la photo.",
+   "Une page par métier, avec les étapes et les avis.",
+   "Le formulaire de devis, simple, sur téléphone."
+  ],
+  "caption": "Votre site amène des demandes de devis, ou il reste une vitrine qu’on ne regarde pas ?\n\nExemple de site vitrine que nous créons pour un artisan :\n· deux boutons visibles tout de suite : devis et appel\n· une page par métier, avec les étapes du chantier\n· un formulaire de devis court, pensé pour le téléphone\n\nDémo réalisée avec des données fictives.\n\nDémo gratuite de 30 minutes : lien en bio.",
+  "hashtags": [
+   "#CreationSiteInternet",
+   "#Artisan",
+   "#SiteWeb",
+   "#Strasbourg"
+  ]
+ },
+ "sites-beaute": {
+  "cible": "Site vitrine · Institut de beauté",
+  "titre": "Un site doux, et un rendez-vous en trois choix.",
+  "cta": "Votre site internet ?",
+  "musique": "calme",
+  "phrases": [
+   "L’accueil, avec la prise de rendez-vous en avant.",
+   "Sur téléphone, le bouton de rendez-vous et les soins.",
+   "Une page par soin, avec les tarifs et les avis.",
+   "La réservation en trois choix simples."
+  ],
+  "caption": "Institut de beauté : vos clientes trouvent vos soins et réservent, même le soir ?\n\nExemple de site que nous créons :\n· la prise de rendez-vous mise en avant\n· une page par soin, avec les tarifs\n· la réservation en trois choix, sur téléphone\n\nDémo réalisée avec des données fictives.\n\nDémo gratuite de 30 minutes : lien en bio.",
+  "hashtags": [
+   "#CreationSiteInternet",
+   "#InstitutDeBeaute",
+   "#SiteWeb",
+   "#Strasbourg"
+  ]
+ },
+ "sites-conseil": {
+  "cible": "Site vitrine · Cabinet de conseil",
+  "titre": "Un site clair, qui mène à un appel découverte.",
+  "cta": "Votre site internet ?",
+  "musique": "calme",
+  "phrases": [
+   "L’accueil : les expertises et l’appel découverte.",
+   "Sur téléphone, un bouton pour réserver un appel.",
+   "Les formules d’accompagnement, expliquées simplement.",
+   "La réservation d’un appel en quelques gestes."
+  ],
+  "caption": "Un cabinet de conseil vend de la confiance. Son site doit la montrer, et mener à un premier échange.\n\nExemple de site que nous créons :\n· les expertises lisibles dès l’accueil\n· les formules expliquées simplement\n· la réservation d’un appel découverte\n\nDémo réalisée avec des données fictives.\n\nDémo gratuite de 30 minutes : lien en bio.",
+  "hashtags": [
+   "#CreationSiteInternet",
+   "#Conseil",
+   "#SiteWeb",
+   "#Strasbourg"
+  ]
+ },
+ "sites-restaurant": {
+  "cible": "Site vitrine · Restaurant",
+  "titre": "La carte, et une table réservée en un geste.",
+  "cta": "Votre site internet ?",
+  "musique": "clair",
+  "phrases": [
+   "L’accueil : réserver une table, ou appeler.",
+   "Sur téléphone, la réservation en un geste.",
+   "La carte avec les prix, toujours à jour.",
+   "La réservation d’une table, en quelques secondes."
+  ],
+  "caption": "Restaurant : vos clients trouvent la carte et réservent sans vous appeler en plein service ?\n\nExemple de site que nous créons :\n· le bouton « Réserver une table » partout\n· la carte avec les prix, facile à mettre à jour\n· la réservation en quelques secondes sur téléphone\n\nDémo réalisée avec des données fictives.\n\nDémo gratuite de 30 minutes : lien en bio.",
+  "hashtags": [
+   "#CreationSiteInternet",
+   "#Restaurant",
+   "#SiteWeb",
+   "#Strasbourg"
+  ]
+ }
+}
