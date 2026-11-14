@@ -126,3 +126,13 @@ Source : la banque d'écrans `banque/jbkt/` (`ecrans.json` = les écrans, `serie
   **Jamais** « notre client », « réalisation pour… » : ce sont des démos, pas des clients.
 - Nouvelle démo déposée sans entrée dans `series.json` : l'écrire (cible, titre court sur 2 lignes, une phrase simple par écran,
   caption, hashtags, musique clair|calme|elan), rendre, vérifier les images à l'œil, puis programmer.
+
+
+## JBKT : nouvelle DA et alternance (depuis le 15/11/2026, demande de Karim)
+
+- Tous les visuels JBKT suivent la DA des démos : fond clair #F3F7FF, Manrope, logo JBKT en haut à gauche, pastille en haut à droite,
+  bandeau nuit #0B1533 en bas avec l'appel à l'action et « Lien en bio ».
+- Posts texte : `python3 outil/texte.py <post.json> <sortie.jpg>` (kinds : standard, sondage, astuce, fichiers, etapes ; exemples dans `images/textes/*.json`).
+  Ne plus utiliser `outil/rendre.py` pour JBKT (il reste pour Radar VTC).
+- **Alternance** : un jour une démo (post + reel de la démo + 2 stories de la démo), le lendemain un post texte (+ sa story via `outil/story.py`, + le reel du jour).
+- Les posts texte gardés : ceux qui parlent d'un problème concret avec une phrase forte (ex. « Combien de versions de ce fichier circulent ? »).
