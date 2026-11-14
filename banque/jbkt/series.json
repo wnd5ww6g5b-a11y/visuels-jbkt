@@ -172,5 +172,119 @@
    "#SiteWeb",
    "#Strasbourg"
   ]
+ },
+ "outils-metier-planning-equipe": {
+  "cible": "Entreprises de services",
+  "titre": "Le planning de l’équipe, dans la poche de chacun.",
+  "cta": "Votre planning sur mesure ?",
+  "musique": "calme",
+  "phrases": [
+   "Au bureau : la semaine de chacun, site par site.",
+   "Sur son téléphone, chacun voit sa journée.",
+   "Les congés se demandent en quelques gestes.",
+   "Un changement ? Chacun est prévenu tout de suite."
+  ],
+  "caption": "Le planning de l’équipe : sur le frigo, dans un Excel, ou dans 15 messages ?\n\nExemple d’outil de planning que nous construisons :\n· la semaine de chacun, site par site, au bureau\n· la journée de chaque salarié sur son téléphone\n· les congés demandés en quelques gestes\n· une notification à chaque changement\n\nDémo réalisée avec des données fictives.\n\nDémo gratuite de 30 minutes : lien en bio.",
+  "hashtags": [
+   "#Planning",
+   "#PME",
+   "#Organisation",
+   "#Strasbourg"
+  ]
+ },
+ "apps-restaurant": {
+  "cible": "Restaurants",
+  "titre": "Réservations et commandes, au même endroit.",
+  "cta": "Votre outil de restaurant ?",
+  "musique": "clair",
+  "phrases": [
+   "Le client choisit le nombre de personnes et le jour.",
+   "Puis l’heure, parmi les créneaux libres.",
+   "Réservation confirmée, rappel la veille.",
+   "En salle : le plan des tables et les arrivées du soir.",
+   "Les commandes à emporter arrivent sur la tablette."
+  ],
+  "caption": "Restaurant : les réservations au téléphone en plein service, les commandes notées sur un ticket ?\n\nExemple d’outil que nous construisons :\n· la réservation en ligne, créneau par créneau\n· le plan des tables et les arrivées du soir sur tablette\n· les commandes à emporter, de « nouvelles » à « prêtes »\n\nDémo réalisée avec des données fictives.\n\nDémo gratuite de 30 minutes : lien en bio.",
+  "hashtags": [
+   "#Restaurant",
+   "#ReservationEnLigne",
+   "#Commerce",
+   "#Strasbourg"
+  ]
+ },
+ "apps-boulangerie": {
+  "cible": "Boulangeries et commerces",
+  "titre": "La commande en ligne, et le retrait à l’heure choisie.",
+  "cta": "Votre commande en ligne ?",
+  "musique": "clair",
+  "phrases": [
+   "Le client choisit ses pains et viennoiseries.",
+   "Puis le jour et le créneau de retrait.",
+   "Il paie en ligne, ou en boutique.",
+   "En boutique : les commandes du jour, créneau par créneau."
+  ],
+  "caption": "Les commandes de gâteaux prises au téléphone, notées sur un carnet ?\n\nExemple de commande en ligne que nous construisons :\n· le catalogue, panier en bas de l’écran\n· le créneau de retrait choisi par le client\n· le paiement en ligne ou en boutique\n· toutes les commandes du jour, rangées par créneau\n\nDémo réalisée avec des données fictives.\n\nDémo gratuite de 30 minutes : lien en bio.",
+  "hashtags": [
+   "#Boulangerie",
+   "#Commerce",
+   "#CommandeEnLigne",
+   "#Strasbourg"
+  ]
+ },
+ "outils-metier-stock": {
+  "cible": "Commerces et dépôts",
+  "titre": "Le stock à jour, et les ruptures vues à temps.",
+  "cta": "Votre gestion de stock ?",
+  "musique": "elan",
+  "phrases": [
+   "Les produits, avec les alertes de stock bas.",
+   "Au dépôt, on scanne l’article avec le téléphone.",
+   "Une sortie s’enregistre en trois touches.",
+   "La commande fournisseur se prépare toute seule."
+  ],
+  "caption": "Votre stock, vous le connaissez vraiment, ou vous le découvrez quand il manque ?\n\nExemple d’outil de stock que nous construisons :\n· les alertes de stock bas bien visibles\n· le scan d’un article avec le téléphone\n· les sorties enregistrées en trois touches\n· la commande fournisseur préparée à partir des alertes\n\nDémo réalisée avec des données fictives.\n\nDémo gratuite de 30 minutes : lien en bio.",
+  "hashtags": [
+   "#GestionDeStock",
+   "#PME",
+   "#Commerce",
+   "#GrandEst"
+  ]
+ },
+ "tableaux-de-bord-dirigeant": {
+  "cible": "Dirigeants de PME",
+  "titre": "Votre entreprise, en un coup d’œil.",
+  "cta": "Votre tableau de bord ?",
+  "musique": "calme",
+  "phrases": [
+   "Le chiffre du mois, les devis, les chantiers en retard.",
+   "Les mêmes chiffres sur téléphone, partout."
+  ],
+  "caption": "Combien de devis en cours ? Quels chantiers en retard ? Sans attendre la fin du mois pour le savoir.\n\nExemple de tableau de bord que nous construisons :\n· le chiffre du mois et les devis en cours\n· les interventions de la semaine\n· les chantiers en retard\n· la même vue sur téléphone\n\nDémo réalisée avec des données fictives.\n\nDémo gratuite de 30 minutes : lien en bio.",
+  "hashtags": [
+   "#TableauDeBord",
+   "#PME",
+   "#Dirigeant",
+   "#Strasbourg"
+  ]
+ },
+ "apps-rendez-vous": {
+  "cible": "Appli client · Prise de rendez-vous",
+  "titre": "Un rendez-vous pris en quelques gestes.",
+  "cta": "Votre appli de rendez-vous ?",
+  "musique": "clair",
+  "phrases": [
+   "La cliente choisit sa prestation.",
+   "Puis son coiffeur, le jour et l’heure.",
+   "Rendez-vous confirmé, ajouté au calendrier.",
+   "La veille, un rappel pour confirmer ou déplacer.",
+   "L’historique, la carte fidélité, et on recommence."
+  ],
+  "caption": "Vos clients prennent rendez-vous tout seuls, même à minuit ?\n\nExemple d’appli de rendez-vous que nous construisons :\n· la prestation, la personne, le jour et l’heure\n· la confirmation et l’ajout au calendrier\n· un rappel la veille\n· l’historique et la carte fidélité\n\nDémo réalisée avec des données fictives.\n\nDémo gratuite de 30 minutes : lien en bio.",
+  "hashtags": [
+   "#ApplicationMobile",
+   "#PriseDeRendezVous",
+   "#Commerce",
+   "#Strasbourg"
+  ]
  }
 }

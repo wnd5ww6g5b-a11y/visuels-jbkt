@@ -304,5 +304,197 @@
     "legende": "la réservation d'une table sur téléphone."
    }
   ]
+ },
+ {
+  "demo": "outils-metier-planning-equipe",
+  "titre": "Démo 5 — Planning d'équipe (marque fictive « Clairéo Services », propreté et entretien)",
+  "statut": "demo",
+  "utilise_le": [],
+  "ecrans": [
+   {
+    "fichier": "outils-metier/outils-metier-planning-equipe-1-ordinateur.jpg",
+    "n": 1,
+    "appareil": "ordinateur",
+    "legende": "sur l'ordinateur, le planning de la semaine personne par personne, site par site, avec congés et créneaux modifiés."
+   },
+   {
+    "fichier": "outils-metier/outils-metier-planning-equipe-2-telephone.jpg",
+    "n": 2,
+    "appareil": "telephone",
+    "legende": "sur son téléphone, la salariée voit sa journée en cours, ses heures et le reste de sa semaine."
+   },
+   {
+    "fichier": "outils-metier/outils-metier-planning-equipe-3-telephone.jpg",
+    "n": 3,
+    "appareil": "telephone",
+    "legende": "elle demande ses congés en choisissant les jours dans un calendrier, avec son solde calculé tout seul."
+   },
+   {
+    "fichier": "outils-metier/outils-metier-planning-equipe-4-telephone.jpg",
+    "n": 4,
+    "appareil": "telephone",
+    "legende": "elle reçoit une notification quand son planning change, avec l'avant / après et le mot de sa responsable."
+   }
+  ]
+ },
+ {
+  "demo": "apps-restaurant",
+  "titre": "Démo 7 — Restaurant : réservation et commandes (marque fictive « Nonna Rosa », trattoria)",
+  "statut": "demo",
+  "utilise_le": [],
+  "ecrans": [
+   {
+    "fichier": "apps/apps-restaurant-1-telephone.jpg",
+    "n": 1,
+    "appareil": "telephone",
+    "legende": "le client ouvre la page de réservation et choisit le nombre de personnes et le jour."
+   },
+   {
+    "fichier": "apps/apps-restaurant-2-telephone.jpg",
+    "n": 2,
+    "appareil": "telephone",
+    "legende": "il choisit l'heure parmi les créneaux libres, sa place en salle, et peut laisser une précision."
+   },
+   {
+    "fichier": "apps/apps-restaurant-3-telephone.jpg",
+    "n": 3,
+    "appareil": "telephone",
+    "legende": "la réservation est confirmée, avec un rappel prévu par SMS la veille."
+   },
+   {
+    "fichier": "apps/apps-restaurant-4-tablette.jpg",
+    "n": 4,
+    "appareil": "tablette",
+    "legende": "en salle, la tablette montre le plan des tables et les arrivées du soir, à pointer en un geste."
+   },
+   {
+    "fichier": "apps/apps-restaurant-5-tablette.jpg",
+    "n": 5,
+    "appareil": "tablette",
+    "legende": "les commandes à emporter arrivent sur la tablette et passent de « nouvelles » à « prêtes » en un clic."
+   }
+  ]
+ },
+ {
+  "demo": "apps-boulangerie",
+  "titre": "Démo 8 — Boulangerie : commande en ligne (marque fictive « Maison Paulin », boulangerie-pâtisserie)",
+  "statut": "demo",
+  "utilise_le": [],
+  "ecrans": [
+   {
+    "fichier": "apps/apps-boulangerie-1-telephone.jpg",
+    "n": 1,
+    "appareil": "telephone",
+    "legende": "le client choisit ses pains et viennoiseries dans le catalogue, son panier se remplit en bas."
+   },
+   {
+    "fichier": "apps/apps-boulangerie-2-telephone.jpg",
+    "n": 2,
+    "appareil": "telephone",
+    "legende": "il choisit le jour et le créneau de retrait parmi ceux encore disponibles."
+   },
+   {
+    "fichier": "apps/apps-boulangerie-3-telephone.jpg",
+    "n": 3,
+    "appareil": "telephone",
+    "legende": "il paie en ligne par carte ou choisit de payer en boutique."
+   },
+   {
+    "fichier": "apps/apps-boulangerie-4-ordinateur.jpg",
+    "n": 4,
+    "appareil": "ordinateur",
+    "legende": "en boutique, toutes les commandes du jour sont rangées par créneau, à préparer, prêtes ou retirées."
+   }
+  ]
+ },
+ {
+  "demo": "outils-metier-stock",
+  "titre": "Démo 9 — Gestion de stock (marque fictive « Comptoir Elec Rhin », fournitures électriques)",
+  "statut": "demo",
+  "utilise_le": [],
+  "ecrans": [
+   {
+    "fichier": "outils-metier/outils-metier-stock-1-ordinateur.jpg",
+    "n": 1,
+    "appareil": "ordinateur",
+    "legende": "sur l'ordinateur, la liste des produits avec les alertes de stock bas et de rupture bien visibles."
+   },
+   {
+    "fichier": "outils-metier/outils-metier-stock-2-telephone.jpg",
+    "n": 2,
+    "appareil": "telephone",
+    "legende": "au dépôt, on scanne le code-barres d'un article avec le téléphone et sa fiche s'affiche tout de suite."
+   },
+   {
+    "fichier": "outils-metier/outils-metier-stock-3-telephone.jpg",
+    "n": 3,
+    "appareil": "telephone",
+    "legende": "on enregistre une sortie en trois touches, pour quel chantier et par qui, avec le stock recalculé."
+   },
+   {
+    "fichier": "outils-metier/outils-metier-stock-4-ordinateur.jpg",
+    "n": 4,
+    "appareil": "ordinateur",
+    "legende": "la commande fournisseur est préparée toute seule à partir des alertes, prête à être envoyée."
+   }
+  ]
+ },
+ {
+  "demo": "tableaux-de-bord-dirigeant",
+  "titre": "Démo 10 — Tableau de bord dirigeant (marque fictive « Ritter Bâtiment », rénovation et second œuvre)",
+  "statut": "demo",
+  "utilise_le": [],
+  "ecrans": [
+   {
+    "fichier": "tableaux-de-bord/tableaux-de-bord-dirigeant-1-ordinateur.jpg",
+    "n": 1,
+    "appareil": "ordinateur",
+    "legende": "sur l'ordinateur, la dirigeante voit d'un coup d'œil le chiffre du mois, les devis en cours, les interventions de la semaine et les chantiers en retard."
+   },
+   {
+    "fichier": "tableaux-de-bord/tableaux-de-bord-dirigeant-2-telephone.jpg",
+    "n": 2,
+    "appareil": "telephone",
+    "legende": "les mêmes chiffres sur téléphone, pour suivre l'entreprise depuis n'importe où."
+   }
+  ]
+ },
+ {
+  "demo": "apps-rendez-vous",
+  "titre": "Démo 12 — Appli client : prise de rendez-vous (marque fictive « Atelier Sève », coiffure et barbier)",
+  "statut": "demo",
+  "utilise_le": [],
+  "ecrans": [
+   {
+    "fichier": "apps/apps-rendez-vous-1-telephone.jpg",
+    "n": 1,
+    "appareil": "telephone",
+    "legende": "la cliente choisit sa prestation, avec la durée et le prix affichés."
+   },
+   {
+    "fichier": "apps/apps-rendez-vous-2-telephone.jpg",
+    "n": 2,
+    "appareil": "telephone",
+    "legende": "elle choisit son coiffeur, le jour et l'heure parmi les créneaux encore libres."
+   },
+   {
+    "fichier": "apps/apps-rendez-vous-3-telephone.jpg",
+    "n": 3,
+    "appareil": "telephone",
+    "legende": "le rendez-vous est confirmé, avec l'adresse et l'ajout au calendrier."
+   },
+   {
+    "fichier": "apps/apps-rendez-vous-4-telephone.jpg",
+    "n": 4,
+    "appareil": "telephone",
+    "legende": "la veille, elle reçoit un rappel sur son téléphone pour confirmer ou déplacer en un clic."
+   },
+   {
+    "fichier": "apps/apps-rendez-vous-5-telephone.jpg",
+    "n": 5,
+    "appareil": "telephone",
+    "legende": "l'historique de ses rendez-vous, sa carte fidélité et un bouton pour reprendre la même prestation."
+   }
+  ]
  }
 ]
