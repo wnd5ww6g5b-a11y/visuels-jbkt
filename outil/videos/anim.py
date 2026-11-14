@@ -1,3 +1,4 @@
+import os
 #!/usr/bin/env python3
 """Vidéos animées (style des pubs Gloova) pour JBKT et Radar VTC.
 
@@ -204,6 +205,8 @@ def build_html(v):
     body = ''.join(parts)
     page = f'<!doctype html><html><head><meta charset="utf-8"><style>{css}</style></head><body>{body}<script>{JS}</script></body></html>'
     page = page.replace('src="A/', f'src="file://{A}/')
+    # B/ = banque d'écrans (banque/jbkt/...), déposée par Karim
+    page = page.replace('src="B/', 'src="file://' + os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'banque')) + '/')
     return page, round(total, 2)
 
 
