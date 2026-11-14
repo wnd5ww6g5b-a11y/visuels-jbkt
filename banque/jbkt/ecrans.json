@@ -3,7 +3,9 @@
   "demo": "crm-commercial",
   "titre": "Démo 3 — CRM commercial PME (marque fictive « Nordal Fenêtres & volets »)",
   "statut": "demo",
-  "utilise_le": [],
+  "utilise_le": [
+   "2026-11-15"
+  ],
   "ecrans": [
    {
     "fichier": "crm/crm-commercial-1-ordinateur.jpg",
@@ -41,7 +43,9 @@
   "demo": "outils-metier-btp",
   "titre": "Démo 1 — Artisan BTP : bons d'intervention (marque fictive « Roth & Fils », plomberie-chauffage)",
   "statut": "demo",
-  "utilise_le": [],
+  "utilise_le": [
+   "2026-11-15"
+  ],
   "ecrans": [
    {
     "fichier": "outils-metier/outils-metier-btp-1-telephone.jpg",
@@ -79,7 +83,9 @@
   "demo": "outils-metier-devis-factures",
   "titre": "Démo 6 — Devis et factures (marque fictive « Atelier Hamm », peinture et décoration)",
   "statut": "demo",
-  "utilise_le": [],
+  "utilise_le": [
+   "2026-11-16"
+  ],
   "ecrans": [
    {
     "fichier": "outils-metier/outils-metier-devis-factures-1-ordinateur.jpg",
@@ -117,7 +123,9 @@
   "demo": "outils-metier-garage",
   "titre": "Démo 2 — Garage : suivi des véhicules (marque fictive « Garage Morand », mécanique et entretien)",
   "statut": "demo",
-  "utilise_le": [],
+  "utilise_le": [
+   "2026-11-18"
+  ],
   "ecrans": [
    {
     "fichier": "outils-metier/outils-metier-garage-1-ordinateur.jpg",
@@ -149,7 +157,9 @@
   "demo": "outils-metier-production",
   "titre": "Démo 4 — Atelier / usine : suivi de production (marque fictive « Vogt Industrie », découpage et emboutissage)",
   "statut": "demo",
-  "utilise_le": [],
+  "utilise_le": [
+   "2026-11-20"
+  ],
   "ecrans": [
    {
     "fichier": "outils-metier/outils-metier-production-1-tablette.jpg",
@@ -309,7 +319,9 @@
   "demo": "outils-metier-planning-equipe",
   "titre": "Démo 5 — Planning d'équipe (marque fictive « Clairéo Services », propreté et entretien)",
   "statut": "demo",
-  "utilise_le": [],
+  "utilise_le": [
+   "2026-11-22"
+  ],
   "ecrans": [
    {
     "fichier": "outils-metier/outils-metier-planning-equipe-1-ordinateur.jpg",
