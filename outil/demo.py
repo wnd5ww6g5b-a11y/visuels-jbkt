@@ -28,28 +28,32 @@ def img(p):
     return 'data:image/jpeg;base64,' + b64(os.path.join(BANK, p))
 
 def device(e, w):
-    """Un écran dans son appareil, largeur w (px)."""
+    """Un écran dans son appareil, largeur extérieure w (px). L'écran garde exactement ses proportions : rien n'est rogné."""
     src, app = img(e['fichier']), e['appareil']
     if app == 'telephone':
-        h = w * 2556 / 1179
-        return f'<div class="ph" style="width:{w}px;height:{h + 28:.0f}px"><img src="{src}"></div>'
-    if app == 'tablette':
-        h = w * 1536 / 2048
-        return f'<div class="tb" style="width:{w}px;height:{h + 36:.0f}px"><img src="{src}"></div>'
-    h = w * 1800 / 2880
-    return f'<div class="lp" style="width:{w}px"><div class="scr" style="height:{h + 24:.0f}px"><img src="{src}"></div><div class="base"></div></div>'
+        pad, r_out, r_in, ratio = 14, 64, 52, 2556 / 1179
+        cls = 'ph'
+    elif app == 'tablette':
+        pad, r_out, r_in, ratio = 18, 40, 22, 1536 / 2048
+        cls = 'tb'
+    else:
+        pad, r_out, r_in, ratio = 12, 22, 8, 1800 / 2880
+        cls = 'lp'
+    iw = w - 2 * pad
+    ih = iw * ratio
+    screen = (f'<div class="{cls}" style="width:{w}px;height:{ih + 2 * pad:.1f}px;padding:{pad}px;border-radius:{r_out}px{" " + str(r_out) + "px 6px 6px" if cls == "lp" else ""}">'
+              f'<img src="{src}" style="width:{iw}px;height:{ih:.1f}px;border-radius:{r_in}px"></div>')
+    if cls == 'lp':
+        return f'<div style="width:{w}px">{screen}<div class="base"></div></div>'
+    return screen
 
 CSS = f"""{FONTS}
 *{{margin:0;box-sizing:border-box}}
 body{{font-family:M;letter-spacing:-0.02em;position:relative;overflow:hidden}}
 img{{display:block}}
-.ph{{background:#0d0f14;border-radius:64px;padding:14px;box-shadow:0 40px 80px rgba(11,21,51,.28)}}
-.ph img{{width:100%;height:100%;border-radius:52px;object-fit:cover}}
-.tb{{background:#0d0f14;border-radius:40px;padding:18px;box-shadow:0 40px 80px rgba(11,21,51,.25)}}
-.tb img{{width:100%;height:100%;border-radius:24px;object-fit:cover}}
-.lp .scr{{background:#0d0f14;border-radius:22px 22px 6px 6px;padding:12px;box-shadow:0 40px 80px rgba(11,21,51,.25)}}
-.lp .scr img{{width:100%;height:100%;border-radius:10px;object-fit:cover;object-position:top}}
-.lp .base{{height:20px;margin:0 -6%;background:linear-gradient(#cfd6e4,#a9b3c6);border-radius:0 0 26px 26px}}
+.ph,.tb,.lp{{background:#0d0f14;box-shadow:0 40px 80px rgba(11,21,51,.26)}}
+.ph img,.tb img,.lp img{{display:block}}
+.base{{height:20px;margin:0 -6%;background:linear-gradient(#cfd6e4,#a9b3c6);border-radius:0 0 26px 26px}}
 .logo{{background:#fff;border-radius:22px;padding:12px 20px;display:inline-block}}
 .logo img{{height:46px}}
 .chip{{display:inline-block;font-weight:700;font-size:24px;padding:10px 18px;border-radius:999px}}
@@ -58,10 +62,18 @@ img{{display:block}}
 def post_html(s, ecrans):
     main = next((e for e in ecrans if e['appareil'] != 'telephone'), ecrans[0])
     phone = next((e for e in ecrans if e['appareil'] == 'telephone' and e is not main), None)
-    mw = 800 if main['appareil'] != 'telephone' else 330
-    comp = f'<div style="position:absolute;left:{(1080 - mw) // 2 - (60 if phone else 0)}px;top:470px">{device(main, mw)}</div>'
-    if phone:
-        comp += f'<div style="position:absolute;right:56px;top:560px">{device(phone, 240)}</div>'
+    if phone and main['appareil'] != 'telephone':
+        mw, pw = (650, 230) if main['appareil'] == 'tablette' else (680, 215)
+        gap = 40
+        x0 = (1080 - mw - pw - gap) // 2
+        mh = (mw - 36) * 1536 / 2048 + 36 if main['appareil'] == 'tablette' else (mw - 24) * 1800 / 2880 + 44
+        ph = (pw - 28) * 2556 / 1179 + 28
+        top = 500
+        comp = (f'<div style="position:absolute;left:{x0}px;top:{top + max(0, (ph - mh) / 2):.0f}px">{device(main, mw)}</div>'
+                f'<div style="position:absolute;left:{x0 + mw + gap}px;top:{top + max(0, (mh - ph) / 2):.0f}px">{device(phone, pw)}</div>')
+    else:
+        mw = 860 if main['appareil'] != 'telephone' else 330
+        comp = f'<div style="position:absolute;left:{(1080 - mw) // 2}px;top:500px">{device(main, mw)}</div>'
     return f"""<html><head><style>{CSS} body{{width:1080px;height:1350px;background:{C['light']};color:{C['ink']}}}</style></head><body>
 <div style="position:absolute;left:70px;top:64px" class="logo"><img src="data:image/png;base64,{LOGO}"></div>
 <div style="position:absolute;right:70px;top:76px;background:#fff;color:{C['muted_l']}" class="chip">Démo · données fictives</div>
@@ -76,7 +88,7 @@ def post_html(s, ecrans):
 
 def story_html(s, e, i, n):
     app = e['appareil']
-    w = 440 if app == 'telephone' else (960 if app == 'tablette' else 1000)
+    w = 440 if app == 'telephone' else (940 if app == 'tablette' else 900)
     return f"""<html><head><style>{CSS} body{{width:1080px;height:1920px;background:{C['dark']};color:#fff}}</style></head><body>
 <div style="position:absolute;left:70px;top:150px" class="logo"><img src="data:image/png;base64,{LOGO}"></div>
 <div style="position:absolute;right:70px;top:164px;background:#16224A;color:{C['muted_d']}" class="chip">Démo · {i}/{n}</div>
