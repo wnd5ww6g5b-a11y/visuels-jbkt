@@ -83,9 +83,7 @@
   "demo": "outils-metier-devis-factures",
   "titre": "Démo 6 — Devis et factures (marque fictive « Atelier Hamm », peinture et décoration)",
   "statut": "demo",
-  "utilise_le": [
-   "2026-11-16"
-  ],
+  "utilise_le": [],
   "ecrans": [
    {
     "fichier": "outils-metier/outils-metier-devis-factures-1-ordinateur.jpg",
@@ -513,7 +511,9 @@
   "demo": "sites-pizzeria",
   "titre": "Démo — Site de pizzeria (marque fictive « Peppo », pizzeria au feu de bois)",
   "statut": "demo",
-  "utilise_le": [],
+  "utilise_le": [
+   "2026-11-16"
+  ],
   "ecrans": [
    {
     "fichier": "sites/sites-pizzeria-1-ordinateur.jpg",
