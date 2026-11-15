@@ -508,5 +508,67 @@
     "legende": "l'historique de ses rendez-vous, sa carte fidélité et un bouton pour reprendre la même prestation."
    }
   ]
+ },
+ {
+  "demo": "sites-pizzeria",
+  "titre": "Démo — Site de pizzeria (marque fictive « Peppo », pizzeria au feu de bois)",
+  "statut": "demo",
+  "utilise_le": [],
+  "ecrans": [
+   {
+    "fichier": "sites/sites-pizzeria-1-ordinateur.jpg",
+    "n": 1,
+    "appareil": "ordinateur",
+    "legende": "la page d'accueil sur ordinateur, avec la grande promesse, les boutons « Commander » et « Voir la carte »."
+   },
+   {
+    "fichier": "sites/sites-pizzeria-2-ordinateur.jpg",
+    "n": 2,
+    "appareil": "ordinateur",
+    "legende": "la carte par catégorie, où chaque pizza s'ajoute au panier en un clic."
+   },
+   {
+    "fichier": "sites/sites-pizzeria-3-ordinateur.jpg",
+    "n": 3,
+    "appareil": "ordinateur",
+    "legende": "le client compose sa propre pizza, pâte et garnitures, avec le prix qui se met à jour."
+   },
+   {
+    "fichier": "sites/sites-pizzeria-4-ordinateur.jpg",
+    "n": 4,
+    "appareil": "ordinateur",
+    "legende": "le délai et le prix de livraison s'affichent selon le quartier choisi, avec les avis clients."
+   },
+   {
+    "fichier": "sites/sites-pizzeria-5-ordinateur.jpg",
+    "n": 5,
+    "appareil": "ordinateur",
+    "legende": "le bas de page avec les avis, les horaires, l'adresse et le contact."
+   },
+   {
+    "fichier": "sites/sites-pizzeria-6-telephone.jpg",
+    "n": 6,
+    "appareil": "telephone",
+    "legende": "la page d'accueil sur téléphone, avec le bouton pour commander tout de suite."
+   },
+   {
+    "fichier": "sites/sites-pizzeria-7-telephone.jpg",
+    "n": 7,
+    "appareil": "telephone",
+    "legende": "la carte sur téléphone, avec le panier qui se remplit en bas de l'écran."
+   },
+   {
+    "fichier": "sites/sites-pizzeria-8-telephone.jpg",
+    "n": 8,
+    "appareil": "telephone",
+    "legende": "composer sa pizza sur téléphone, en touchant les garnitures."
+   },
+   {
+    "fichier": "sites/sites-pizzeria-9-telephone.jpg",
+    "n": 9,
+    "appareil": "telephone",
+    "legende": "choisir son quartier et voir le délai de livraison avant de commander."
+   }
+  ]
  }
 ]

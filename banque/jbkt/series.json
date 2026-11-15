@@ -286,5 +286,29 @@
    "#Commerce",
    "#Strasbourg"
   ]
+ },
+ "sites-pizzeria": {
+  "cible": "Site vitrine · Pizzeria",
+  "titre": "Commander sa pizza en ligne, en quelques gestes.",
+  "cta": "Votre site internet ?",
+  "musique": "elan",
+  "phrases": [
+   "L’accueil : « Commander » et « Voir la carte ».",
+   "La carte : chaque pizza s’ajoute en un clic.",
+   "Le client compose sa pizza, le prix suit.",
+   "Le délai de livraison selon le quartier.",
+   "En bas : avis, horaires, adresse, contact.",
+   "Sur téléphone, on commande tout de suite.",
+   "La carte, avec le panier en bas de l’écran.",
+   "Composer sa pizza en touchant les garnitures.",
+   "Le quartier, le délai, et on commande."
+  ],
+  "caption": "Pizzeria : vos clients commandent sur votre site, ou sur une plateforme qui prend sa part ?\n\nExemple de site que nous créons :\n· la carte, chaque pizza ajoutée en un clic\n· la pizza à composer soi-même, prix à jour\n· le délai de livraison selon le quartier\n· pensé d’abord pour le téléphone\n\nDémo réalisée avec des données fictives.\n\nDémo gratuite de 30 minutes : lien en bio.",
+  "hashtags": [
+   "#Pizzeria",
+   "#CreationSiteInternet",
+   "#CommandeEnLigne",
+   "#Strasbourg"
+  ]
  }
 }
