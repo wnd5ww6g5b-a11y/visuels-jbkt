@@ -151,6 +151,12 @@ Instagram montre un compte à de nouvelles personnes quand ses publications sont
   Dernière image : « Enregistre(z) ce post » + « Envoie(z)-le à … ».
 - **Gloova** : le carrousel utile de la semaine est créé avec `status` = `to_validate` (Karim valide Gloova), jamais `scheduled`.
 - Légendes : finir par une demande simple (« Enregistre », « Envoie-le à… », une question).
+- **Mot-clé en commentaire** (automatique depuis le 16/11) : quand quelqu'un écrit le mot-clé de la marque en commentaire ou en message privé,
+  le serveur lui envoie le lien en message privé et répond « C'est envoyé en message privé 📩 » sous son commentaire.
+  Mots-clés : **RADAR** (lien App Store), **GLOOVA** (gloova.fr), **DEMO** (démos JBKT).
+  Chaque semaine, par marque, **2 publications au moins** finissent par cet appel, à la place de « lien en bio » :
+  Radar « Commente RADAR et je t'envoie le lien de l'essai gratuit en privé », Gloova « Écrivez GLOOVA en commentaire et on vous envoie le lien en privé »,
+  JBKT « Écrivez DEMO en commentaire pour recevoir nos démos en privé ». Le carrousel utile de la semaine en fait partie.
 
 **Onglet « Croissance Instagram » de l'outil** (documents `insta/gloova`, `insta/jbkt`, `insta/radar`) :
 - rempli chaque matin par la tâche « Relevé Instagram » (abonnés du jour, portée, enregistrements, partages, formats) avec `outil/insta/releve.py` ;
