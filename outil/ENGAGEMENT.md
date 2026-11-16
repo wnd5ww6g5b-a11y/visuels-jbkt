@@ -136,3 +136,29 @@ Source : la banque d'écrans `banque/jbkt/` (`ecrans.json` = les écrans, `serie
   Ne plus utiliser `outil/rendre.py` pour JBKT (il reste pour Radar VTC).
 - **Alternance** : un jour une démo (post + reel de la démo + 2 stories de la démo), le lendemain un post texte (+ sa story via `outil/story.py`, + le reel du jour).
 - Les posts texte gardés : ceux qui parlent d'un problème concret avec une phrase forte (ex. « Combien de versions de ce fichier circulent ? »).
+
+
+## Croissance Instagram (depuis le 16/11/2026, demande de Karim : « + de followers »)
+
+Constat du 16/11 : 165 abonnés Gloova, 3 Radar, 2 JBKT ; 0 enregistrement et 0 partage en 30 jours. On parlait trop de l'outil.
+Instagram montre un compte à de nouvelles personnes quand ses publications sont **enregistrées, partagées et commentées**.
+
+**Règle 70 / 30** : sur 10 publications d'une marque, 7 sont **utiles** (on les enregistre ou on les envoie à quelqu'un), 3 parlent du produit ou des démos.
+- JBKT : au plus **3 démos par semaine** (remplace l'alternance un jour sur deux) ; les autres jours : astuces, carrousels utiles, questions.
+- Chaque semaine, par marque : **1 carrousel utile** au moins (5 à 7 images), fait avec `python3 outil/carrousel.py <spec.json> <dossier>`
+  (exemples dans `images/carrousels/*.json`). Images rangées dans `images/carrousels/`, document `contents` avec `format` = `carrousel` et `image_urls`.
+  Idées : messages à copier, listes à vérifier, calculs pas à pas, erreurs à éviter. Rien d'inventé, aucun chiffre sans source.
+  Dernière image : « Enregistre(z) ce post » + « Envoie(z)-le à … ».
+- **Gloova** : le carrousel utile de la semaine est créé avec `status` = `to_validate` (Karim valide Gloova), jamais `scheduled`.
+- Légendes : finir par une demande simple (« Enregistre », « Envoie-le à… », une question).
+
+**Onglet « Croissance Instagram » de l'outil** (documents `insta/gloova`, `insta/jbkt`, `insta/radar`) :
+- rempli chaque matin par la tâche « Relevé Instagram » (abonnés du jour, portée, enregistrements, partages, formats) avec `outil/insta/releve.py` ;
+- le dimanche, la tâche de programmation met à jour, pour les 3 marques :
+  - `scripts` : 3 reels à tourner par Karim ou Julien (`mode` face / voix / ugc, accroche des 2 premières secondes, 3 ou 4 lignes, fin, conseil de tournage).
+    UGC = seulement une vraie cliente qui est d'accord, avec ses vrais mots ; si elle est payée ou reçoit un cadeau : « collaboration commerciale ».
+    Jamais de faux témoignage, jamais d'avatar présenté comme une cliente. Radar : toujours « voiture garée ».
+  - `engage` : 4 ou 5 endroits où aller commenter (hashtags, types de comptes) avec 1 ou 2 idées de vrais commentaires (jamais de lien, jamais de pub).
+  - `notes` : 2 à 4 phrases tirées des chiffres de la semaine (ce qui a marché, ce qu'on change).
+- Pour choisir les sujets : regarder les publications avec le meilleur `score` dans `insta/<marque>` et refaire le même type de sujet.
+- Quand Karim envoie une vidéo tournée : la monter (sous-titres, coupe, musique légère), la programmer en reel, et passer le script à `done` = true.
