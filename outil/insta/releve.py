@@ -34,7 +34,7 @@ for acc, bid in BR.items():
     doc = {'brand_id': bid, 'account': acc, 'updated_at': datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%S+00:00'),
            'followers': hist[-120:], 'posts': ps, 'formats': sorted(fmt.values(), key=lambda f: -f['reach'] / max(f['posts'], 1)),
            'notes': old.get('notes', [])}
-    for k in ('scripts', 'engage'):
+    for k in ('scripts', 'engage', 'a_commenter'):
         if k in old: doc[k] = old[k]
     json.dump(doc, open(os.path.join(out, f'{bid}.json'), 'w'), ensure_ascii=False)
     print(bid, n, len(ps))

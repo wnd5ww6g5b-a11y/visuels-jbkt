@@ -161,6 +161,16 @@ Instagram montre un compte à de nouvelles personnes quand ses publications sont
   Radar « Commente RADAR et je t'envoie le lien de l'essai gratuit en privé », Gloova « Écrivez GLOOVA en commentaire et on vous envoie le lien en privé »,
   JBKT « Écrivez DEMO en commentaire pour recevoir nos démos en privé ». Le carrousel utile de la semaine en fait partie.
 
+**Liste du jour « 10 comptes à commenter »** (champ `a_commenter` de `insta/<marque>`, rempli chaque matin par la tâche « Relevé Instagram ») :
+- 10 **vrais comptes Instagram publics** de la cible, trouvés par recherche web et vérifiés (le profil existe, compte actif, pas un concurrent) :
+  Gloova = esthéticiennes, instituts, ongleries, prothésistes, extensions de cils en France ;
+  Radar = chauffeurs VTC indépendants en France (comptes de chauffeurs, pas de plateformes) ;
+  JBKT = commerces, artisans, restaurants et PME d'Alsace (Strasbourg, Bas-Rhin, Haut-Rhin).
+- Pas un compte vu dans les 14 derniers jours (`deja_vus`, garder les 140 derniers noms).
+- Pour chacun : `pourquoi` (quelques mots : métier, ville si connue) et `idee` = une idée de vrai commentaire liée à son métier,
+  à adapter à la publication choisie. Jamais de lien, jamais de pub, jamais de mensonge, jamais « super ! ».
+- Rien d'inventé : si la recherche ne donne pas 10 comptes sûrs, en mettre moins.
+
 **Onglet « Croissance Instagram » de l'outil** (documents `insta/gloova`, `insta/jbkt`, `insta/radar`) :
 - rempli chaque matin par la tâche « Relevé Instagram » (abonnés du jour, portée, enregistrements, partages, formats) avec `outil/insta/releve.py` ;
 - le dimanche, la tâche de programmation met à jour, pour les 3 marques :

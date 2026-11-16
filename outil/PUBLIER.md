@@ -89,6 +89,10 @@ Puis `status` = `published`, `published_at`, `instagram_media_id`. En cas d'erre
 Décidé par Karim le 16/11/2026 : pour gagner des abonnés, **chaque commentaire reçoit une réponse dans l'heure**, sur les 3 comptes.
 Les réponses simples partent **tout de suite, sans validation**. Tout ce qui est délicat passe par la validation de Karim.
 
+**Mots-clés (depuis le 16/11)** : un commentaire qui contient seulement ou surtout un mot-clé (RADAR, GLOOVA, DEMO) est déjà traité
+par le serveur (lien en message privé + réponse « C'est envoyé en message privé 📩 »). Ne pas y répondre une 2e fois :
+le noter `status` = `replied`, `auto` = true, `reply` = « (mot-clé : réponse automatique du serveur) ».
+
 1. **Publier les réponses validées** : collection `comments`, documents avec `status` = `validated` et sans `error`.
    Pour chacun : Windsor.ai for Social Media, `execute_action`, connector `instagram`, action `reply_to_comment`,
    account = `account_id` de la marque, params = `{"comment_id": <id du document>, "message": <reply>}`.
