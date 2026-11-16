@@ -59,3 +59,21 @@ Ces priorités sont lues par la tâche « Contenu SEO automatique » (outil/CONT
 `history` : ajouter la ligne du jour à la fin, garder les 26 dernières.
 3. Commit et push de `outil/geo/priorites.md`.
 4. Résumé court : score par marque (cité ou nommé / total), et les 2 sujets prioritaires de chaque marque.
+
+## Fiches annuaires à relier aux sites (depuis le 16/11/2026)
+
+Inscriptions faites le 16/11 : à chaque test GEO du lundi, chercher si la fiche est en ligne (recherche web sur le nom + l'annuaire).
+Dès qu'une fiche est publique, ajouter son adresse dans le `sameAs` du JSON-LD de la page d'accueil (site-jbkt : `index.html`,
+bloc `ProfessionalService` ; gloomy-site : `api/seo.js`), vérifier le build, commit et push, puis cocher ici. Ne jamais ajouter une fiche non publique.
+
+JBKT :
+- [ ] La Fabrique du Net (envoyée le 16/11, en vérification)
+- [ ] Pages Jaunes (envoyée le 16/11, en modération)
+- [ ] Fiche Google (créée le 16/11, attend la vidéo de validation de Karim) : ajouter le lien Google Maps une fois validée
+- [ ] Codeur.com (compte existant : demander à Karim l'adresse du profil public)
+- [ ] Sortlist (à créer par Karim dans son Chrome)
+
+Gloova :
+- [ ] AlternativeTo (envoyée le 16/11, file d'attente longue)
+- [ ] G2 / Capterra / GetApp (compte à créer avec contact@gloova.fr)
+- [ ] Appvizer (formulaire d'inscription en panne le 16/11 : réessayer)
