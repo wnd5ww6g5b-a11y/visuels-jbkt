@@ -6,20 +6,24 @@ Fiche à jour au 16 novembre 2026. Gloova est l'agenda et la réservation en lig
 
 Gloova aide maintenant les pros de la beauté à faire revenir leurs clientes, à en gagner de nouvelles et à vendre plus, sans travail en plus au quotidien.
 
-| Nouveauté | Pour qui | Message clé | Où |
+| Nouveauté | Pour qui | Message clé | Formule |
 | --- | --- | --- | --- |
-| Réserver à nouveau en 2 clics | Clientes du salon | « Votre prochain rendez-vous est déjà prêt » | Email automatique |
-| Parrainage clientes -10 % | Clientes du salon | « Vos clientes vous ramènent leurs amies » | Site + réglage dans l'app |
-| Bons cadeaux en ligne | Clientes du salon | « Vendez des bons cadeaux même quand le salon est fermé » | Page du salon |
-| Statistiques simples | Pros | « Vos jours creux et vos soins les plus rentables en un coup d'œil » | App |
-| Parrainage entre pros | Pros | « -10 % pendant 3 mois pour votre consœur, 1 mois offert pour vous » | App + site |
-| Choix de la prestataire | Clientes du salon | « Choisissez avec qui, ou la première disponible » | Site + app |
-| Question allergies | Clientes du salon | « Une question simple, oui ou non » | Site |
-| Liste d'attente en ligne | Clientes du salon | « Prévenue dès qu'une place se libère » | Site + app |
-| Acompte par prestation | Pros | « Moins de rendez-vous oubliés sur les soins longs » | App + site |
-| Nouvelle app (version F) | Pros | « Plus claire, plus rapide, sur iPhone et iPad » | App Store |
+| Réserver à nouveau en 2 clics | Clientes du salon | « Votre prochain rendez-vous est déjà prêt » | Pro, Pro+, Ultra |
+| Statistiques simples | Pros | « Vos jours creux et vos soins les plus rentables en un coup d'œil » | Pro, Pro+, Ultra |
+| Parrainage entre pros | Pros | « -10 % pendant 3 mois pour votre consœur, 1 mois offert pour vous » | Pro, Pro+, Ultra |
+| Question allergies | Clientes du salon | « Une question simple, oui ou non » | Pro, Pro+, Ultra |
+| Liste d'attente en ligne | Clientes du salon | « Prévenue dès qu'une place se libère » | Pro, Pro+, Ultra |
+| Nouvelle app (version F) | Pros | « Plus claire, plus rapide, sur iPhone et iPad » | Pro, Pro+, Ultra |
+| Parrainage clientes -10 % | Clientes du salon | « Vos clientes vous ramènent leurs amies » | Pro+, Ultra |
+| Bons cadeaux en ligne | Clientes du salon | « Vendez des bons cadeaux même quand le salon est fermé » | Pro+, Ultra |
+| Acompte par prestation | Pros | « Moins de rendez-vous oubliés sur les soins longs » | Pro+, Ultra |
+| Choix de la prestataire | Clientes du salon | « Choisissez avec qui, ou la première disponible » | Ultra (équipe) |
+
+Chaque formule inclut tout ce que contient la précédente : Gloova Pro 9,99 €, Gloova Pro+ 13,99 €, Gloova Ultra 15,99 € par mois (TTC).
 
 ## 1. Réserver à nouveau en 2 clics
+
+Formule : Pro, Pro+ et Ultra.
 
 Trois jours après son rendez-vous, la cliente reçoit un email de remerciement au nom du salon. Le bouton « Réserver à nouveau » ouvre la page du salon avec le même soin et la même prestataire déjà choisis : elle n'a plus qu'à prendre le jour.
 
@@ -30,6 +34,8 @@ Trois jours après son rendez-vous, la cliente reçoit un email de remerciement 
 
 ## 2. Parrainage clientes : « Offrez -10 % à une amie »
 
+Formule : Pro+ et Ultra.
+
 Chaque cliente reçoit un code personnel créé automatiquement (par exemple MARIE-7K2Q). Elle le voit juste après sa réservation, avec les boutons « Copier le lien » et « Partager », et dans l'email de remerciement. Son amie l'utilise en réservant et a la réduction.
 
 - Le salon l'active en un geste dans « Emails aux clientes » (app ou site) et choisit la réduction, de 5 à 30 %.
@@ -38,6 +44,8 @@ Chaque cliente reçoit un code personnel créé automatiquement (par exemple MAR
 - Argument : le bouche-à-oreille, mesurable et sans effort.
 
 ## 3. Bons cadeaux en ligne
+
+Formule : Pro+ et Ultra (paiement en ligne activé).
 
 Les clientes peuvent acheter un bon cadeau directement sur la page du salon, 24 h sur 24. Idéal pour Noël, la fête des mères et les anniversaires.
 
@@ -54,6 +62,8 @@ Les clientes peuvent acheter un bon cadeau directement sur la page du salon, 24 
 
 ## 4. Statistiques simples
 
+Formule : Pro, Pro+ et Ultra.
+
 Nouvel écran « Statistiques » dans l'app (Mon institut › Statistiques), sur les 12 dernières semaines, sans tableau compliqué :
 
 - Mes jours creux : le taux de remplissage de chaque jour de la semaine par rapport aux horaires d'ouverture, et les 3 moments les plus calmes (par exemple « mardi matin : 18 % rempli »), avec une idée : une petite offre sur ces créneaux.
@@ -63,6 +73,8 @@ Nouvel écran « Statistiques » dans l'app (Mon institut › Statistiques), sur
 Argument : savoir où agir en 10 secondes, sans Excel.
 
 ## 5. Parrainage entre pros
+
+Formule : Pro, Pro+ et Ultra.
 
 Chaque pro a son code de parrainage dans « Mon compte », avec un bouton pour le partager (message prêt à envoyer avec le lien d'inscription).
 
@@ -75,18 +87,28 @@ Argument : les pros se parlent entre elles ; chaque recommandation est récompen
 ## 6. Réservation plus simple et plus sûre
 
 ### Choix de la prestataire
+
+Formule : Ultra (gestion d'équipe).
 Dans les salons avec une équipe, la cliente choisit avec qui elle veut son rendez-vous, ou « Première disponible ». Seules les prestataires qui réalisent le soin sont proposées, avec leurs propres horaires. Si l'agenda de la personne choisie est plein ce jour-là, Gloova propose les collègues qui ont encore de la place. Même logique dans l'app quand la pro ajoute un rendez-vous.
 
 ### Question allergies, sans faire peur
+
+Formule : Pro, Pro+ et Ultra.
 Au moment de réserver : « Une allergie ou une contre-indication à nous signaler ? » Oui / Non. Le champ de détail n'apparaît que si elle répond oui. L'information est ajoutée à sa fiche cliente et visible sur le rendez-vous dans l'app.
 
 ### Liste d'attente en ligne
+
+Formule : Pro, Pro+ et Ultra.
 Aucun horaire ne convient ? La cliente s'inscrit pour être prévenue si une place se libère ce jour-là. Quand un rendez-vous est annulé, l'app propose à la pro de prévenir d'un coup toutes les clientes en attente (« Remplir un créneau ») : la première qui réserve a la place.
 
 ### Acompte par prestation
+
+Formule : Pro+ et Ultra (paiement en ligne).
 La pro peut demander un acompte en ligne seulement sur certains soins (par exemple les extensions de cils), avec le pourcentage de son choix. La fiche du rendez-vous affiche l'acompte payé et le reste à payer. Condition : paiement en ligne activé.
 
 ## 7. La nouvelle app (version F)
+
+Formule : Pro, Pro+ et Ultra.
 
 L'app iPhone et iPad a été entièrement redessinée : fond blanc, cartes crème, boutons noirs, touches de rose poudré, et la fleur Gloova au centre de la barre du bas pour tout ajouter en un geste.
 

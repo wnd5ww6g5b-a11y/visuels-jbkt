@@ -66,4 +66,4 @@ Marketing, Gestion, Digital, Croissance, Fidélisation
 Voir `outil/marques/gloova-nouveautes-2026-11.md` (fiche de Karim du 16/11). Respecter sa partie « À savoir avant de communiquer » :
 nouveautés de l'app (statistiques, réglages parrainage, bons cadeaux dans l'app) = pas de date annoncée avant validation Apple ;
 bons cadeaux et acompte = paiement en ligne activé (1,5 % prélevé) ; parrainage clientes désactivé par défaut.
-Formules concernées par chaque nouveauté : à confirmer par Karim avant d'en parler (ne pas deviner).
+Formule de chaque nouveauté : indiquée dans la fiche (tableau « En bref »). Toujours la préciser (« dès Pro+ », « avec Ultra »).
