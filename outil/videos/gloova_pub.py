@@ -43,6 +43,10 @@ body{font-family:J,sans-serif;-webkit-font-smoothing:antialiased}
 .phone{position:absolute;left:170px;width:740px;border-radius:112px;background:#111214;padding:18px;box-shadow:0 80px 160px rgba(30,31,33,.30)}
 .phone .scr{border-radius:96px;overflow:hidden;background:#fff;height:1400px}
 .phone .scr img{display:block;width:100%}
+.us .cap{font-weight:700;font-size:92px;text-transform:uppercase;letter-spacing:-.03em;line-height:1.02;bottom:300px}
+.us .cap .w{display:inline-block;background:#1E1F21;color:#fff;padding:6px 22px 14px;margin:6px 0;border-radius:12px;white-space:nowrap}
+.bw video{filter:grayscale(1) contrast(1.18) brightness(.95)!important}
+.stamp{position:absolute;left:50%;top:38%;font-weight:700;font-size:250px;letter-spacing:-.05em;color:#1E1F21;background:#F2D3D1;padding:10px 60px 30px;border-radius:30px;transform:translate(-50%,-50%) rotate(-8deg);opacity:0;box-shadow:0 30px 80px rgba(0,0,0,.35)}
 .card{position:absolute;left:110px;right:110px;background:#fff;border-radius:40px;padding:34px 40px;display:flex;gap:28px;align-items:center;box-shadow:0 40px 90px rgba(30,31,33,.22);opacity:0}
 .card i{width:84px;height:84px;border-radius:26px;background:#EFE3DF;display:flex;align-items:center;justify-content:center;flex:none}
 .card b{display:block;font-size:36px;color:#1E1F21}
@@ -74,6 +78,10 @@ function render(t){
     const a=+e.dataset.ph, p=ease((t-a)/(+e.dataset.pd||1.1)), d=cl((t-a)/4);
     e.style.transform=`translateY(${(1-p)*900 - 50*d}px) rotate(${(1-p)*-6}deg)`;
   });
+  document.querySelectorAll('[data-stamp]').forEach(e=>{
+    const a=+e.dataset.stamp, p=cl((t-a)/.18);
+    e.style.opacity=p; e.style.transform=`translate(-50%,-50%) rotate(-8deg) scale(${2.2-1.2*p})`;
+  });
   document.querySelectorAll('[data-card]').forEach(e=>{
     const a=+e.dataset.card, p=back((t-a)/.6);
     e.style.opacity=cl((t-a)/.25); e.style.transform=`translateY(${(1-p)*60}px) scale(${.85+.15*p})`;
@@ -93,8 +101,15 @@ render(0);
 """
 
 
+LINES = False
 def words(text, start, step=None):
     step = STEP if step is None else step
+    if LINES:
+        out = []
+        for i, line in enumerate(text.split('<br>')):
+            if i: out.append('<br>')
+            out.append(f'<span class="w" data-w="{start + i*step*3:.2f}">{line}</span>')
+        return ''.join(out), start + len(text.split('<br>'))*step*3
     out, i = [], 0
     for li, line in enumerate(text.split('<br>')):
         if li: out.append('<br>')
@@ -108,8 +123,10 @@ def build(v):
     global XF, STEP, WD
     XF = v.get('xf', 0.5); STEP = v.get('step', 0.09); WD = v.get('wd', 0.7)
     parts, t = [], 0.0
-    def scene(a, b, inner, bg='#1E1F21'):
-        parts.append(f'<div class="sc" data-a="{a:.2f}" data-b="{b:.2f}" data-xf="{XF}" style="background:{bg}">{inner}</div>')
+    starts = []
+    def scene(a, b, inner, bg='#1E1F21', cls=''):
+        starts.append(a)
+        parts.append(f'<div class="sc {cls}" data-a="{a:.2f}" data-b="{b:.2f}" data-xf="{XF}" style="background:{bg}">{inner}</div>')
     shots = v['shots']
     pos = v['product'].get('after', len(shots))
     seq = shots[:pos] + [{'product': True}] + shots[pos:]
@@ -125,24 +142,34 @@ def build(v):
             scene(t, t + d, inner, '#F4F2ED'); t += d
         else:
             d = s.get('dur', 4.2)
+            global LINES
+            LINES = bool(v.get('us'))
             tw, _ = words(s.get('text', ''), t + v.get('cap_delay', 0.6))
+            LINES = False
             inner = (f'<video muted playsinline preload="auto" data-off="{s.get("off", 0.2)}" src="file://{A}/{s["clip"]}"></video>'
                      f'<div class="vig"></div><div class="shade"></div><div class="cap">{tw}</div>')
-            scene(t, t + d, inner); t += d
+            if s.get('stamp'):
+                inner += f'<div class="stamp" data-stamp="{t + s.get("stamp_at", 1.5):.2f}">{s["stamp"]}</div>'
+            scene(t, t + d, inner, cls=('bw' if s.get('bw') else '')); t += d
     E = v['end']
     tw, te = words(E['tagline'], t + E.get('delay', 1.0), 0.08)
+    if E.get('price'):
+        pw, _ = words(E['price'], te + 0.2, 0.08)
+        te += 0.5
     inner = ('<div style="position:absolute;inset:0;background:linear-gradient(170deg,#F4F2ED 0%,#F3EEEA 55%,#EFE3DF 100%)"></div>'
              f'<div style="position:absolute;left:0;right:0;top:560px;text-align:center"><span class="w" data-w="{t+0.4:.2f}" style="display:inline-flex;align-items:center;gap:26px">'
              f'<img src="file://{LOGO}" style="width:130px;height:130px"><span style="font-weight:700;font-size:150px;letter-spacing:-.04em;color:#1E1F21">Gloova</span></span></div>'
              f'<div style="position:absolute;left:90px;right:90px;top:820px;text-align:center"><div class="ttl" style="font-size:70px">{tw}</div></div>'
-             f'<div style="position:absolute;left:0;right:0;top:1060px;text-align:center"><span class="w" data-w="{te+0.3:.2f}" style="display:inline-block;background:#1E1F21;color:#fff;font-weight:600;font-size:40px;padding:30px 52px;border-radius:60px">{E["sub"]}</span></div>'
-             f'<div style="position:absolute;left:0;right:0;top:1230px;text-align:center;color:rgba(30,31,33,.6);font-weight:600;font-size:34px"><span class="w" data-w="{te+0.7:.2f}">{E["small"]}</span></div>')
+             + (f'<div style="position:absolute;left:0;right:0;top:1000px;text-align:center;color:#1E1F21"><div style="font-weight:700;font-size:150px;letter-spacing:-.05em;line-height:1">{pw}</div><div style="font-weight:600;font-size:38px;color:rgba(30,31,33,.6);margin-top:6px"><span class="w" data-w="{te:.2f}">{E.get("price_sub","")}</span></div></div>' if E.get('price') else '')
+             + f'<div style="position:absolute;left:0;right:0;top:{1300 if E.get("price") else 1060}px;text-align:center"><span class="w" data-w="{te+0.3:.2f}" style="display:inline-block;background:#1E1F21;color:#fff;font-weight:600;font-size:40px;padding:30px 52px;border-radius:60px">{E["sub"]}</span></div>'
+             f'<div style="position:absolute;left:0;right:0;top:{1470 if E.get("price") else 1230}px;text-align:center;color:rgba(30,31,33,.6);font-weight:600;font-size:34px"><span class="w" data-w="{te+0.7:.2f}">{E["small"]}</span></div>')
     scene(t, 0, inner, '#F4F2ED')
-    total = te + 0.7 + E.get('hold', 2.6)
+    total = max(te + 0.7 + E.get('hold', 2.6), t + E.get('min', 0))
+    build.starts = starts
     css = CSS.replace('file://A/', f'file://{A}/')
     if v.get('cap_size'): css = css.replace('font-size:86px', f"font-size:{v['cap_size']}px")
     js = JS.replace('__WD__', str(WD))
-    return f'<!doctype html><html><head><meta charset="utf-8"><style>{css}</style></head><body>{"".join(parts)}<div class="grain"></div><script>{js}</script></body></html>', round(total, 2)
+    return f'<!doctype html><html><head><meta charset="utf-8"><style>{css}</style></head><body class="{'us' if v.get('us') else ''}">{"".join(parts)}<div class="grain"></div><script>{js}</script></body></html>', round(total, 2)
 
 
 def main():
@@ -175,6 +202,20 @@ def main():
     if rc: raise SystemExit('rendu échoué')
     out = Path(a.sortie); out.parent.mkdir(parents=True, exist_ok=True)
     part = out.with_name(out.stem + '.part.mp4')
+    if v.get('voice'):
+        mus = ICI / 'music' / a.musique
+        mus = mus if mus.suffix else mus.with_suffix('.m4a')
+        ins = ['-i', str(vid), '-i', str(mus)]
+        flt = [f"[1:a]apad,atrim=0:{total:.2f},afade=t=in:d=0.4,afade=t=out:st={total-1.5:.2f}:d=1.5,volume=0.32[m]"]
+        labels = ['[m]']
+        for k, vo in enumerate(v['voice']):
+            ins += ['-i', str(ICI / vo['file'])]
+            ms = int((build.starts[vo['scene']] + vo.get('at', 0.25)) * 1000)
+            flt.append(f"[{k+2}:a]adelay={ms}|{ms},volume=1.6[v{k}]"); labels.append(f'[v{k}]')
+        flt.append(''.join(labels) + f"amix=inputs={len(labels)}:normalize=0,alimiter=limit=0.95[a]")
+        subprocess.run(['ffmpeg', '-v', 'error', '-y', *ins, '-filter_complex', ';'.join(flt), '-map', '0:v', '-map', '[a]',
+                        '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-t', f'{total:.2f}', '-movflags', '+faststart', str(part)], check=True)
+        part.rename(out); vid.unlink(missing_ok=True); print(out, f'{total:.1f}s'); return
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', str(vid), '-i', str(ICI / 'music' / f'{a.musique}.m4a'),
                     '-map', '0:v', '-map', '1:a', '-c:v', 'copy',
                     '-af', f'afade=t=in:d=0.6,afade=t=out:st={total - 2:.2f}:d=2',

@@ -1,0 +1,19 @@
+{"id": "gloova-pub-us", "us": true, "xf": 0.2, "step": 0.07, "wd": 0.45, "cap_delay": 0.3, "cap_size": 92,
+ "shots": [
+  {"clip": "clips/us-lit.mp4", "off": 0.0, "text": "23 h.<br>Encore des<br>messages ?", "dur": 4.9, "bw": true},
+  {"clip": "clips/us-chaos.mp4", "off": 0.8, "text": "En pleine<br>pose ?", "dur": 3.9, "bw": true, "stamp": "STOP.", "stamp_at": 2.4},
+  {"clip": "clips/gloova-canape.mp4", "off": 0.5, "text": "Elles réservent<br>seules. 24 h/24.", "dur": 4.3},
+  {"clip": "clips/gloova-ongles.mp4", "off": 0.5, "text": "Un rappel part<br>la veille.", "dur": 2.9},
+  {"clip": "clips/gloova-matin.mp4", "off": 1.0, "text": "Et vous ?<br>Mains libres.", "dur": 3.1}
+ ],
+ "product": {"screen": "gloova-ecran-accueil.jpg", "title": "Voici Gloova.", "card": ["Nouveau rendez-vous", "Massage californien · Samedi 11:00"], "dur": 4.5, "after": 2, "title_delay": 0.15, "phone_delay": 0.05, "phone_in": 0.6, "card_delay": 1.6},
+ "end": {"tagline": "L'agenda des pros<br>de la beauté.", "price": "Dès 9,99 €", "price_sub": "par mois TTC · sans engagement", "sub": "Sans commission sur vos rendez-vous", "small": "gloova.fr · iPhone et iPad", "delay": 0.3, "hold": 1.4, "min": 6.9},
+ "voice": [
+  {"file": "voix/us-L1.mp3", "scene": 0, "at": 0.3},
+  {"file": "voix/us-L2.mp3", "scene": 1, "at": 0.2},
+  {"file": "voix/us-L3.mp3", "scene": 2, "at": 0.25},
+  {"file": "voix/us-L4.mp3", "scene": 3, "at": 0.2},
+  {"file": "voix/us-L5.mp3", "scene": 4, "at": 0.25},
+  {"file": "voix/us-L6.mp3", "scene": 5, "at": 0.2},
+  {"file": "voix/us-L7.mp3", "scene": 6, "at": 0.3}
+ ]}
