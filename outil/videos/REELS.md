@@ -1,5 +1,10 @@
 # Fabriquer un reel (JBKT et Radar VTC)
 
+> **JBKT : nouveau style « pro » en test depuis le 16/11/2026** (piste A choisie par Karim, l'ancien style faisait bas de gamme) :
+> `python3 outil/videos/pro.py fiche.json videos/AAAA/MM/<id>.mp4 --musique elan` (exemple : `outil/videos/exemple-jbkt-pro.json`).
+> Vraie photo du métier (Unsplash, dossier `assets/photos/`), très gros texte, vrais écrans de `banque/jbkt/` en gros plan,
+> pastille « Démo · données fictives ». En attente de l'avis de Karim avant de remplacer l'ancien style pour JBKT.
+
 Le style est celui des pubs Gloova, validé par Karim : le texte apparaît mot par mot, les téléphones entrent et sortent,
 on passe d'un fond à l'autre, une liste se construit, et la fin montre le logo et un bouton. Durée : 16 à 19 s, en 1080 × 1920, avec musique.
 
