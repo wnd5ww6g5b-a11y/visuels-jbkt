@@ -22,7 +22,7 @@
    "clip": "clips/gloova-canape.mp4",
    "off": 0.8,
    "text": "Vos clientes réservent<br>en ligne, 24 h/24.",
-   "dur": 4.3
+   "dur": 4.62
   },
   {
    "clip": "clips/gloova-matin.mp4",
@@ -34,7 +34,7 @@
    "clip": "clips/gloova-matin.mp4",
    "off": 2.6,
    "text": "Vous travaillez,<br>tranquille.",
-   "dur": 2.87
+   "dur": 3.1
   }
  ],
  "product": {
@@ -59,7 +59,7 @@
   "hold": 1.2,
   "price": "Dès 9,99 €",
   "price_sub": "par mois TTC · sans engagement",
-  "min": 7.67
+  "min": 7.74
  },
  "lines": [
   "Vos mains sont prises ?",
