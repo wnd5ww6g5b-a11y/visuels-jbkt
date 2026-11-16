@@ -60,6 +60,37 @@ Ces priorités sont lues par la tâche « Contenu SEO automatique » (outil/CONT
 3. Commit et push de `outil/geo/priorites.md`.
 4. Résumé court : score par marque (cité ou nommé / total), et les 2 sujets prioritaires de chaque marque.
 
+## 4. Corriger tout seul (décidé par Karim le 16/11/2026)
+
+Le test ne sert à rien s'il ne fait que constater. Après l'étape 3, l'outil **agit lui-même** sur ce qu'il a vu, dans ces limites :
+au plus **2 pages corrigées par marque et par semaine** (les 2 questions `priority: true`), rien d'inventé, jamais changer l'adresse d'une page,
+jamais dénigrer un concurrent, jamais de prix JBKT. Si la construction du site échoue : annuler la modification de cette page.
+
+### 4.1 Rendre la page facile à citer par une IA
+Pour chaque question prioritaire, ouvrir la page indiquée dans `questions.json` (Gloova : dépôt `gloomy-site` ; JBKT : dépôt `site-jbkt`).
+Si aucune page n'existe, en créer une en suivant `outil/CONTENU-AUTO.md`. Sinon, l'améliorer :
+1. **Réponse directe** : les 2 premières phrases sous le titre répondent à la question telle qu'elle est posée, en nommant la marque
+   (« Gloova est un agenda en ligne pour… »). Pas d'introduction générale avant.
+2. **« En bref »** : 3 à 5 puces factuelles juste après (pour qui, ce que ça fait, formule et prix TTC pour Gloova, sans commission sur les rendez-vous).
+3. **Comparaison honnête** si la question compare des outils (« alternative à… », « … ou … ») : seulement des faits lus le jour même sur le site
+   officiel de chaque outil (avec la date de vérification écrite sous le tableau) ; si un fait n'est pas vérifiable, ne pas le mettre.
+4. **FAQ visible + JSON-LD `FAQPage`** qui reprend la question exacte et 2 ou 3 questions voisines.
+5. **« Mis à jour le <date> »** visible, et `dateModified` dans le JSON-LD.
+6. **Liens** : 2 liens internes depuis des pages proches vers cette page, et un lien vers chaque fiche d'annuaire déjà publique (liste plus bas).
+7. Construire le site (Gloova : `npm ci` puis `npm run build`), commit, push (IndexNow part tout seul au déploiement), vérifier que l'adresse répond.
+
+### 4.2 Se faire inscrire là où les IA vont chercher
+Dans `others`, repérer les annuaires et comparatifs cités au moins 2 semaines de suite (ex. Capterra, GetApp, AlternativeTo, Hackceleration, Tool-Advisor) :
+- **annuaire** où la marque n'est pas inscrite : l'ajouter à la liste « Fiches annuaires » ci-dessous avec l'adresse d'inscription gratuite
+  (ne jamais cocher une offre payante). L'inscription demande un compte : action pour Karim (`statut: "karim"`).
+- **article ou comparatif** : relever le contact de l'auteur sur sa page contact (jamais deviner une adresse) et préparer un e-mail court
+  (3 phrases, sans flatterie, sans lien de suivi) proposant d'ajouter la marque, enregistré avec `statut: "to_validate"`. Ne jamais l'envoyer.
+
+### 4.3 Noter ce qui a été fait
+Dans `geo/<marque>`, champ `actions` (garder les 30 dernières) :
+`{"date": "AAAA-MM-JJ", "type": "page" | "annuaire" | "contact", "cible": "<question ou site>", "fait": "<1 phrase>", "url": "…", "statut": "fait" | "karim" | "to_validate"}`.
+Le résumé final liste ces actions. La page SEO de l'outil les affiche sous « Ce que l'outil a corrigé ».
+
 ## Fiches annuaires à relier aux sites (depuis le 16/11/2026)
 
 Inscriptions faites le 16/11 : à chaque test GEO du lundi, chercher si la fiche est en ligne (recherche web sur le nom + l'annuaire).
@@ -75,6 +106,7 @@ JBKT :
 
 Gloova :
 - [ ] AlternativeTo (envoyée le 16/11, file d'attente longue)
-- [x] G2 : fiche Gloova approuvée le 16/11/2026 (compte contact@gloova.fr). Lien public à récupérer dans l'e-mail de G2, puis à ajouter dans `sameAs` (gloomy-site api/seo.js).
+- [x] G2 : https://www.g2.com/products/gloova/reviews (en ligne le 16/11/2026, compte contact@gloova.fr), ajoutée dans `sameAs`.
 - [ ] Capterra / GetApp / Software Advice : non cochés exprès (Capterra = paiement au clic). Seulement si Karim le décide.
 - [ ] Appvizer (formulaire d'inscription en panne le 16/11 : réessayer)
+- [ ] Capterra en fiche gratuite seule (sans campagne au clic) : à vérifier sur digitalmarkets.gartner.com avant d'inscrire, accord de Karim
