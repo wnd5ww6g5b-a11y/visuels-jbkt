@@ -148,6 +148,9 @@ Instagram montre un compte à de nouvelles personnes quand ses publications sont
 - Chaque semaine, par marque : **1 carrousel utile** au moins (5 à 7 images), fait avec `python3 outil/carrousel.py <spec.json> <dossier>`
   (exemples dans `images/carrousels/*.json`). Images rangées dans `images/carrousels/`, document `contents` avec `format` = `carrousel` et `image_urls`.
   Idées : messages à copier, listes à vérifier, calculs pas à pas, erreurs à éviter. Rien d'inventé, aucun chiffre sans source.
+  Sujets à faire en priorité (demande de Karim, 16/11) :
+  Gloova : messages tout prêts pour relancer une cliente (fait le 17/11), **règles d'annulation à copier** ;
+  JBKT : **astuces Excel et Google pour les PME** ; Radar : **calculs et seuils de rentabilité**.
   Dernière image : « Enregistre(z) ce post » + « Envoie(z)-le à … ».
 - **Gloova** : le carrousel utile de la semaine est créé avec `status` = `to_validate` (Karim valide Gloova), jamais `scheduled`.
 - Légendes : finir par une demande simple (« Enregistre », « Envoie-le à… », une question).
