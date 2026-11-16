@@ -30,7 +30,7 @@ Base de l'outil : artifact `215e6505-5f68-4a59-8694-595b631af2eb`, collection `c
 Le compte Instagram de chaque marque est dans le document `config/instagram`
 (`gloova`, `jbkt`, `radar` → `account_id`).
 
-**D. Commentaires (Radar VTC et JBKT, et Gloova pendant le concours)** : relever les nouveaux commentaires, proposer une réponse, publier les réponses validées par Karim.
+**D. Commentaires (Gloova, Radar VTC et JBKT)** : répondre à chaque nouveau commentaire dans l'heure (automatique si simple, validation si délicat), publier les réponses validées.
 
 Si rien ne relève de A, B ni D (ni des articles, voir ARTICLES.md) : s'arrêter tout de suite, sans rien modifier.
 
@@ -84,35 +84,42 @@ Puis `status` = `published`, `published_at`, `instagram_media_id`. En cas d'erre
    laisser `status` tel quel, et passer au suivant.
 5. Résumer à la fin : images préparées, posts publiés, posts en erreur.
 
-## D. Commentaires (Radar VTC et JBKT ; Gloova pendant le concours)
+## D. Commentaires (Gloova, Radar VTC et JBKT) : réponse dans l'heure
 
-Décidé par Karim : l'outil propose une réponse, **Karim la valide** dans la page « Commentaires ». Rien n'est publié sans validation.
+Décidé par Karim le 16/11/2026 : pour gagner des abonnés, **chaque commentaire reçoit une réponse dans l'heure**, sur les 3 comptes.
+Les réponses simples partent **tout de suite, sans validation**. Tout ce qui est délicat passe par la validation de Karim.
 
 1. **Publier les réponses validées** : collection `comments`, documents avec `status` = `validated` et sans `error`.
    Pour chacun : Windsor.ai for Social Media, `execute_action`, connector `instagram`, action `reply_to_comment`,
    account = `account_id` de la marque, params = `{"comment_id": <id du document>, "message": <reply>}`.
    Puis `update` : `status` = `replied`, `replied_at` = maintenant. En cas d'erreur : écrire `error` = le message, ne pas réessayer.
-2. **Relever les nouveaux commentaires** : `get_data`, connector `instagram`, accounts = ceux de `radar` et `jbkt`,
+2. **Relever les nouveaux commentaires** : `get_data`, connector `instagram`, accounts = ceux de `gloova`, `radar` et `jbkt`,
    fields = `["account_id","media_id","media_permalink","media_caption","comment_id","comment_text","comment_username","comment_timestamp","comment_parent_id"]`,
    date_preset = `last_30d` (la date est celle de la publication, pas du commentaire).
-   Du 23 novembre au 18 décembre 2026 inclus, ajouter le compte `gloova` (voir « Concours Gloova » plus bas).
    Garder les lignes qui ont un `comment_id`, dont l'auteur n'est pas le compte lui-même (`radar_vtc`, `jbktsolutionsdigitales`, `gloova_beauty`)
    et qui n'existent pas encore dans `comments` (même id). Ignorer les commentaires de plus de 7 jours.
-3. Pour chaque nouveau commentaire, créer `comments/<comment_id>` (db_write `set`) :
-   `{"brand_id", "media_id", "permalink", "post_title" (titre du document contents dont instagram_media_id = media_id, sinon 1re ligne de la légende),
-   "username", "text", "at" (comment_timestamp), "reply" (réponse proposée), "status": "to_validate"}`.
-4. **Écrire la réponse proposée** :
-   - courte (1 à 2 phrases), chaleureuse, dans le ton de la marque (Radar : tutoiement entre chauffeurs ; JBKT : vouvoiement) ;
-   - répondre vraiment à ce qui est dit : un vote (« A », « OUI ») → remercier et relancer par une question ; une question précise → répondre si la réponse est sûre, sinon inviter à écrire en message privé ;
-   - jamais de prix, jamais de promesse de gains, rien d'inventé ; ne pas mettre de lien (le lien est en bio) ;
-   - spam, insulte ou pub : `reply` = `""` et `status` = `ignored` directement.
-5. Résumer : réponses publiées, nouveaux commentaires à valider.
+3. **Trier chaque nouveau commentaire** :
+   - **Simple → réponse automatique tout de suite** : un vote (« A », « OUI »), un compliment, un emoji, un avis sur le sujet du post,
+     une question dont la réponse est **écrite telle quelle** dans `outil/marques/<marque>.md` (ex. « c'est sur iPhone ? », « il y a un essai ? »).
+     Publier avec `reply_to_comment`, puis créer `comments/<comment_id>` avec `status` = `replied`, `replied_at`, `auto` = true.
+   - **Délicat → validation** : critique, plainte, problème avec l'app, question sur un prix JBKT, question sur un compte ou un paiement,
+     tout ce dont la réponse n'est pas sûre. Créer le document avec la réponse proposée et `status` = `to_validate`.
+   - **Spam, insulte, pub, faux comptes de gains** : `reply` = `""`, `status` = `ignored`, pas de réponse.
+   Document : `{"brand_id", "media_id", "permalink", "post_title" (titre du document contents dont instagram_media_id = media_id, sinon 1re ligne de la légende),
+   "username", "text", "at" (comment_timestamp), "reply", "status"}` (+ `auto`, `replied_at` si publié).
+4. **Écrire la réponse** :
+   - courte (1 à 2 phrases), chaleureuse, dans le ton de la marque (Radar : tutoiement entre chauffeurs ; JBKT et Gloova : vouvoiement) ;
+   - **finir par une question** quand c'est naturel : une réponse qui relance fait revenir la personne et pousse le post ;
+   - un vote → remercier et demander pourquoi ; un compliment → remercier et poser une question sur son activité ;
+   - jamais de prix JBKT, jamais de promesse de gains, rien d'inventé ; pas de lien (le lien est en bio) ;
+   - jamais 2 fois la même phrase d'affilée sur un même compte.
+5. Résumer : réponses publiées automatiquement, réponses à valider.
 
 ### Concours Gloova (23 nov. → 18 déc. 2026) : réponses automatiques
 
 Décidé par Karim : sur le post du concours (document `contents/concours-gloova-carrousel`, son `instagram_media_id`)
 et sur le reel du concours (`contents/concours-gloova-reel`), les **participations** reçoivent une réponse courte
-**publiée tout de suite, sans validation**. Tout le reste passe par la validation, comme pour Radar et JBKT.
+**publiée tout de suite, sans validation**. Tout le reste suit la partie D (automatique si simple, validation si délicat).
 - **Participation** = un commentaire qui donne une prestation et/ou identifie un compte (@…), sans question.
   Réponse : 1 phrase, vouvoiement, chaleureuse, qui reprend la prestation citée si elle est claire, puis
   « Participation bien enregistrée, bonne chance ! ✨ » (varier un peu la formulation, jamais 2 fois la même d'affilée).
@@ -121,7 +128,6 @@ et sur le reel du concours (`contents/concours-gloova-reel`), les **participatio
 - **Question** (règlement, lots, date, « je ne suis pas esthéticienne », etc.) ou **critique** : réponse proposée,
   `status` = `to_validate` (Karim valide). S'appuyer seulement sur le règlement : gloova.fr/concours.
 - **Spam, insulte, compte de « tirage » ou de faux gains** : `status` = `ignored`, pas de réponse.
-- Les commentaires des autres posts Gloova ne sont pas relevés.
 
 ## Hashtags de base par marque
 

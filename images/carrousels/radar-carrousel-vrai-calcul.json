@@ -1,0 +1,8 @@
+{"brand":"radar","slug":"radar-carrousel-vrai-calcul","slides":[
+{"type":"cover","kicker":"Le calcul","title":"Ton €/km est peut-être faux.","sub":"Le vrai calcul d'une course, en 5 étapes, avec une offre d'exemple.","swipe":"Fais défiler →"},
+{"type":"tip","title":"Additionne les km.","text":"Course + approche. Les km pour aller chercher le client, tu les paies aussi.","example":"11,2 km de course + 3 km d'approche = 14,2 km"},
+{"type":"tip","title":"Additionne les minutes.","text":"Même chose pour le temps : l'approche compte.","example":"24 min de course + 7 min d'approche = 31 min"},
+{"type":"tip","title":"Calcule ton €/km.","text":"Le prix divisé par le total des km.","example":"14,60 € ÷ 14,2 km = 1,03 € par km"},
+{"type":"tip","title":"Calcule ton €/h.","text":"Le prix divisé par le total des minutes, fois 60.","example":"14,60 € ÷ 31 min × 60 = 28,26 € de l'heure"},
+{"type":"tip","title":"Compare à ton seuil.","text":"Il n'y a pas de bon chiffre pour tout le monde : il dépend de ta voiture, de tes frais et de tes heures."},
+{"type":"end","title":"Enregistre ce post.","text":"Radar VTC fait ce calcul pour toi, en une capture de l'offre.","cta":"Essai gratuit 7 jours sur l'App Store"}]}

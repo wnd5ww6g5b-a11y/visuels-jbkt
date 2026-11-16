@@ -7,7 +7,7 @@ Décidé par Karim le 13/11/2026 :
 - mis à jour le 14/11/2026 : Karim délègue le plan marketing de JBKT et Radar. Les documents sont créés **directement programmés**
   (`status` = `scheduled`, `validated_at` = maintenant, `validated_by` = `Claude (plan délégué par Karim)`).
   Karim peut toujours modifier ou refuser un contenu dans le calendrier avant l'heure prévue ;
-- les réponses aux commentaires sont proposées par l'outil et **validées par Karim** (voir PUBLIER.md, partie D).
+- mis à jour le 16/11/2026 : chaque commentaire reçoit une réponse dans l'heure, automatique si elle est simple, validée par Karim si elle est délicate (voir PUBLIER.md, partie D).
 
 Base de l'outil : artifact `215e6505-5f68-4a59-8694-595b631af2eb`, collection `contents`.
 
