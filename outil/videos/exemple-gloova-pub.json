@@ -1,0 +1,9 @@
+{"id": "gloova-pub-mains-prises",
+ "shots": [
+  {"clip": "clips/gloova-ongles.mp4", "text": "Vos mains<br>sont prises.", "dur": 3.8},
+  {"clip": "clips/gloova-cils.mp4", "text": "Votre téléphone<br>attendra.", "dur": 3.8},
+  {"clip": "clips/gloova-canape.mp4", "text": "Vos clientes, elles,<br>réservent en ligne.", "dur": 4.2},
+  {"clip": "clips/gloova-matin.mp4", "text": "Et votre journée<br>est déjà prête.", "dur": 4.2}
+ ],
+ "product": {"screen": "gloova-ecran-accueil.jpg", "title": "Chaque réservation arrive<br>dans votre agenda.", "card": ["Nouveau rendez-vous", "Massage californien · Samedi 11:00"], "dur": 4.6, "after": 3},
+ "end": {"tagline": "L'agenda des pros<br>de la beauté.", "sub": "Sans commission sur vos rendez-vous", "small": "gloova.fr · iPhone et iPad"}}
