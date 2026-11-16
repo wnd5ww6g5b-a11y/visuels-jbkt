@@ -98,15 +98,18 @@ Dès qu'une fiche est publique, ajouter son adresse dans le `sameAs` du JSON-LD 
 bloc `ProfessionalService` ; gloomy-site : `api/seo.js`), vérifier le build, commit et push, puis cocher ici. Ne jamais ajouter une fiche non publique.
 
 JBKT :
-- [ ] La Fabrique du Net (envoyée le 16/11, en vérification)
-- [ ] Pages Jaunes (envoyée le 16/11, en modération)
+- [ ] La Fabrique du Net (envoyée le 16/11, en vérification ; pas encore en ligne au contrôle du 16/11 soir)
+- [ ] Pages Jaunes (envoyée le 16/11, en modération ; pas encore en ligne au contrôle du 16/11 soir)
 - [ ] Fiche Google (créée le 16/11, attend la vidéo de validation de Karim) : ajouter le lien Google Maps une fois validée
 - [ ] Codeur.com (compte existant : demander à Karim l'adresse du profil public)
-- [ ] Sortlist (à créer par Karim dans son Chrome)
+- [ ] Sortlist (à créer par Karim dans son Chrome ; Sortlist ressort encore le 16/11 sur « logiciel métier Strasbourg », « site internet PME » et « automatiser les tâches »)
+- [ ] Digitiz, article « Les meilleures agences web en France en 2026 » (digitiz.fr/agences-web) : cité le 16/11 sur 2 questions. Pas de formulaire d'inscription ; e-mail à l'auteur préparé dans l'outil (à valider, jamais envoyé automatiquement).
 
 Gloova :
-- [ ] AlternativeTo (envoyée le 16/11, file d'attente longue)
+- [ ] AlternativeTo (envoyée le 16/11, file d'attente longue ; alternativeto.net/software/gloova répond 404 au contrôle du 16/11 soir)
 - [x] G2 : https://www.g2.com/products/gloova/reviews (en ligne le 16/11/2026, compte contact@gloova.fr), ajoutée dans `sameAs`.
 - [ ] Capterra / GetApp / Software Advice : non cochés exprès (Capterra = paiement au clic). Seulement si Karim le décide.
 - [ ] Appvizer (formulaire d'inscription en panne le 16/11 : réessayer)
+- [ ] Tool-Advisor, annuaire gratuit : sur https://tool-advisor.fr/contact/ choisir « Je souhaite ajouter mon logiciel à l'annuaire (gratuit) ». Ne PAS choisir « être présent sur un comparatif » (payant). Action pour Karim.
+- [ ] Hack'celeration, comparatif « Meilleur logiciel institut de beauté et spa » (Romain Cochard, hello@hackceleration.com affiché sur la page) : cité 3 fois de suite ; e-mail préparé dans l'outil (à valider, jamais envoyé automatiquement).
 - [ ] Capterra en fiche gratuite seule (sans campagne au clic) : à vérifier sur digitalmarkets.gartner.com avant d'inscrire, accord de Karim
