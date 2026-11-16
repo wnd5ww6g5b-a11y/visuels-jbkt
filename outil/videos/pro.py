@@ -96,6 +96,16 @@ function render(t){
     e.style.transform=`translate(${(1-pin)*dir*700}px, ${(1-pin)*500 - 60*drift}px) rotate(${(1-pin)*dir*-8}deg)`;
   });
 }
+async function renderAt(t){
+  render(t);
+  const vids=[...document.querySelectorAll('video[data-clip]')];
+  await Promise.all(vids.map(v=>new Promise(res=>{
+    const target=Math.min(t, (v.duration||5)-0.05);
+    if(Math.abs(v.currentTime-target)<0.001){res();return;}
+    v.addEventListener('seeked',()=>res(),{once:true}); v.currentTime=target;
+    setTimeout(res,1500);
+  })));
+}
 render(0);
 """
 
@@ -122,8 +132,12 @@ def build(v):
     # 1. Accroche sur photo réelle
     t0 = 0.0
     hw, he = words(v['hook'], 0.35)
-    s1_end = he + 1.6
-    inner = (f'<img data-kb="0" data-kd="{s1_end+0.7:.2f}" src="file://{A}/{v["photo"]}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">'
+    s1_end = max(he + 1.6, 4.2) if v.get('clip') else he + 1.6
+    if v.get('clip'):
+        media = f'<video data-clip="1" muted playsinline preload="auto" src="file://{A}/{v["clip"]}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>'
+    else:
+        media = f'<img data-kb="0" data-kd="{s1_end+0.7:.2f}" src="file://{A}/{v["photo"]}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">'
+    inner = (media +
              '<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,21,51,.15) 0%,rgba(11,21,51,.35) 40%,rgba(11,21,51,.92) 72%,#0B1533 100%)"></div>'
              f'<div style="position:absolute;left:84px;right:84px;bottom:300px;color:#fff">'
              f'<div class="kick" data-w="0.15" style="background:#087BFF;color:#fff;margin-bottom:40px">{v["kicker"]}</div>'
@@ -190,9 +204,10 @@ def main():
         b = p.chromium.launch(executable_path='/usr/bin/google-chrome', args=['--allow-file-access-from-files'])
         pg = b.new_page(viewport={'width': W, 'height': H})
         pg.goto(f'file://{hp}'); pg.wait_for_timeout(600)
+        pg.evaluate("Promise.all([...document.querySelectorAll('video')].map(v=>v.readyState>=1?0:new Promise(r=>{v.onloadedmetadata=r;setTimeout(r,5000)})))")
         if a.still:
             for s in a.still.split(','):
-                pg.evaluate(f'render({s})'); pg.wait_for_timeout(50)
+                pg.evaluate(f'renderAt({s})'); pg.wait_for_timeout(50)
                 f = tmpd / f'{v["id"]}-{s}.jpg'; pg.screenshot(path=str(f), type='jpeg', quality=85); print(f)
             b.close(); print('durée', total); return
         out = Path(a.sortie); out.parent.mkdir(parents=True, exist_ok=True)
@@ -200,7 +215,7 @@ def main():
         ff = subprocess.Popen(['ffmpeg', '-v', 'error', '-y', '-f', 'image2pipe', '-framerate', str(FPS), '-c:v', 'mjpeg', '-i', '-',
                                '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18', '-pix_fmt', 'yuv420p', str(vid)], stdin=subprocess.PIPE)
         for i in range(int(total * FPS)):
-            pg.evaluate(f'render({i / FPS})')
+            pg.evaluate(f'renderAt({i / FPS})')
             ff.stdin.write(pg.screenshot(type='jpeg', quality=92))
         ff.stdin.close(); rc = ff.wait(); b.close()
     if rc: sys.exit('rendu échoué')
