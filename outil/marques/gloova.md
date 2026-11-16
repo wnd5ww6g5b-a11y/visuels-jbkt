@@ -60,3 +60,10 @@ Surtout les indépendantes et les petites équipes (1 à 5 personnes).
 
 ## Catégories du blog
 Marketing, Gestion, Digital, Croissance, Fidélisation
+
+
+## Nouveautés de novembre 2026
+Voir `outil/marques/gloova-nouveautes-2026-11.md` (fiche de Karim du 16/11). Respecter sa partie « À savoir avant de communiquer » :
+nouveautés de l'app (statistiques, réglages parrainage, bons cadeaux dans l'app) = pas de date annoncée avant validation Apple ;
+bons cadeaux et acompte = paiement en ligne activé (1,5 % prélevé) ; parrainage clientes désactivé par défaut.
+Formules concernées par chaque nouveauté : à confirmer par Karim avant d'en parler (ne pas deviner).
