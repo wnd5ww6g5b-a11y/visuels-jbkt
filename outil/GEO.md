@@ -75,5 +75,6 @@ JBKT :
 
 Gloova :
 - [ ] AlternativeTo (envoyée le 16/11, file d'attente longue)
-- [ ] G2 / Capterra / GetApp (compte à créer avec contact@gloova.fr)
+- [x] G2 : fiche Gloova approuvée le 16/11/2026 (compte contact@gloova.fr). Lien public à récupérer dans l'e-mail de G2, puis à ajouter dans `sameAs` (gloomy-site api/seo.js).
+- [ ] Capterra / GetApp / Software Advice : non cochés exprès (Capterra = paiement au clic). Seulement si Karim le décide.
 - [ ] Appvizer (formulaire d'inscription en panne le 16/11 : réessayer)
