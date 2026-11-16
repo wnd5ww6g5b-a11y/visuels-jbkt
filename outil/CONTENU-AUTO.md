@@ -30,6 +30,10 @@ Radar VTC : rien (pas de site web).
      traiter le sujet sous l'angle « ce qui fait varier », sans chiffre.
 4. Sinon : lire les vraies données Google de l'outil (document `seo/jbkt` ou `seo/gloova` de l'artifact
    `215e6505-5f68-4a59-8694-595b631af2eb`) s'il existe : viser une recherche entre la 5e et la 20e place.
+4 bis. **Saison (Google Trends)** : lire aussi `seo/tendances-jbkt` ou `seo/tendances-gloova` (même artifact, voir
+   `outil/seo/RICHES-ET-TENDANCES.md`). Si un mot a son mois fort dans les 2 prochains mois (champ `conseil`), préférer
+   un sujet qui le vise (ex. Gloova en novembre : bons cadeaux de Noël en institut ; JBKT en décembre : site vitrine pour
+   bien démarrer janvier), toujours sans rien inventer. Les « recherches populaires » donnent la formulation à reprendre.
 5. Choisir un sujet qui N'A PAS encore de contenu (ni le même sujet, ni la même recherche visée).
 
 ## Règles de qualité (toutes obligatoires)
