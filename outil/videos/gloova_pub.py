@@ -31,7 +31,9 @@ html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#1E1F21
 *{box-sizing:border-box}
 body{font-family:J,sans-serif;-webkit-font-smoothing:antialiased}
 .sc{position:absolute;inset:0;overflow:hidden;opacity:0}
-.sc video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sc video{position:absolute;inset:-30px;width:calc(100% + 60px);height:calc(100% + 60px);object-fit:cover;filter:saturate(.86) contrast(1.05) sepia(.07) brightness(1.02)}
+.grain{position:absolute;inset:0;background:url('file://A/grain.png');mix-blend-mode:overlay;opacity:.55;pointer-events:none;z-index:50}
+.vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,.28) 100%);pointer-events:none}
 .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,31,33,0) 45%,rgba(30,31,33,.55) 78%,rgba(30,31,33,.75) 100%)}
 .cap{position:absolute;left:80px;right:80px;bottom:250px;color:#fff;font-weight:600;font-size:86px;line-height:1.06;letter-spacing:-.035em;text-shadow:0 4px 30px rgba(0,0,0,.25)}
 .w{display:inline-block;white-space:pre;opacity:0}
@@ -50,13 +52,15 @@ const cl=x=>Math.max(0,Math.min(1,x));
 const ease=t=>1-Math.pow(1-cl(t),3);
 const back=t=>{t=cl(t);const c1=1.3,c3=c1+1;return 1+c3*Math.pow(t-1,3)+c1*Math.pow(t-1,2)};
 function render(t){
+  const g=document.querySelector('.grain'); if(g){ const f=Math.floor(t*24); g.style.backgroundPosition=`${(f*137)%512}px ${(f*241)%512}px`; }
   document.querySelectorAll('.sc').forEach(s=>{
     const a=+s.dataset.a,b=+s.dataset.b,xf=+s.dataset.xf;
     let o = a<=0 ? 1 : cl((t-a)/xf);
     if(b>0 && t>b) o=Math.min(o, 1-cl((t-b)/xf));
     s.style.opacity=o; s.style.visibility = o>0?'visible':'hidden';
     const z=s.querySelector('video');
-    if(z){ const p=cl((t-a)/(b+xf-a)); z.style.transform=`scale(${1.02+.06*p})`; }
+    if(z){ const p=cl((t-a)/(b+xf-a)); const sx=Math.sin(t*1.7)*6+Math.sin(t*4.3)*2, sy=Math.cos(t*1.3)*5+Math.sin(t*3.7)*2;
+      z.style.transform=`translate(${sx}px,${sy}px) scale(${1.02+.05*p}) rotate(${Math.sin(t*.9)*.25}deg)`; }
   });
   document.querySelectorAll('[data-w]').forEach(e=>{
     const p=ease((t-+e.dataset.w)/.7);
@@ -116,7 +120,7 @@ def build(v):
             d = s.get('dur', 4.2)
             tw, _ = words(s['text'], t + 0.6)
             inner = (f'<video muted playsinline preload="auto" data-off="{s.get("off", 0.2)}" src="file://{A}/{s["clip"]}"></video>'
-                     f'<div class="shade"></div><div class="cap">{tw}</div>')
+                     f'<div class="vig"></div><div class="shade"></div><div class="cap">{tw}</div>')
             scene(t, t + d, inner); t += d
     E = v['end']
     tw, te = words(E['tagline'], t + 1.0, 0.08)
@@ -129,7 +133,7 @@ def build(v):
     scene(t, 0, inner, '#F4F2ED')
     total = te + 0.7 + 2.6
     css = CSS.replace('file://A/', f'file://{A}/')
-    return f'<!doctype html><html><head><meta charset="utf-8"><style>{css}</style></head><body>{"".join(parts)}<script>{JS}</script></body></html>', round(total, 2)
+    return f'<!doctype html><html><head><meta charset="utf-8"><style>{css}</style></head><body>{"".join(parts)}<div class="grain"></div><script>{JS}</script></body></html>', round(total, 2)
 
 
 def main():
