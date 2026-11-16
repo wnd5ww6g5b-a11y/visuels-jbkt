@@ -21,7 +21,9 @@ ICI = Path(__file__).parent
 A = ICI / 'assets'
 LOGO = (ICI / '..' / '..' / '..' / 'gloomy-site' / 'public' / 'images' / 'brand' / 'logo-fleur-noire.png').resolve()
 W, H, FPS = 1080, 1920, 30
-XF = 0.5  # fondu entre plans
+XF = 0.5  # fondu entre plans (modifiable par la fiche : "xf")
+STEP = 0.09
+WD = 0.7
 
 CSS = """
 @font-face{font-family:J;font-weight:500;src:url('file://A/plus-jakarta-sans-latin-500-normal.woff2')}
@@ -49,6 +51,7 @@ body{font-family:J,sans-serif;-webkit-font-smoothing:antialiased}
 
 JS = r"""
 const cl=x=>Math.max(0,Math.min(1,x));
+const WD=__WD__;
 const ease=t=>1-Math.pow(1-cl(t),3);
 const back=t=>{t=cl(t);const c1=1.3,c3=c1+1;return 1+c3*Math.pow(t-1,3)+c1*Math.pow(t-1,2)};
 function render(t){
@@ -60,14 +63,15 @@ function render(t){
     s.style.opacity=o; s.style.visibility = o>0?'visible':'hidden';
     const z=s.querySelector('video');
     if(z){ const p=cl((t-a)/(b+xf-a)); const sx=Math.sin(t*1.7)*6+Math.sin(t*4.3)*2, sy=Math.cos(t*1.3)*5+Math.sin(t*3.7)*2;
-      z.style.transform=`translate(${sx}px,${sy}px) scale(${1.02+.05*p}) rotate(${Math.sin(t*.9)*.25}deg)`; }
+      const punch = xf<0.3 ? .08*(1-ease((t-a)/.35)) : 0;
+      z.style.transform=`translate(${sx}px,${sy}px) scale(${1.02+.05*p+punch}) rotate(${Math.sin(t*.9)*.25}deg)`; }
   });
   document.querySelectorAll('[data-w]').forEach(e=>{
-    const p=ease((t-+e.dataset.w)/.7);
+    const p=ease((t-+e.dataset.w)/WD);
     e.style.opacity=p; e.style.transform=`translateY(${(1-p)*40}px)`; e.style.filter=`blur(${(1-p)*8}px)`;
   });
   document.querySelectorAll('[data-ph]').forEach(e=>{
-    const a=+e.dataset.ph, p=ease((t-a)/1.1), d=cl((t-a)/4);
+    const a=+e.dataset.ph, p=ease((t-a)/(+e.dataset.pd||1.1)), d=cl((t-a)/4);
     e.style.transform=`translateY(${(1-p)*900 - 50*d}px) rotate(${(1-p)*-6}deg)`;
   });
   document.querySelectorAll('[data-card]').forEach(e=>{
@@ -89,7 +93,8 @@ render(0);
 """
 
 
-def words(text, start, step=0.09):
+def words(text, start, step=None):
+    step = STEP if step is None else step
     out, i = [], 0
     for li, line in enumerate(text.split('<br>')):
         if li: out.append('<br>')
@@ -100,6 +105,8 @@ def words(text, start, step=0.09):
 
 
 def build(v):
+    global XF, STEP, WD
+    XF = v.get('xf', 0.5); STEP = v.get('step', 0.09); WD = v.get('wd', 0.7)
     parts, t = [], 0.0
     def scene(a, b, inner, bg='#1E1F21'):
         parts.append(f'<div class="sc" data-a="{a:.2f}" data-b="{b:.2f}" data-xf="{XF}" style="background:{bg}">{inner}</div>')
@@ -109,21 +116,21 @@ def build(v):
     for s in seq:
         if s.get('product'):
             P = v['product']; d = P.get('dur', 4.6)
-            tw, te = words(P['title'], t + 0.4, 0.07)
+            tw, te = words(P['title'], t + P.get('title_delay', 0.4), 0.07)
             inner = ('<div style="position:absolute;inset:0;background:radial-gradient(1100px 1000px at 50% 70%,#EFE3DF 0%,#F4F2ED 62%)"></div>'
                      f'<div style="position:absolute;left:80px;right:80px;top:200px"><div class="ttl">{tw}</div></div>'
-                     f'<div class="phone" data-ph="{t+0.3:.2f}" style="top:640px"><div class="scr"><img src="file://{A}/{P["screen"]}"></div></div>'
-                     f'<div class="card" data-card="{t+1.9:.2f}" style="top:1380px"><i><img src="file://{LOGO}" style="width:52px;height:52px"></i>'
+                     f'<div class="phone" data-ph="{t+P.get('phone_delay', 0.3):.2f}" data-pd="{P.get('phone_in', 1.1)}" style="top:640px"><div class="scr"><img src="file://{A}/{P["screen"]}"></div></div>'
+                     f'<div class="card" data-card="{t+P.get('card_delay', 1.9):.2f}" style="top:1380px"><i><img src="file://{LOGO}" style="width:52px;height:52px"></i>'
                      f'<div><b>{P["card"][0]}</b><span>{P["card"][1]}</span></div></div>')
             scene(t, t + d, inner, '#F4F2ED'); t += d
         else:
             d = s.get('dur', 4.2)
-            tw, _ = words(s['text'], t + 0.6)
+            tw, _ = words(s.get('text', ''), t + v.get('cap_delay', 0.6))
             inner = (f'<video muted playsinline preload="auto" data-off="{s.get("off", 0.2)}" src="file://{A}/{s["clip"]}"></video>'
                      f'<div class="vig"></div><div class="shade"></div><div class="cap">{tw}</div>')
             scene(t, t + d, inner); t += d
     E = v['end']
-    tw, te = words(E['tagline'], t + 1.0, 0.08)
+    tw, te = words(E['tagline'], t + E.get('delay', 1.0), 0.08)
     inner = ('<div style="position:absolute;inset:0;background:linear-gradient(170deg,#F4F2ED 0%,#F3EEEA 55%,#EFE3DF 100%)"></div>'
              f'<div style="position:absolute;left:0;right:0;top:560px;text-align:center"><span class="w" data-w="{t+0.4:.2f}" style="display:inline-flex;align-items:center;gap:26px">'
              f'<img src="file://{LOGO}" style="width:130px;height:130px"><span style="font-weight:700;font-size:150px;letter-spacing:-.04em;color:#1E1F21">Gloova</span></span></div>'
@@ -131,9 +138,11 @@ def build(v):
              f'<div style="position:absolute;left:0;right:0;top:1060px;text-align:center"><span class="w" data-w="{te+0.3:.2f}" style="display:inline-block;background:#1E1F21;color:#fff;font-weight:600;font-size:40px;padding:30px 52px;border-radius:60px">{E["sub"]}</span></div>'
              f'<div style="position:absolute;left:0;right:0;top:1230px;text-align:center;color:rgba(30,31,33,.6);font-weight:600;font-size:34px"><span class="w" data-w="{te+0.7:.2f}">{E["small"]}</span></div>')
     scene(t, 0, inner, '#F4F2ED')
-    total = te + 0.7 + 2.6
+    total = te + 0.7 + E.get('hold', 2.6)
     css = CSS.replace('file://A/', f'file://{A}/')
-    return f'<!doctype html><html><head><meta charset="utf-8"><style>{css}</style></head><body>{"".join(parts)}<div class="grain"></div><script>{JS}</script></body></html>', round(total, 2)
+    if v.get('cap_size'): css = css.replace('font-size:86px', f"font-size:{v['cap_size']}px")
+    js = JS.replace('__WD__', str(WD))
+    return f'<!doctype html><html><head><meta charset="utf-8"><style>{css}</style></head><body>{"".join(parts)}<div class="grain"></div><script>{js}</script></body></html>', round(total, 2)
 
 
 def main():

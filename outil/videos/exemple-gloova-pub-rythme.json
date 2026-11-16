@@ -1,0 +1,79 @@
+{
+ "id": "gloova-pub-rythme",
+ "xf": 0.12,
+ "step": 0.05,
+ "wd": 0.35,
+ "cap_delay": 0.15,
+ "shots": [
+  {
+   "clip": "clips/gloova-ongles.mp4",
+   "off": 0.3,
+   "text": "Vos mains",
+   "dur": 1.5
+  },
+  {
+   "clip": "clips/gloova-cils.mp4",
+   "off": 0.4,
+   "text": "sont prises.",
+   "dur": 1.0
+  },
+  {
+   "clip": "clips/gloova-ongles.mp4",
+   "off": 3.0,
+   "text": "",
+   "dur": 1.0
+  },
+  {
+   "clip": "clips/gloova-cils.mp4",
+   "off": 2.8,
+   "text": "Pas le temps<br>de répondre ?",
+   "dur": 1.5
+  },
+  {
+   "clip": "clips/gloova-canape.mp4",
+   "off": 0.6,
+   "text": "Elles réservent",
+   "dur": 1.5
+  },
+  {
+   "clip": "clips/gloova-canape.mp4",
+   "off": 3.0,
+   "text": "en ligne.",
+   "dur": 1.0
+  },
+  {
+   "clip": "clips/gloova-matin.mp4",
+   "off": 0.5,
+   "text": "Vous ?",
+   "dur": 1.0
+  },
+  {
+   "clip": "clips/gloova-matin.mp4",
+   "off": 3.0,
+   "text": "Vous travaillez.",
+   "dur": 1.5
+  }
+ ],
+ "product": {
+  "screen": "gloova-ecran-accueil.jpg",
+  "title": "Tout arrive<br>dans votre agenda.",
+  "card": [
+   "Nouveau rendez-vous",
+   "Massage californien · Samedi 11:00"
+  ],
+  "dur": 3.0,
+  "after": 6,
+  "title_delay": 0.1,
+  "phone_delay": 0.05,
+  "phone_in": 0.6,
+  "card_delay": 1.1
+ },
+ "end": {
+  "tagline": "L'agenda des pros<br>de la beauté.",
+  "sub": "Sans commission sur vos rendez-vous",
+  "small": "gloova.fr · iPhone et iPad",
+  "delay": 0.5,
+  "hold": 1.8
+ },
+ "cap_size": 112
+}
