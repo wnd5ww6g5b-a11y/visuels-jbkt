@@ -203,10 +203,14 @@ def main():
     out = Path(a.sortie); out.parent.mkdir(parents=True, exist_ok=True)
     part = out.with_name(out.stem + '.part.mp4')
     if v.get('voice'):
-        mus = ICI / 'music' / a.musique
-        mus = mus if mus.suffix else mus.with_suffix('.m4a')
-        ins = ['-i', str(vid), '-i', str(mus)]
-        flt = [f"[1:a]apad,atrim=0:{total:.2f},afade=t=in:d=0.4,afade=t=out:st={total-1.5:.2f}:d=1.5,volume=0.32[m]"]
+        if a.musique == 'none':
+            ins = ['-i', str(vid), '-f', 'lavfi', '-t', f'{total:.2f}', '-i', 'anullsrc=r=44100:cl=stereo']
+            flt = ["[1:a]anull[m]"]
+        else:
+            mus = ICI / 'music' / a.musique
+            mus = mus if mus.suffix else mus.with_suffix('.m4a')
+            ins = ['-i', str(vid), '-i', str(mus)]
+            flt = [f"[1:a]apad,atrim=0:{total:.2f},afade=t=in:d=0.4,afade=t=out:st={total-1.5:.2f}:d=1.5,volume=0.32[m]"]
         labels = ['[m]']
         for k, vo in enumerate(v['voice']):
             ins += ['-i', str(ICI / vo['file'])]

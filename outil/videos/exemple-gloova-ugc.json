@@ -1,0 +1,69 @@
+{
+ "id": "gloova-ugc-presentatrice",
+ "presenter": {
+  "clip": "clips/ugc-presentatrice-sync.mp4",
+  "seg1": [
+   0,
+   5.64
+  ],
+  "seg2": [
+   6.24,
+   13.43
+  ],
+  "subs1": [
+   "Vous êtes esthéticienne",
+   "et vous passez vos soirées",
+   "à répondre aux messages ?",
+   "Je vous montre Gloova."
+  ],
+  "subs2": [
+   "Et c'est dès 9,99 € par mois",
+   "sans commission",
+   "sur vos rendez-vous.",
+   "Écrivez GLOOVA en commentaire !"
+  ]
+ },
+ "screens": {
+  "dur": 9.0,
+  "vo_len": 8.5,
+  "imgs": [
+   "gloova-ecran-agenda.jpg",
+   "gloova-ecran-accueil.jpg"
+  ],
+  "subs": [
+   "Vos clientes réservent",
+   "toutes seules,",
+   "sur votre page, 24 h/24.",
+   "Une confirmation,",
+   "puis un rappel la veille."
+  ],
+  "cards": [
+   {
+    "at": 3.6,
+    "until": 6.0,
+    "icon": "✓",
+    "title": "Réservation confirmée",
+    "sub": "Massage californien · Samedi 11:00",
+    "top": 1230
+   },
+   {
+    "at": 6.2,
+    "icon": "⏰",
+    "title": "Rappel envoyé la veille",
+    "sub": "La veille du rendez-vous",
+    "top": 1230
+   }
+  ]
+ },
+ "end": {
+  "dur": 2.6,
+  "cta": "Écrivez GLOOVA en commentaire",
+  "small": "gloova.fr · iPhone et iPad"
+ },
+ "audio": {
+  "p1": "voix/ugc-P1.mp3",
+  "vo": "voix/ugc-VO.mp3",
+  "p2": "voix/ugc-P2.mp3",
+  "music": "gloova-rythme-2.m4a"
+ }
+}
