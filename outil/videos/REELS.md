@@ -63,3 +63,11 @@ Pour un reel d'engagement, la fin pose la question : par exemple `tagline` = `"E
   Les montants d'une offre d'exemple sont présentés comme un exemple, et les calculs doivent être justes
   (€/km = prix ÷ km de la course ; €/h = prix ÷ (minutes de course + minutes d'approche) × 60).
 - JBKT : on parle aux patrons de TPE et de PME ; pas de prix ; signature « Démo gratuite de 30 min ».
+
+## Voix de Gloova (choisie par Karim le 17/11/2026 : « à partir de maintenant ça sera la voix de Gloova »)
+
+- Higgsfield, modèle `elevenlabs_v4`, voix preset Celine `57ccb351-84d7-54ba-afd4-26b566ca6023`, `stability` 0.4.
+- **Toujours tout le texte en UNE seule prise** (un seul élément `dialogue`), jamais phrase par phrase : c'est ce qui la rend fluide.
+- Puis découper la prise aux pauses (`ffmpeg -af silencedetect=n=-38dB:d=0.12`, coupe au milieu de chaque silence,
+  fondus de 20 à 40 ms) et caler chaque morceau sur son plan (`voice` : `at` = 0,3 s − silence de début du morceau).
+- Nombres écrits en toutes lettres (« neuf euros quatre-vingt-dix-neuf »). Exemple complet : `exemple-gloova-pub-dynamique-voix-fluide.json`.

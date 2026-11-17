@@ -59,6 +59,30 @@ Images fournies par Karim (JPEG, dans l'ordre), publiées telles quelles. Quand 
 params = `{"image_urls": <image_urls>, "caption": <légende finale>}` (légende finale = `caption` + ligne vide + `hashtags`).
 Puis `status` = `published`, `published_at`, `instagram_media_id`. En cas d'erreur : `publish_error`, pas de nouvel essai.
 
+
+## Facebook (décidé par Karim le 17/11/2026)
+
+Pages Facebook (connector Windsor `facebook_organic`) : `gloova` → `1497497520105638` ; `jbkt` → `1308753372330573` ;
+`radar` → `1407890339078131` (aussi dans le document `config/facebook`).
+
+**Règle : chaque post image ou carrousel publié sur Instagram est aussi publié sur la Page Facebook de la marque**, au même passage,
+juste après Instagram (jamais les stories ; jamais les vidéos : Windsor ne sait pas publier de vidéo sur Facebook).
+1. Image : `image_url` du document. Carrousel : la **première** image de `image_urls` seulement.
+2. `execute_action`, connector `facebook_organic`, action `create_photo_post`, account = id de la Page,
+   params = `{"image_url": <image>, "caption": <légende Facebook>}`.
+3. Légende Facebook = `caption` adaptée, puis ligne vide, puis 2 ou 3 hashtags au plus :
+   - « lien en bio » → le vrai lien : JBKT `https://www.jbktsolutionsdigitales.fr/contact`, Gloova `https://gloova.fr`,
+     Radar `https://apps.apple.com/fr/app/id6829886766` ;
+   - « Écrivez GLOOVA en commentaire et on vous envoie le lien en privé » (et toute phrase « écrivez … en commentaire … en privé ») →
+     « Découvrir Gloova : https://gloova.fr » (le message privé automatique n'existe que sur Instagram) ;
+   - « sur l'App Store » sans lien → ajouter le lien Radar ;
+   - rien d'autre ne change (mêmes règles : rien d'inventé, prix TTC Gloova, aucune plateforme ni lieu pour Radar).
+4. Écrire dans le document : `facebook_post_id` et `facebook_published_at`. En cas d'erreur : `facebook_error`, pas de nouvel essai,
+   et ne jamais republier Instagram pour autant.
+5. Un document avec `facebook_post_id` n'est jamais republié sur Facebook.
+6. Posts propres à Facebook : documents `channel` = `facebook` (texte seul avec `link`, ou image avec `image_url`),
+   mêmes conditions que B ; texte seul → action `create_post`, params = `{"message": <caption>, "link": <link>}`.
+
 ## Étapes
 
 1. Lire `config/instagram` et la collection `contents` (db_query, `channel` = `instagram`).
@@ -82,7 +106,8 @@ Puis `status` = `published`, `published_at`, `instagram_media_id`. En cas d'erre
       `status` = `published`, `published_at` = maintenant (ISO), `instagram_media_id` = id renvoyé.
 4. En cas d'erreur sur un post : NE PAS réessayer en boucle. Écrire `publish_error` = le message dans le document,
    laisser `status` tel quel, et passer au suivant.
-5. Résumer à la fin : images préparées, posts publiés, posts en erreur.
+5. Facebook : appliquer la partie « Facebook » ci-dessus pour chaque image ou carrousel publié à ce passage, et pour les documents `channel` = `facebook` arrivés à l'heure.
+6. Résumer à la fin : images préparées, posts publiés (Instagram et Facebook), posts en erreur.
 
 ## D. Commentaires (Gloova, Radar VTC et JBKT) : réponse dans l'heure
 
