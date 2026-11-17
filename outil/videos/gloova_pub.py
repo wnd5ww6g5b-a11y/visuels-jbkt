@@ -37,6 +37,7 @@ body{font-family:J,sans-serif;-webkit-font-smoothing:antialiased}
 .grain{position:absolute;inset:0;background:url('file://A/grain.png');mix-blend-mode:overlay;opacity:.55;pointer-events:none;z-index:50}
 .vig{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,.28) 100%);pointer-events:none}
 .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,31,33,0) 45%,rgba(30,31,33,.55) 78%,rgba(30,31,33,.75) 100%)}
+.ia{position:absolute;right:44px;bottom:60px;color:rgba(255,255,255,.72);font-weight:500;font-size:26px;letter-spacing:0}
 .cap{position:absolute;left:80px;right:80px;bottom:250px;color:#fff;font-weight:600;font-size:86px;line-height:1.06;letter-spacing:-.035em;text-shadow:0 4px 30px rgba(0,0,0,.25)}
 .w{display:inline-block;white-space:pre;opacity:0}
 .ttl{font-weight:700;font-size:80px;line-height:1.05;letter-spacing:-.035em;color:#1E1F21}
@@ -147,7 +148,8 @@ def build(v):
             tw, _ = words(s.get('text', ''), t + v.get('cap_delay', 0.6))
             LINES = False
             inner = (f'<video muted playsinline preload="auto" data-off="{s.get("off", 0.2)}" src="file://{A}/{s["clip"]}"></video>'
-                     f'<div class="vig"></div><div class="shade"></div><div class="cap">{tw}</div>')
+                     f'<div class="vig"></div><div class="shade"></div><div class="cap">{tw}</div>'
+                     + ('<div class="ia">Image générée par IA</div>' if v.get('ia_label') else ''))
             if s.get('stamp'):
                 inner += f'<div class="stamp" data-stamp="{t + s.get("stamp_at", 1.5):.2f}">{s["stamp"]}</div>'
             scene(t, t + d, inner, cls=('bw' if s.get('bw') else '')); t += d

@@ -1,0 +1,100 @@
+{
+ "id": "gloova-pub-tele-journee",
+ "xf": 0.35,
+ "step": 0.08,
+ "wd": 0.6,
+ "cap_delay": 0.25,
+ "cap_size": 100,
+ "shots": [
+  {
+   "clip": "clips/gloova-tv-ouverture.mp4",
+   "off": 0.1,
+   "text": "7 h 00.",
+   "dur": 4.8
+  },
+  {
+   "clip": "clips/gloova-tv-soin.mp4",
+   "off": 0.6,
+   "text": "Pendant vos soins,<br>plus besoin de décrocher.",
+   "dur": 3.9
+  },
+  {
+   "clip": "clips/gloova-tv-tram.mp4",
+   "off": 0.8,
+   "text": "Elles réservent<br>en ligne,<br>à toute heure.",
+   "dur": 3.5
+  },
+  {
+   "clip": "clips/gloova-tv-arrivee.mp4",
+   "off": 1.6,
+   "text": "Et le soir,<br>elles sont là.",
+   "dur": 3.3
+  }
+ ],
+ "product": {
+  "screen": "gloova-ecran-accueil.jpg",
+  "title": "Tout arrive<br>dans votre agenda.",
+  "card": [
+   "Nouveau rendez-vous",
+   "Soin visage · Mardi 18:30"
+  ],
+  "dur": 3.6,
+  "after": 4,
+  "title_delay": 0.25,
+  "phone_delay": 0.1,
+  "phone_in": 0.8,
+  "card_delay": 1.4
+ },
+ "end": {
+  "tagline": "L'agenda des pros<br>de la beauté.",
+  "sub": "Sans commission sur vos rendez-vous",
+  "small": "gloova.fr · iPhone et iPad",
+  "delay": 0.2,
+  "hold": 1.2,
+  "price": "Dès 9,99 €",
+  "price_sub": "par mois TTC · sans engagement",
+  "min": 6.4
+ },
+ "lines": [
+  "Vos mains sont prises ?",
+  "Pas le temps de répondre ?",
+  "Vos clientes réservent en ligne, vingt-quatre heures sur vingt-quatre.",
+  "Tout arrive dans votre agenda.",
+  "Et vous ?",
+  "Vous travaillez, tranquille.",
+  "Gloova, l'agenda des pros de la beauté. Dès neuf euros quatre-vingt-dix-neuf par mois, sans commission sur vos rendez-vous !"
+ ],
+ "voice": [
+  {
+   "file": "voix/journee-P1.mp3",
+   "scene": 0,
+   "at": 0.3
+  },
+  {
+   "file": "voix/journee-P2.mp3",
+   "scene": 1,
+   "at": 0.18
+  },
+  {
+   "file": "voix/journee-P3.mp3",
+   "scene": 2,
+   "at": 0.2
+  },
+  {
+   "file": "voix/journee-P4.mp3",
+   "scene": 3,
+   "at": 0.08
+  },
+  {
+   "file": "voix/journee-P5.mp3",
+   "scene": 4,
+   "at": 0.06
+  },
+  {
+   "file": "voix/journee-P6.mp3",
+   "scene": 5,
+   "at": 0.17
+  }
+ ],
+ "ia_label": true
+}
