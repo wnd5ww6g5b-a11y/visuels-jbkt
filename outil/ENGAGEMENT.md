@@ -152,7 +152,7 @@ Instagram montre un compte à de nouvelles personnes quand ses publications sont
   Gloova : messages tout prêts pour relancer une cliente (fait le 17/11), **règles d'annulation à copier** ;
   JBKT : **astuces Excel et Google pour les PME** ; Radar : **calculs et seuils de rentabilité**.
   Dernière image : « Enregistre(z) ce post » + « Envoie(z)-le à … ».
-- **Gloova** : le carrousel utile de la semaine est créé avec `status` = `to_validate` (Karim valide Gloova), jamais `scheduled`.
+- **Gloova** : depuis le 17/11/2026, Karim a délégué aussi Gloova (« valide tout automatiquement, si ça ne va pas on te dira après ») : le carrousel utile de la semaine est créé directement en `scheduled`, `validated_by` = « Claude (plan délégué par Karim) ».
 - Légendes : finir par une demande simple (« Enregistre », « Envoie-le à… », une question).
 - **Mot-clé en commentaire** (automatique depuis le 16/11) : quand quelqu'un écrit le mot-clé de la marque en commentaire ou en message privé,
   le serveur lui envoie le lien en message privé et répond « C'est envoyé en message privé 📩 » sous son commentaire.

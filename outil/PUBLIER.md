@@ -73,7 +73,7 @@ Pour chaque document `channel` = `"facebook"`, status `scheduled` ou `validated`
 2. `format` = `"texte"` ou `"lien"` : action `create_post`, params = `{"message": <caption>}` et `"link": <link>` s'il existe.
 3. account = id de la Page de la marque. Écrire `facebook_post_id`, `facebook_published_at`, status `published`.
    En cas d'erreur : `facebook_error`, status `error`, pas de nouvel essai.
-4. Jamais un document Gloova en `to_validate` ; jamais de carrousel, de vidéo ni de story sur Facebook.
+4. Jamais un document en `to_validate` ; jamais de carrousel, de vidéo ni de story sur Facebook.
 
 ## Étapes
 

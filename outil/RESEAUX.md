@@ -35,13 +35,13 @@ Seulement Karim ou Julien, à la main, en apportant de l'aide d'abord, en respec
 L'outil peut préparer des idées de réponses, jamais poster dans un groupe.
 
 **Règles de chaque marque** : identiques à Instagram (Gloova : prix TTC, « sans commission sur vos rendez-vous »,
-validation de Karim ; Radar : aucune plateforme, aucun lieu, aucune promesse de gains, calculs justes ;
+plan délégué depuis le 17/11/2026 ; Radar : aucune plateforme, aucun lieu, aucune promesse de gains, calculs justes ;
 JBKT : jamais de prix, démos « données fictives »).
 
 ## Documents dans l'outil (collection `contents`)
 `channel` = `"facebook"`, `brand_id`, `format` = `"texte"` | `"lien"` | `"image"`, `caption` (le texte complet),
 `link` (format lien, ou en plus d'un texte), `image_url` (format image), `scheduled_at`, `status`
-(`scheduled` pour JBKT et Radar ; `to_validate` pour Gloova tant que Karim n'a pas validé), `validated_by`.
+(`scheduled` pour les 3 marques depuis le 17/11/2026), `validated_by`.
 Publication : `outil/PUBLIER.md`, partie « Facebook ».
 
 ## TikTok (bientôt)
