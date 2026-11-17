@@ -70,7 +70,7 @@ def verifier(o):
             if not has(x, 'position') or not has(x, 'name'): e.append(f"Fil d'Ariane, élément {i} : position ou nom manquant")
     if 'SoftwareApplication' in T or 'MobileApplication' in T or 'WebApplication' in T:
         if not has(o, 'name'): e.append('Application : nom manquant (name)')
-        if not has(o, 'offers', 'price'): e.append('Application : prix manquant (offers.price, 0 si gratuit)')
+        if not (has(o, 'offers', 'price') or has(o, 'offers', 'lowPrice')): e.append('Application : prix manquant (offers.price, ou lowPrice pour plusieurs formules ; 0 si gratuit)')
         if has(o, 'offers') and not has(o, 'offers', 'priceCurrency'): w.append('Application : devise recommandée (offers.priceCurrency)')
         if not has(o, 'aggregateRating') and not has(o, 'review'):
             w.append("Application : pas d'étoiles possibles sans vrais avis (aggregateRating/review) : ne jamais en inventer")
