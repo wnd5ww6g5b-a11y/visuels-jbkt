@@ -30,7 +30,7 @@ Base de l'outil : artifact `215e6505-5f68-4a59-8694-595b631af2eb`, collection `c
 Le compte Instagram de chaque marque est dans le document `config/instagram`
 (`gloova`, `jbkt`, `radar` → `account_id`).
 
-**D. Commentaires (Gloova, Radar VTC et JBKT)** : répondre à chaque nouveau commentaire dans l'heure (automatique si simple, validation si délicat), publier les réponses validées.
+**D. Commentaires (Gloova, Radar VTC et JBKT)** : répondre à chaque nouveau commentaire dans l'heure (tout automatique depuis le 17/11, avec garde-fous), publier les réponses validées.
 
 Si rien ne relève de A, B ni D (ni des articles, voir ARTICLES.md) : s'arrêter tout de suite, sans rien modifier.
 
@@ -104,7 +104,7 @@ Pour chaque document `channel` = `"facebook"`, status `scheduled` ou `validated`
 ## D. Commentaires (Gloova, Radar VTC et JBKT) : réponse dans l'heure
 
 Décidé par Karim le 16/11/2026 : pour gagner des abonnés, **chaque commentaire reçoit une réponse dans l'heure**, sur les 3 comptes.
-Les réponses simples partent **tout de suite, sans validation**. Tout ce qui est délicat passe par la validation de Karim.
+Les réponses simples partent **tout de suite, sans validation**. Depuis le 17/11/2026 (Karim : « oui, gère »), **les commentaires délicats aussi** : réponse publiée directement, avec les garde-fous ci-dessous.
 
 **Mots-clés (depuis le 16/11)** : un commentaire qui contient seulement ou surtout un mot-clé (RADAR, GLOOVA, DEMO) est déjà traité
 par le serveur (lien en message privé + réponse « C'est envoyé en message privé 📩 »). Ne pas y répondre une 2e fois :
@@ -123,8 +123,15 @@ le noter `status` = `replied`, `auto` = true, `reply` = « (mot-clé : réponse 
    - **Simple → réponse automatique tout de suite** : un vote (« A », « OUI »), un compliment, un emoji, un avis sur le sujet du post,
      une question dont la réponse est **écrite telle quelle** dans `outil/marques/<marque>.md` (ex. « c'est sur iPhone ? », « il y a un essai ? »).
      Publier avec `reply_to_comment`, puis créer `comments/<comment_id>` avec `status` = `replied`, `replied_at`, `auto` = true.
-   - **Délicat → validation** : critique, plainte, problème avec l'app, question sur un prix JBKT, question sur un compte ou un paiement,
-     tout ce dont la réponse n'est pas sûre. Créer le document avec la réponse proposée et `status` = `to_validate`.
+   - **Délicat → réponse publiée aussi, sans validation** : critique, plainte, problème avec l'app, question sur un prix JBKT,
+     question sur un compte ou un paiement, tout ce dont la réponse n'est pas sûre. Réponse calme, polie, qui reconnaît le problème
+     et propose d'en parler en privé : Gloova « Écrivez-nous à contact@gloova.fr ou en message privé, on regarde ça avec vous »,
+     JBKT « Écrivez-nous en message privé, on vous répond vite », Radar « Écris-nous en message privé, on regarde ça ensemble ».
+     Prix JBKT : « Nos tarifs se font sur devis, après une démo gratuite de 30 minutes : écrivez-nous en message privé. »
+     **Jamais** : promettre un remboursement, un geste commercial, une date de correction ou une fonction ; donner un chiffre ou un
+     fait qui n'est pas dans la fiche de la marque ; demander des données personnelles en public ; se justifier longuement ;
+     répondre à une menace juridique (dans ce cas seulement : pas de réponse, `status` = `karim`, et le signaler dans le résumé).
+     Publier avec `reply_to_comment`, document avec `status` = `replied`, `auto` = true, `sensible` = true.
    - **Spam, insulte, pub, faux comptes de gains** : `reply` = `""`, `status` = `ignored`, pas de réponse.
    Document : `{"brand_id", "media_id", "permalink", "post_title" (titre du document contents dont instagram_media_id = media_id, sinon 1re ligne de la légende),
    "username", "text", "at" (comment_timestamp), "reply", "status"}` (+ `auto`, `replied_at` si publié).
@@ -134,20 +141,21 @@ le noter `status` = `replied`, `auto` = true, `reply` = « (mot-clé : réponse 
    - un vote → remercier et demander pourquoi ; un compliment → remercier et poser une question sur son activité ;
    - jamais de prix JBKT, jamais de promesse de gains, rien d'inventé ; pas de lien (le lien est en bio) ;
    - jamais 2 fois la même phrase d'affilée sur un même compte.
-5. Résumer : réponses publiées automatiquement, réponses à valider.
+5. Résumer : réponses publiées (dont les commentaires délicats, à relire par Karim), et les cas `karim`.
 
 ### Concours Gloova (23 nov. → 18 déc. 2026) : réponses automatiques
 
 Décidé par Karim : sur le post du concours (document `contents/concours-gloova-carrousel`, son `instagram_media_id`)
 et sur le reel du concours (`contents/concours-gloova-reel`), les **participations** reçoivent une réponse courte
-**publiée tout de suite, sans validation**. Tout le reste suit la partie D (automatique si simple, validation si délicat).
+**publiée tout de suite, sans validation**. Tout le reste suit la partie D (tout est répondu automatiquement depuis le 17/11).
 - **Participation** = un commentaire qui donne une prestation et/ou identifie un compte (@…), sans question.
   Réponse : 1 phrase, vouvoiement, chaleureuse, qui reprend la prestation citée si elle est claire, puis
   « Participation bien enregistrée, bonne chance ! ✨ » (varier un peu la formulation, jamais 2 fois la même d'affilée).
   Publier avec `reply_to_comment`, puis créer `comments/<id>` avec `status` = `replied`, `replied_at`, `auto` = true.
   Ne jamais dire qu'une participation est gagnante ou « validée » au tirage ; ne rien promettre.
-- **Question** (règlement, lots, date, « je ne suis pas esthéticienne », etc.) ou **critique** : réponse proposée,
-  `status` = `to_validate` (Karim valide). S'appuyer seulement sur le règlement : gloova.fr/concours.
+- **Question** (règlement, lots, date, « je ne suis pas esthéticienne », etc.) ou **critique** : réponse publiée directement
+  (depuis le 17/11), en s'appuyant **seulement** sur le règlement gloova.fr/concours, qu'on cite ; si le règlement ne répond pas :
+  « Bonne question, écrivez-nous en message privé et on vous répond. » Jamais annoncer un gagnant ni modifier une règle.
 - **Spam, insulte, compte de « tirage » ou de faux gains** : `status` = `ignored`, pas de réponse.
 
 ## Hashtags de base par marque
