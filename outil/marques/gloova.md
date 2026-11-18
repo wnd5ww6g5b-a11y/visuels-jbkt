@@ -67,3 +67,14 @@ Voir `outil/marques/gloova-nouveautes-2026-11.md` (fiche de Karim du 16/11). Res
 nouveautés de l'app (statistiques, réglages parrainage, bons cadeaux dans l'app) = pas de date annoncée avant validation Apple ;
 bons cadeaux et acompte = paiement en ligne activé (1,5 % prélevé) ; parrainage clientes désactivé par défaut.
 Formule de chaque nouveauté : indiquée dans la fiche (tableau « En bref »). Toujours la préciser (« dès Pro+ », « avec Ultra »).
+
+## Nouvelle DA « Pop » (depuis le 18/11/2026 — carte blanche de Karim : « il faut qu'on soit vendeur »)
+
+L'ancienne DA (crème, noir, petites cartes) n'est plus utilisée pour les nouveaux posts Gloova. Script : `outil/gloova_pop.py`.
+- Couleurs : noir #141012, rose bonbon #FF5C93, blush #FFE1EA, crème #FFF7F2.
+- Typo : Bricolage Grotesque 800 (titres énormes et serrés), Instrument Serif italique (la phrase émotion), Inter (texte).
+- 3 mises en page : `offre` (grand titre + vrai écran de l'app dans un iPhone + 3 coches + prix), `messages` (photo Higgsfield + bulles
+  de messages de clientes + bandeau noir « Elles réservent seules. »), `avant_apres` (deux colonnes Avant / Avec Gloova).
+- Toujours un vrai écran de l'app (dossier gloomy-site/public/images/app), une offre claire (essai 30 jours, prix TTC réels), un bouton.
+- Photos : Higgsfield gpt_image_2_6 (0,25 crédit), sans texte ni logo ; « Image générée par IA » dès qu'une personne (même des mains) est générée.
+- Règles qui restent : « sans commission sur vos rendez-vous » (jamais « 0 % commission »), aucune fonction qui n'existe pas, aucun avis inventé.
