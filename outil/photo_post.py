@@ -59,7 +59,7 @@ def html(p):
     fonts = font(*m['titre']) + font(*m['texte']) if m['titre'] != m['texte'] else font(*m['titre'])
     ia = ('<div style="position:absolute;right:44px;bottom:40px;font:500 22px Inter,sans-serif;'
           f'color:{"rgba(255,255,255,.85)" if sombre else "rgba(29,31,32,.7)"}">Image générée par IA</div>') if p.get('ia') else ''
-    titre_style = ('letter-spacing:-0.045em;' if p['brand'] == 'gloova' else 'letter-spacing:-0.035em;')
+    titre_style = ('letter-spacing:-0.03em;' if p['brand'] == 'gloova' else 'letter-spacing:-0.035em;')
     return f"""<!DOCTYPE html><html><head><meta charset="utf-8"><style>{fonts}
 *{{margin:0;box-sizing:border-box}} body{{width:1080px;height:1350px;overflow:hidden}}
 </style></head><body>
