@@ -98,8 +98,40 @@ def prix(p):
 </div>"""
 
 
+def importer(p):
+    """Illustration (pas une capture) : un export de fichier clientes devient la liste Gloova, sans doublons."""
+    lignes = [('Camille R.', '06 •• •• •• 12'), ('Ines M.', '06 •• •• •• 48'), ('Camille R.', '06 •• •• •• 12'),
+              ('Sarah P.', '07 •• •• •• 03'), ('Chloé B.', '06 •• •• •• 77')]
+    csv = ''.join(f'<div style="display:flex;justify-content:space-between;padding:14px 22px;border-top:1px solid {BORD};'
+                  f'font:500 24px J;color:{NOIR};{"background:#FBEDEB" if i == 2 else ""}"><span>{n}</span><span style="color:{GRIS}">{t}</span></div>'
+                  for i, (n, t) in enumerate(lignes))
+    uniques = [l for i, l in enumerate(lignes) if i != 2]
+    gl = ''.join(f'<div style="display:flex;align-items:center;gap:16px;padding:12px 0;font:600 25px J;color:{NOIR}">'
+                 f'<span style="width:46px;height:46px;border-radius:50%;background:{ROSE};display:flex;align-items:center;justify-content:center;font:700 20px J">{n[0]}</span>{n}</div>'
+                 for n, _ in uniques)
+    return f"""<div style="position:relative;width:1080px;height:1350px;background:{CREME};overflow:hidden">
+  <div style="position:absolute;left:80px;top:80px">{entete()}</div>
+  <div style="position:absolute;left:80px;right:80px;top:196px">
+    <h1 style="font:700 {p.get('size', 72)}px/1.04 J;letter-spacing:-.03em;color:{NOIR}">{p['title']}</h1>
+    <p style="margin-top:24px;font:500 30px/1.38 J;color:{GRIS};max-width:860px">{p['subtitle']}</p>
+  </div>
+  <div style="position:absolute;left:80px;top:660px;width:430px;border-radius:28px;background:#fff;border:2px solid {BORD};overflow:hidden">
+    <div style="padding:18px 22px;font:700 24px J;color:{NOIR}">Votre export Excel ou CSV</div>{csv}
+    <div style="padding:14px 22px;border-top:1px solid {BORD};font:500 21px J;color:#B5655C">1 doublon</div>
+  </div>
+  <div style="position:absolute;left:512px;top:870px;width:56px;height:56px;border-radius:50%;background:{NOIR};display:flex;align-items:center;justify-content:center">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+  <div style="position:absolute;left:570px;top:660px;width:430px;border-radius:28px;background:#fff;border:2px solid {BORD};padding:18px 28px">
+    <div style="font:700 24px J;color:{NOIR};margin-bottom:6px">Vos clientes dans Gloova</div>{gl}
+    <div style="margin-top:8px;display:inline-block;padding:10px 20px;border-radius:999px;background:{ROSE};font:600 21px J;color:{NOIR}">Sans doublons</div>
+  </div>
+  <div style="position:absolute;left:80px;bottom:80px">{cta(p['cta'])}</div>
+  <div style="position:absolute;right:80px;bottom:46px;font:500 20px J;color:{GRIS}">Illustration, données fictives</div>
+</div>"""
+
+
 def html(p):
-    corps = {'ecran': ecran, 'prix': prix}[p['layout']](p)
+    corps = {'ecran': ecran, 'prix': prix, 'import': importer}[p['layout']](p)
     return (f'<!DOCTYPE html><html><head><meta charset="utf-8"><style>{font(500)}{font(600)}{font(700)}'
             '*{margin:0;box-sizing:border-box}body{width:1080px;height:1350px;overflow:hidden}</style></head>'
             f'<body>{corps}</body></html>')
