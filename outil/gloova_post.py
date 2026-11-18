@@ -130,8 +130,62 @@ def importer(p):
 </div>"""
 
 
+FONDS = {'noir': (NOIR, '#fff', 'rgba(255,255,255,.72)'), 'rose': (ROSE, NOIR, GRIS), 'creme': (CREME, NOIR, GRIS)}
+
+
+def entete_couleur(encre):
+    logo = 'gloova-fleur-blanche.png' if encre == '#fff' else 'gloova-fleur-noire.png'
+    return (f'<div style="display:flex;align-items:center;gap:14px"><img src="{b64(os.path.join(LOGOS, logo), "image/png")}" '
+            f'style="height:50px"><span style="font:700 36px J;letter-spacing:-.02em;color:{encre}">Gloova</span></div>')
+
+
+def cta_couleur(txt, fond):
+    if fond != 'noir':
+        return cta(txt)
+    return (f'<div style="display:inline-flex;align-items:center;gap:18px;height:92px;padding:0 14px 0 38px;border-radius:999px;'
+            f'background:#fff;color:{NOIR};font:700 31px J">{txt}<span style="width:64px;height:64px;border-radius:50%;background:{NOIR};'
+            'display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" '
+            'stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>')
+
+
+def liste(p):
+    """Style « époque » : grand titre, cartes blanches empilées (numérotées ou cochées)."""
+    fond, encre, gris = FONDS[p.get('fond', 'creme')]
+    num = p.get('numeros')
+    cartes = ''
+    for i, (t, s) in enumerate(p['items'], 1):
+        rond = (f'<span style="flex:none;width:54px;height:54px;border-radius:50%;background:{NOIR};color:#fff;display:flex;'
+                f'align-items:center;justify-content:center;font:700 24px J">{i}</span>') if num else CHECK.format(bg=ROSE)
+        cartes += (f'<div style="display:flex;align-items:center;gap:24px;padding:26px 30px;border-radius:28px;background:#fff">{rond}'
+                   f'<div><div style="font:600 32px/1.2 J;letter-spacing:-.02em;color:{NOIR}">{t}</div>'
+                   f'<div style="margin-top:6px;font:500 23px/1.3 J;color:{GRIS}">{s}</div></div></div>')
+    return f"""<div style="position:relative;width:1080px;height:1350px;background:{fond};overflow:hidden">
+  <div style="position:absolute;left:80px;top:80px">{entete_couleur(encre)}</div>
+  <div style="position:absolute;left:80px;right:80px;top:190px">
+    <h1 style="font:500 {p.get('size', 92)}px/1.0 J;letter-spacing:-.045em;color:{encre}">{p['title']}</h1>
+    {f'<p style="margin-top:24px;font:500 29px/1.38 J;color:{gris};max-width:860px">{p["subtitle"]}</p>' if p.get('subtitle') else ''}
+  </div>
+  <div style="position:absolute;left:80px;right:80px;top:{p.get('top', 560)}px;display:flex;flex-direction:column;gap:16px">{cartes}</div>
+  <div style="position:absolute;left:80px;bottom:80px">{cta_couleur(p['cta'], p.get('fond', 'creme'))}</div>
+</div>"""
+
+
+def chiffre(p):
+    """Style « époque » : un très grand chiffre, une phrase, un bouton."""
+    fond, encre, gris = FONDS[p.get('fond', 'creme')]
+    return f"""<div style="position:relative;width:1080px;height:1350px;background:{fond};overflow:hidden">
+  <div style="position:absolute;left:80px;top:80px">{entete_couleur(encre)}</div>
+  <div style="position:absolute;left:72px;right:60px;top:300px">
+    <div style="font:500 {p.get('size', 300)}px/0.9 J;letter-spacing:-.06em;color:{encre}">{p['chiffre']}</div>
+    <h1 style="margin-top:40px;font:500 84px/1.0 J;letter-spacing:-.045em;color:{encre}">{p['title']}</h1>
+    <p style="margin-top:26px;font:500 30px/1.38 J;color:{gris};max-width:860px">{p['subtitle']}</p>
+  </div>
+  <div style="position:absolute;left:80px;bottom:80px">{cta_couleur(p['cta'], p.get('fond', 'creme'))}</div>
+</div>"""
+
+
 def html(p):
-    corps = {'ecran': ecran, 'prix': prix, 'import': importer}[p['layout']](p)
+    corps = {'ecran': ecran, 'prix': prix, 'import': importer, 'liste': liste, 'chiffre': chiffre}[p['layout']](p)
     return (f'<!DOCTYPE html><html><head><meta charset="utf-8"><style>{font(500)}{font(600)}{font(700)}'
             '*{margin:0;box-sizing:border-box}body{width:1080px;height:1350px;overflow:hidden}</style></head>'
             f'<body>{corps}</body></html>')
