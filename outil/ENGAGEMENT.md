@@ -199,3 +199,13 @@ Même idée, nouveau texte et nouvelle accroche : jamais republier le même visu
 Champ du document : `recycle_de` = le `permalink` de la publication d'origine, et `format` = le nouveau format.
 Les règles de chaque marque s'appliquent comme d'habitude (vérifier à nouveau prix, fonctions, calculs).
 Ne pas recycler un sujet lié à une date passée (concours terminé, offre finie).
+
+## Nouveau style des posts JBKT et Radar (depuis le 18/11/2026, validé par Karim)
+
+Les posts image JBKT et Radar se font maintenant avec deux scripts, et plus avec les anciens visuels « carte » :
+- `outil/mockup_post.py` : les écrans posés dans un ordinateur, une tablette ou un téléphone, **au format exact de l'écran**
+  (ordinateur 2880 × 1800, tablette 2048 × 1536, téléphone 1179 × 2556) : jamais étirés ni coupés.
+  JBKT : écrans de `banque/jbkt` (mention « Démo · données fictives »). Radar : écran dessiné en HTML au style de l'app
+  (offre d'exemple, aucun nom de plateforme, aucun lieu, mention « Exemple fictif »), calculs vérifiés.
+- `outil/photo_post.py` : une photo Higgsfield (gpt_image_2_6, 0,25 crédit, sans texte ni logo) + titre, logo et bouton.
+Alterner une photo et un post en appareils, pour une grille propre. Exemples publiés le 18/11 : `images/mockups/`, `images/photos-posts/`.
