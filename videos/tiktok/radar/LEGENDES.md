@@ -1,6 +1,6 @@
 # Radar VTC : 10 publications TikTok (5 vidéos, 5 images)
 
-Toutes les offres sont des exemples fictifs. Calculs : €/km = prix ÷ (km course + km approche) ; €/h = prix ÷ (min course + min approche) × 60.
+Toutes les offres sont des exemples fictifs. Fonds créés avec Higgsfield (mention « Images générées par IA » sur chaque visuel). Calculs : €/km = prix ÷ (km course + km approche) ; €/h = prix ÷ (min course + min approche) × 60.
 À publier depuis l'appli TikTok (Windsor ne publie pas sur TikTok). Ajouter un son tendance au moment de publier (les vidéos sont muettes).
 Rythme conseillé : 1 par jour, vers 12 h ou 19 h, en alternant vidéo et image.
 
