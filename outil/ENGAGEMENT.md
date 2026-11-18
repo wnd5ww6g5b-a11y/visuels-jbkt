@@ -170,6 +170,12 @@ Instagram montre un compte à de nouvelles personnes quand ses publications sont
 - Pour chacun : `pourquoi` (quelques mots : métier, ville si connue) et `idee` = une idée de vrai commentaire liée à son métier,
   à adapter à la publication choisie. Jamais de lien, jamais de pub, jamais de mensonge, jamais « super ! ».
 - Rien d'inventé : si la recherche ne donne pas 10 comptes sûrs, en mettre moins.
+- **Compte vivant obligatoire** (demande de Karim, 18/11/2026) : la dernière publication doit dater de **moins de 30 jours**.
+  Vérifier avec Firecrawl / Alexandria `scrapecreators` → `instagram/user-posts` (handle, trim = true), trier par `taken_at` (les posts épinglés sont en tête).
+  Compte introuvable ou sans publication depuis 30 jours : on l'écarte et on le met dans `deja_vus`.
+  Pour trouver de nouveaux comptes actifs : `instagram/hashtag-posts` (date_posted = last-week) sur les hashtags de la cible.
+- **Commentaire collé à la publication** : pour chaque compte, donner `post_url` (la dernière publication) et `commentaire` = un texte prêt à copier
+  qui parle de CETTE publication (ce qu'elle montre ou demande), avec une vraie question. Gloova et JBKT : vouvoiement ; Radar : tutoiement.
 
 **Onglet « Croissance Instagram » de l'outil** (documents `insta/gloova`, `insta/jbkt`, `insta/radar`) :
 - rempli chaque matin par la tâche « Relevé Instagram » (abonnés du jour, portée, enregistrements, partages, formats) avec `outil/insta/releve.py` ;
