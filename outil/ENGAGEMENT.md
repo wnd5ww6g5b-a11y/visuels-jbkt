@@ -187,3 +187,15 @@ Instagram montre un compte à de nouvelles personnes quand ses publications sont
   - `notes` : 2 à 4 phrases tirées des chiffres de la semaine (ce qui a marché, ce qu'on change).
 - Pour choisir les sujets : regarder les publications avec le meilleur `score` dans `insta/<marque>` et refaire le même type de sujet.
 - Quand Karim envoie une vidéo tournée : la monter (sous-titres, coupe, musique légère), la programmer en reel, et passer le script à `done` = true.
+
+## Recycler ce qui marche (depuis le 18/11/2026, demande de Karim)
+
+Chaque dimanche, avant de créer la semaine, regarder dans `insta/<marque>.posts` les publications publiées **il y a 3 à 6 semaines**
+avec le meilleur `score` (portée + enregistrements + partages), et pour chaque marque, en reprendre **1** (2 au plus) dans un autre format :
+- une image ou un post texte qui a bien marché → un reel (outil/videos) ou un carrousel utile (outil/carrousel.py) ;
+- un reel qui a bien marché → un carrousel qui détaille le même conseil, ou une nouvelle accroche sur la même vidéo ;
+- un carrousel qui a bien marché → un reel « en 20 secondes ».
+Même idée, nouveau texte et nouvelle accroche : jamais republier le même visuel avec la même légende.
+Champ du document : `recycle_de` = le `permalink` de la publication d'origine, et `format` = le nouveau format.
+Les règles de chaque marque s'appliquent comme d'habitude (vérifier à nouveau prix, fonctions, calculs).
+Ne pas recycler un sujet lié à une date passée (concours terminé, offre finie).
