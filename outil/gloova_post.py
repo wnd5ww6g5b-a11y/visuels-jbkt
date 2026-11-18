@@ -155,7 +155,7 @@ def liste(p):
     cartes = ''
     for i, (t, s) in enumerate(p['items'], 1):
         rond = (f'<span style="flex:none;width:54px;height:54px;border-radius:50%;background:{NOIR};color:#fff;display:flex;'
-                f'align-items:center;justify-content:center;font:700 24px J">{i}</span>') if num else CHECK.format(bg=ROSE)
+                f'align-items:center;justify-content:center;font:700 24px J">{"ABCDEFG"[i-1] if p.get("lettres") else i}</span>') if (num or p.get("lettres")) else CHECK.format(bg=ROSE)
         cartes += (f'<div style="display:flex;align-items:center;gap:24px;padding:26px 30px;border-radius:28px;background:#fff">{rond}'
                    f'<div><div style="font:600 32px/1.2 J;letter-spacing:-.02em;color:{NOIR}">{t}</div>'
                    f'<div style="margin-top:6px;font:500 23px/1.3 J;color:{GRIS}">{s}</div></div></div>')
