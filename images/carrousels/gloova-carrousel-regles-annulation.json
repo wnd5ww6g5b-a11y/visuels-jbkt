@@ -1,0 +1,48 @@
+{
+ "brand": "gloova",
+ "slug": "gloova-carrousel-regles-annulation",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "À copier-coller",
+   "title": "Vos règles d'annulation, prêtes à copier.",
+   "sub": "4 textes doux et clairs. Adaptez le délai et les minutes à votre institut.",
+   "swipe": "Faites défiler →"
+  },
+  {
+   "type": "tip",
+   "title": "Le délai pour prévenir",
+   "text": "Choisissez votre délai et écrivez-le partout.",
+   "example": "« Merci de me prévenir au moins 24 h à l'avance en cas d'empêchement : je pourrai proposer le créneau à une autre cliente. »"
+  },
+  {
+   "type": "tip",
+   "title": "Le retard",
+   "text": "Une phrase claire évite les tensions le jour J.",
+   "example": "« Au-delà de 15 minutes de retard, je devrai peut-être raccourcir le soin ou le reporter, pour respecter les clientes suivantes. »"
+  },
+  {
+   "type": "tip",
+   "title": "L'acompte des soins longs",
+   "text": "Pour les poses et les soins de plus d'une heure.",
+   "example": "« Pour les soins de plus d'une heure, un acompte est demandé à la réservation. Il est déduit le jour du rendez-vous. »"
+  },
+  {
+   "type": "tip",
+   "title": "Le rendez-vous non honoré",
+   "text": "Restez douce, mais restez ferme.",
+   "example": "« En cas d'absence sans prévenir, l'acompte est conservé. Merci de votre compréhension 🌸 »"
+  },
+  {
+   "type": "tip",
+   "title": "Où les afficher",
+   "text": "Sur votre page de réservation, dans le message de confirmation et en story à la une. Une règle visible, c'est moins de discussions."
+  },
+  {
+   "type": "end",
+   "title": "Enregistrez ce post.",
+   "text": "Et envoyez-le à une collègue qui n'ose pas encore poser ses règles.",
+   "cta": "Écrivez GLOOVA en commentaire"
+  }
+ ]
+}

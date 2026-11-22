@@ -1,0 +1,49 @@
+{
+ "brand": "jbkt",
+ "slug": "jbkt-carrousel-google-sheets",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "Astuces Google Sheets",
+   "title": "5 réglages pour un tableau d'équipe propre.",
+   "sub": "Gratuits, déjà dans Google Sheets, 2 minutes chacun.",
+   "swipe": "Faites défiler →"
+  },
+  {
+   "type": "tip",
+   "title": "Figez la ligne des titres",
+   "text": "Les titres restent visibles quand on descend dans le tableau.",
+   "example": "Affichage → Figer → 1 ligne"
+  },
+  {
+   "type": "tip",
+   "title": "Ajoutez des menus déroulants",
+   "text": "Tout le monde écrit « En cours » de la même façon.",
+   "example": "Insertion → Menu déroulant"
+  },
+  {
+   "type": "tip",
+   "title": "Protégez les colonnes sensibles",
+   "text": "Les formules ne sont plus effacées par erreur.",
+   "example": "Données → Protéger des feuilles et des plages"
+  },
+  {
+   "type": "tip",
+   "title": "Retrouvez une ancienne version",
+   "text": "Quelqu'un a tout modifié ? On revient en arrière.",
+   "example": "Fichier → Historique des versions"
+  },
+  {
+   "type": "tip",
+   "title": "Colorez ce qui est en retard",
+   "text": "Une date dépassée devient rouge toute seule.",
+   "example": "Format → Mise en forme conditionnelle"
+  },
+  {
+   "type": "end",
+   "title": "Enregistrez ce post.",
+   "text": "Envoyez-le à la personne qui gère vos tableaux. Et quand le tableau ne suffit plus, écrivez DEMO en commentaire.",
+   "cta": "Démo gratuite de 30 min"
+  }
+ ]
+}

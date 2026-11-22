@@ -1,0 +1,49 @@
+{
+ "brand": "radar",
+ "slug": "radar-carrousel-5-offres",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "Le calcul",
+   "title": "5 offres d'exemple, calculées.",
+   "sub": "Approche comprise. Regarde le €/km ET le €/h : ils ne disent pas toujours la même chose.",
+   "swipe": "Fais défiler →"
+  },
+  {
+   "type": "tip",
+   "title": "La petite course.",
+   "text": "8,90 € · 4,1 km et 10 min · approche 1,2 km et 4 min.",
+   "example": "5,3 km et 14 min → 1,68 €/km et 38,14 €/h"
+  },
+  {
+   "type": "tip",
+   "title": "La longue course.",
+   "text": "41,00 € · 38,5 km et 40 min · approche 2,5 km et 6 min.",
+   "example": "41 km et 46 min → 1,00 €/km et 53,48 €/h"
+  },
+  {
+   "type": "tip",
+   "title": "L'approche longue.",
+   "text": "13,20 € · 8 km et 15 min · approche 6,4 km et 12 min.",
+   "example": "14,4 km et 27 min → 0,92 €/km et 29,33 €/h"
+  },
+  {
+   "type": "tip",
+   "title": "La course dans les bouchons.",
+   "text": "18,00 € · 9 km et 38 min · approche 1,5 km et 5 min.",
+   "example": "10,5 km et 43 min → 1,71 €/km mais 25,12 €/h"
+  },
+  {
+   "type": "tip",
+   "title": "La course équilibrée.",
+   "text": "24,60 € · 16,2 km et 24 min · approche 2 km et 5 min.",
+   "example": "18,2 km et 29 min → 1,35 €/km et 50,90 €/h"
+  },
+  {
+   "type": "end",
+   "title": "Enregistre ce post.",
+   "text": "€/km = prix ÷ (km course + km approche). €/h = prix ÷ (min course + min approche) × 60. Envoie-le à un collègue chauffeur.",
+   "cta": "Commente RADAR pour l'essai gratuit"
+  }
+ ]
+}
