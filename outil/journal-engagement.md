@@ -35,3 +35,26 @@ Une ligne par publication : date · marque · format · sujet. Ne pas répéter 
 - 2026-11-22 · jbkt · reel · Avant / après · Avant / après : le planning
 - 2026-11-22 · radar · post · Question ouverte · Ta course la plus longue cette semaine ?
 - 2026-11-22 · radar · reel · Récap · 7 jours pour tester
+- 2026-11-23 · radar · reel · Tu la prends ? · Offre d’exemple 16,80 € (approche 2,6 km)
+- 2026-11-23 · jbkt · reel · Astuce · Boîte mail : 3 règles pour ne plus perdre un devis
+- 2026-11-23 · radar · facebook · lien · L’app qui fait le calcul (App Store)
+- 2026-11-23 · jbkt · facebook · lien · Article : digitaliser les bons d’intervention
+- 2026-11-24 · radar · reel · Le verdict · Le verdict de l’offre de lundi
+- 2026-11-24 · gloova · carrousel · À copier · Règles d’annulation prêtes à copier
+- 2026-11-25 · radar · carrousel · Calculs · 5 offres d’exemple, calculées
+- 2026-11-25 · radar · reel · Astuce chauffeur · L’attente au départ compte aussi
+- 2026-11-25 · jbkt · reel · 3 tâches · Commerce : 3 tâches à ne plus faire à la main
+- 2026-11-25 · jbkt · carrousel · Astuces · 5 réglages Google Sheets pour un tableau d’équipe
+- 2026-11-26 · jbkt · reel · Astuce · 3 raccourcis Excel
+- 2026-11-26 · jbkt · facebook · question · Où en est un dossier : A, B, C ou D
+- 2026-11-26 · gloova · facebook · lien · Page bons cadeaux de Noël
+- 2026-11-27 · radar · reel · Tu la prends ? · Offre d’exemple 22,50 € (approche 7 km)
+- 2026-11-27 · radar · facebook · texte · 5 vérifications de la voiture avant décembre
+- 2026-11-28 · radar · reel · Le verdict · Le verdict de l’offre de vendredi
+- 2026-11-28 · jbkt · reel · Un métier, un outil · Centre de tri : la pesée saisie une seule fois
+- 2026-11-28 · radar · facebook · question · La pause du midi : A, B, C ou D
+- 2026-11-28 · jbkt · facebook · texte · 5 réglages Google Sheets (texte complet)
+- 2026-11-28 · gloova · facebook · texte · Règles d’annulation (texte complet)
+- 2026-11-29 · radar · reel · Fonction de l’app · Les trains et les avions qui arrivent
+- 2026-11-29 · jbkt · reel · Astuce · Site vitrine : 3 choses en haut de l’accueil
+- Semaine du 23/11 : posts du jour = visuels déjà validés par Karim (18 et 19/11), stories de ces posts programmées (radar 21:00, jbkt 17:30).
