@@ -98,18 +98,19 @@ Dès qu'une fiche est publique, ajouter son adresse dans le `sameAs` du JSON-LD 
 bloc `ProfessionalService` ; gloomy-site : `api/seo.js`), vérifier le build, commit et push, puis cocher ici. Ne jamais ajouter une fiche non publique.
 
 JBKT :
-- [ ] La Fabrique du Net (envoyée le 16/11, en vérification ; pas encore en ligne au contrôle du 16/11 soir)
-- [ ] Pages Jaunes (envoyée le 16/11, en modération ; pas encore en ligne au contrôle du 16/11 soir)
+- [x] La Fabrique du Net : https://www.lafabriquedunet.fr/agences/agence/jbkt-solutions-digitales (en ligne au contrôle du 23/11), ajoutée dans `sameAs` et liée depuis /logiciel-metier-sur-mesure et /logiciel-suivi-de-production. À vérifier par Karim : la fiche indique « Basée à Philippsbourg » alors que le site dit Strasbourg.
+- [ ] Pages Jaunes (envoyée le 16/11, en modération ; toujours introuvable au contrôle du 23/11)
 - [ ] Fiche Google (créée le 16/11, attend la vidéo de validation de Karim) : ajouter le lien Google Maps une fois validée
 - [ ] Codeur.com (compte existant : demander à Karim l'adresse du profil public)
-- [ ] Sortlist (à créer par Karim dans son Chrome ; Sortlist ressort encore le 16/11 sur « logiciel métier Strasbourg », « site internet PME » et « automatiser les tâches »)
-- [ ] Digitiz, article « Les meilleures agences web en France en 2026 » (digitiz.fr/agences-web) : cité le 16/11 sur 2 questions. Pas de formulaire d'inscription ; e-mail à l'auteur préparé dans l'outil (à valider, jamais envoyé automatiquement).
+- [ ] Sortlist (à créer par Karim dans son Chrome ; ressort encore le 23/11 sur « logiciel métier Strasbourg » (Talentic) et « site internet PME » (StriQ))
+- [ ] Digitiz, article « Les meilleures agences web en France en 2026 » (digitiz.fr/agences-web, aussi digitiz.fr/annuaire/agences-web le 23/11) : cité le 16/11 et le 23/11. Pas de formulaire d'inscription ; e-mail à l'auteur préparé dans l'outil (à valider, jamais envoyé automatiquement).
 
 Gloova :
-- [ ] AlternativeTo (envoyée le 16/11, file d'attente longue ; alternativeto.net/software/gloova répond 404 au contrôle du 16/11 soir)
-- [x] G2 : https://www.g2.com/products/gloova/reviews (en ligne le 16/11/2026, compte contact@gloova.fr), ajoutée dans `sameAs`.
+- [ ] AlternativeTo (envoyée le 16/11, file d'attente longue ; alternativeto.net/software/gloova répond encore 404 au contrôle du 23/11)
+- [x] G2 : https://www.g2.com/products/gloova/reviews (en ligne le 16/11/2026, compte contact@gloova.fr). Liens G2 retirés du site le 19/11 (commit « liens G2 retirés ») : ne pas les remettre sans l'accord de Karim.
 - [ ] Capterra / GetApp / Software Advice : non cochés exprès (Capterra = paiement au clic). Seulement si Karim le décide.
 - [ ] Appvizer (formulaire d'inscription en panne le 16/11 : réessayer)
 - [ ] Tool-Advisor, annuaire gratuit : sur https://tool-advisor.fr/contact/ choisir « Je souhaite ajouter mon logiciel à l'annuaire (gratuit) ». Ne PAS choisir « être présent sur un comparatif » (payant). Action pour Karim.
 - [ ] Hack'celeration, comparatif « Meilleur logiciel institut de beauté et spa » (Romain Cochard, hello@hackceleration.com affiché sur la page) : cité 3 fois de suite ; e-mail préparé dans l'outil (à valider, jamais envoyé automatiquement).
 - [ ] Capterra en fiche gratuite seule (sans campagne au clic) : à vérifier sur digitalmarkets.gartner.com avant d'inscrire, accord de Karim
+- [ ] La Fabrique du Net, rubrique logiciels (annuaire gratuit) : citée le 16/11 et le 23/11 (fiches Welcome RDV, Kiute, guide « site internet institut de beauté »). Inscription gratuite sur https://www.lafabriquedunet.fr/logiciels/inscrire-mon-logiciel (ne pas prendre « Logiciel Certifié » ni les options sponsorisées, payantes). Demande un compte : action pour Karim.
