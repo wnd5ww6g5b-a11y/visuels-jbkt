@@ -39,6 +39,7 @@ MARQUES = {
               'logo_clair': 'radar-icone.png', 'logo_sombre': 'radar-icone.png', 'nom': 'Radar VTC',
               'encre': '#111418', 'fond_cta_clair': '#111418', 'fond_cta_sombre': '#FFFFFF', 'rond': '#E9EBEF'},
 }
+MARQUES['rideradar'] = dict(MARQUES['radar'], nom='Ride Radar')
 
 
 def html(p):
@@ -51,14 +52,14 @@ def html(p):
     logo = m['logo_sombre'] if sombre else m['logo_clair']
     # Le logo JBKT est en couleurs : sur fond sombre, on le pose sur une pastille blanche (règle du logo).
     logo_box = ('background:#fff;border-radius:18px;padding:14px 18px;' if p['brand'] == 'jbkt' and sombre else '')
-    logo_h = {'jbkt': 84, 'radar': 64}.get(p['brand'], 58)
+    logo_h = {'jbkt': 84, 'radar': 64, 'rideradar': 64}.get(p['brand'], 58)
     cta_bg = m['fond_cta_sombre'] if sombre else m['fond_cta_clair']
     cta_fg = '#111418' if cta_bg == '#FFFFFF' else '#FFFFFF'
     t_fam, t_w = m['titre'][1], m['titre'][2]
     x_fam, x_w = m['texte'][1], m['texte'][2]
     fonts = font(*m['titre']) + font(*m['texte']) if m['titre'] != m['texte'] else font(*m['titre'])
     ia = ('<div style="position:absolute;right:44px;bottom:40px;font:500 22px Inter,sans-serif;'
-          f'color:{"rgba(255,255,255,.85)" if sombre else "rgba(29,31,32,.7)"}">Image générée par IA</div>') if p.get('ia') else ''
+          f'color:{"rgba(255,255,255,.85)" if sombre else "rgba(29,31,32,.7)"}">{"AI-generated image" if p['brand'] == 'rideradar' else "Image générée par IA"}</div>') if p.get('ia') else ''
     titre_style = ('letter-spacing:-0.03em;' if p['brand'] == 'gloova' else 'letter-spacing:-0.035em;')
     return f"""<!DOCTYPE html><html><head><meta charset="utf-8"><style>{fonts}
 *{{margin:0;box-sizing:border-box}} body{{width:1080px;height:1350px;overflow:hidden}}
@@ -67,7 +68,7 @@ def html(p):
   <div style="position:absolute;inset:0;background:{voile}"></div>
   <div style="position:absolute;left:84px;right:96px;top:84px">
     <div style="display:flex;align-items:center;gap:16px;{logo_box}width:max-content">
-      <img src="{b64(os.path.join(LOGOS, logo), 'image/png')}" style="height:{logo_h}px;{'border-radius:16px' if p['brand'] == 'radar' else ''}">
+      <img src="{b64(os.path.join(LOGOS, logo), 'image/png')}" style="height:{logo_h}px;{'border-radius:16px' if p['brand'] in ('radar', 'rideradar') else ''}">
       {f'<span style="font-family:{t_fam};font-weight:{t_w};font-size:40px;color:{encre};letter-spacing:-0.02em">{m["nom"]}</span>' if m['nom'] else ''}
     </div>
     <h1 style="margin-top:58px;font-family:{t_fam};font-weight:{t_w};font-size:{p.get('size', 84)}px;line-height:1.02;{titre_style}color:{encre}">{p['title']}</h1>

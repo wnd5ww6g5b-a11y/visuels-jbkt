@@ -28,7 +28,7 @@ Les posts d'exemple `scheduled` sans `validated_at` n'ont pas besoin d'image.
 
 Base de l'outil : artifact `215e6505-5f68-4a59-8694-595b631af2eb`, collection `contents`.
 Le compte Instagram de chaque marque est dans le document `config/instagram`
-(`gloova`, `jbkt`, `radar` → `account_id`).
+(`gloova`, `jbkt`, `radar`, `rideradar` → `account_id`). `rideradar` = Ride Radar, version anglaise de Radar VTC (rideradar_uk, voir outil/marques/rideradar.md).
 
 **D. Commentaires (Gloova, Radar VTC et JBKT)** : répondre à chaque nouveau commentaire dans l'heure (tout automatique depuis le 17/11, avec garde-fous), publier les réponses validées.
 
@@ -63,7 +63,7 @@ Puis `status` = `published`, `published_at`, `instagram_media_id`. En cas d'erre
 ## Facebook (décidé par Karim le 17/11/2026, revu le soir même)
 
 Pages Facebook (connector Windsor `facebook_organic`) : `gloova` → `1497497520105638` ; `jbkt` → `1308753372330573` ;
-`radar` → `1407890339078131` (aussi dans le document `config/facebook`).
+`radar` → `1407890339078131` ; `rideradar` → `1410746815462808` (aussi dans le document `config/facebook`).
 
 **On ne recopie plus Instagram sur Facebook** (« ce sont des réseaux différents, on ne poste pas pareil ») : seuls les
 documents `channel` = `"facebook"` sont publiés sur Facebook. Ils sont écrits pour Facebook (voir `outil/RESEAUX.md`).

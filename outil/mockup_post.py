@@ -77,7 +77,7 @@ def html(p):
         sub = 'rgba(255,255,255,.75)' if sombre else '#4A5160'
         accent = '#FFFFFF' if sombre else '#111418'
         logo = (f'<div style="display:flex;align-items:center;gap:14px"><img src="{b64(os.path.join(LOGOS, "radar-icone.png"))}" style="height:60px;border-radius:15px">'
-                f'<span style="font:800 38px Manrope;letter-spacing:-0.02em;color:{ink}">Radar VTC</span></div>')
+                f'<span style="font:800 38px Manrope;letter-spacing:-0.02em;color:{ink}">{"Ride Radar" if p['brand'] == 'rideradar' else "Radar VTC"}</span></div>')
         deco = ''
     cta_bg = accent
     cta_fg = '#111418' if cta_bg == '#FFFFFF' else '#FFFFFF'
