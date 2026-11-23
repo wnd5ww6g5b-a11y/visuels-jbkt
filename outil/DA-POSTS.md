@@ -35,7 +35,7 @@ Planches de référence : `images/nouveaux-1911-planche.jpg`, `images/gloova-epo
 
 - `mockup_post.py` avec une **vraie capture** de l'app Radar (`devices[].src`, voir outil/marques/radar.md) ; les écrans redessinés en HTML ne sont plus utilisés (décision de Karim du 23/11).
 - `photo_post.py` avec `brand: radar`, `ton: sombre`, `ia: true`, une photo de `banque/photos-ia/` (pluie, route, volant, cafe, support).
-- Calculs toujours justes et écrits dans la légende : €/km = prix ÷ (km course + km approche) ; €/h = prix ÷ (min course + min approche) × 60. Aucune promesse de gain, aucun nom de plateforme, aucun lieu, jamais une vraie capture d'une appli de plateforme.
+- Calculs toujours justes et écrits dans la légende : €/km = prix ÷ (km course + km approche) ; €/h = prix ÷ (min course + min approche) × 60. Aucune promesse de gain. Noms de plateformes et lieux : seulement tels qu'ils apparaissent sur les vraies captures de Radar, avec la mention d'indépendance (outil/marques/radar.md). Jamais une capture d'une appli de plateforme, jamais de logo.
 
 ## Photos Higgsfield
 
