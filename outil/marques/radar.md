@@ -57,3 +57,10 @@ Chauffeurs VTC indépendants qui roulent avec Uber, Bolt et Heetch.
 - Mention si besoin : « Radar VTC n'est pas affilié à Uber, Bolt ou Heetch. »
 - Pas de nom ni de visuel du Zénith ou d'autres salles sans leur accord écrit (dire « fins de concerts et de matchs »). L'écran Événements est donc écarté des posts.
 - Jamais de vraies adresses de clients, de plaques ni de visages sur les captures.
+
+## Vraies captures de l'app et noms de plateformes (décision de Karim du 23/11/2026)
+
+- Les écrans de l'app montrés dans les posts sont **toujours de vraies captures** de Radar VTC (banque : jbkt-studio radar-accueil/offre/historique/zones/arrivees, à ranger dans banque/radar/).
+- Les noms de plateformes (Uber, Bolt, Heetch…) et les lieux qui apparaissent **sur ces captures** peuvent rester : c'est l'usage d'une marque pour indiquer la compatibilité de l'app (exception de « référence nécessaire », art. L713-6 CPI), à condition que l'usage reste loyal.
+- Conditions : jamais de logo de plateforme, jamais laisser croire à un partenariat, et ajouter en fin de légende : « Radar VTC est une app indépendante, sans lien avec les plateformes citées. » Pas de nom de client ni de donnée personnelle visible sur une capture.
+- Hors captures, la règle reste : pas de nom de plateforme dans les titres et les visuels créés, pas de hashtag local.

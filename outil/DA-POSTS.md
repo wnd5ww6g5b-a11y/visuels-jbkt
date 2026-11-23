@@ -33,7 +33,7 @@ Planches de référence : `images/nouveaux-1911-planche.jpg`, `images/gloova-epo
 
 ## Radar VTC (fond #111418 ou #EEF0F3, Manrope 800)
 
-- `mockup_post.py` avec un écran Radar dessiné en HTML (`devices[].html`, voir radar-mk-justesse.json), « Exemple fictif », verdict RENTABLE / LIMITE / PAS RENTABLE.
+- `mockup_post.py` avec une **vraie capture** de l'app Radar (`devices[].src`, voir outil/marques/radar.md) ; les écrans redessinés en HTML ne sont plus utilisés (décision de Karim du 23/11).
 - `photo_post.py` avec `brand: radar`, `ton: sombre`, `ia: true`, une photo de `banque/photos-ia/` (pluie, route, volant, cafe, support).
 - Calculs toujours justes et écrits dans la légende : €/km = prix ÷ (km course + km approche) ; €/h = prix ÷ (min course + min approche) × 60. Aucune promesse de gain, aucun nom de plateforme, aucun lieu, jamais une vraie capture d'une appli de plateforme.
 

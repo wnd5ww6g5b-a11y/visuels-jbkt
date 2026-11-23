@@ -11,3 +11,4 @@ Ajoutée le 23/11/2026 par Karim. Instagram `rideradar_uk` (Windsor account_id 1
 - Aucune promesse de gain, rien d'inventé, aucun faux avis.
 - Rythme : 1 post par jour, 19:00 (heure de Paris).
 - Lien App Store : https://apps.apple.com/gb/app/id6829886766 (à vérifier par Karim).
+- Captures réelles avec noms de plateformes : autorisées dans les mêmes conditions que Radar VTC (pas de logo, pas de partenariat sous-entendu), avec en fin de légende : « Ride Radar is an independent app, not affiliated with any of the platforms mentioned. »
