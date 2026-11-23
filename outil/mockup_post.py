@@ -14,8 +14,8 @@ téléphone 1179 x 2556) : l'image n'est jamais étirée ni coupée. Un écran �
 """
 import asyncio, base64, json, os, sys
 
-FONTS = os.environ.get('FONTS_DIR', '/home/claude/jbkt-studio/node_modules/@fontsource')
-LOGOS = os.environ.get('LOGOS_DIR', '/home/claude/jbkt-studio/src/assets')
+FONTS = os.environ.get('FONTS_DIR', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets', 'fonts'))
+LOGOS = os.environ.get('LOGOS_DIR', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets', 'logos'))
 RATIO = {'laptop': 1800 / 2880, 'tablet': 1536 / 2048, 'phone': 2556 / 1179}
 
 

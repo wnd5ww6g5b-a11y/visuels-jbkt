@@ -15,8 +15,8 @@ Règles : la photo ne montre jamais de texte lisible, de logo, de lieu précis, 
 import asyncio, base64, json, os, sys
 
 ICI = os.path.dirname(os.path.abspath(__file__))
-FONTS = os.environ.get('FONTS_DIR', '/home/claude/jbkt-studio/node_modules/@fontsource')
-LOGOS = os.environ.get('LOGOS_DIR', '/home/claude/jbkt-studio/src/assets')
+FONTS = os.environ.get('FONTS_DIR', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets', 'fonts'))
+LOGOS = os.environ.get('LOGOS_DIR', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets', 'logos'))
 
 
 def b64(path, mime):
@@ -63,7 +63,7 @@ def html(p):
     return f"""<!DOCTYPE html><html><head><meta charset="utf-8"><style>{fonts}
 *{{margin:0;box-sizing:border-box}} body{{width:1080px;height:1350px;overflow:hidden}}
 </style></head><body>
-<div style="position:relative;width:1080px;height:1350px;background:#000 url({b64(p['photo'], 'image/png')}) center/cover">
+<div style="position:relative;width:1080px;height:1350px;background:#000 url({b64(p['photo'], 'image/jpeg' if p['photo'].lower().endswith(('.jpg','.jpeg')) else 'image/png')}) center/cover">
   <div style="position:absolute;inset:0;background:{voile}"></div>
   <div style="position:absolute;left:84px;right:96px;top:84px">
     <div style="display:flex;align-items:center;gap:16px;{logo_box}width:max-content">

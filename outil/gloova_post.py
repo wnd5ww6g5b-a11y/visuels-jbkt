@@ -13,9 +13,9 @@ prix TTC 9,99 / 13,99 / 15,99 €, essai 30 jours, mention « Données fictives 
 """
 import asyncio, base64, json, os, sys
 
-FONTS = os.environ.get('FONTS_DIR', '/home/claude/jbkt-studio/node_modules/@fontsource')
-LOGOS = os.environ.get('LOGOS_DIR', '/home/claude/jbkt-studio/src/assets')
-ECRANS = os.environ.get('ECRANS_DIR', '/home/claude/gloomy-site/public/images/app')
+FONTS = os.environ.get('FONTS_DIR', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets', 'fonts'))
+LOGOS = os.environ.get('LOGOS_DIR', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets', 'logos'))
+ECRANS = os.environ.get('ECRANS_DIR', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets', 'ecrans-gloova'))
 
 NOIR, CREME, ROSE, FLEUR, GRIS, BORD = '#1D1F20', '#F6F2EE', '#F3E2E0', '#E2A9A2', '#6D7478', '#DFDBD8'
 

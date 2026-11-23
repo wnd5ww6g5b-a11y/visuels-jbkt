@@ -209,3 +209,8 @@ Les posts image JBKT et Radar se font maintenant avec deux scripts, et plus avec
   (offre d'exemple, aucun nom de plateforme, aucun lieu, mention « Exemple fictif »), calculs vérifiés.
 - `outil/photo_post.py` : une photo Higgsfield (gpt_image_2_6, 0,25 crédit, sans texte ni logo) + titre, logo et bouton.
 Alterner une photo et un post en appareils, pour une grille propre. Exemples publiés le 18/11 : `images/mockups/`, `images/photos-posts/`.
+
+
+## DA des posts image (23/11/2026)
+
+Pour tous les nouveaux posts image (Instagram et Facebook, 3 marques), suivre **outil/DA-POSTS.md** : elle remplace rendre.py, texte.py, demo.py, carrousel.py et gloova_pop.py. Elle l'emporte sur les parties plus anciennes de ce fichier en cas de différence.
